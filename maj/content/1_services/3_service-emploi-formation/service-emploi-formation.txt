@@ -1,0 +1,3 @@
+Title: Service Emploi Formation Insertion
+----
+Description: Accueil, information, orientation et accompagnement des personnes en recherche d’emploi/formation dans leurs démarches d’insertion professionnelle.

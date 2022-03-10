@@ -1,0 +1,121 @@
+/* reset des marges extérieures et intérieures */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* style général */
+:root{
+    --font-family: Roboto, sans-serif;
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --highlight-color: #808080;
+}
+
+body{
+    margin: 2%;
+    font-family: var(--font-family);
+    color: var(--primary-color);
+}
+
+/* style général des liens */
+li{
+    list-style-type: none;
+}
+
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--highlight-color);
+}
+
+/* mise en place de la grille */
+header, main, footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* éléments du header */
+/* logo */
+header{
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    grid-column: 1;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+/* navbar */
+header nav{
+    grid-column: 2 / span 2;
+    width: 100%;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+/* éléments du footer */
+footer section{
+    grid-column: 1 / span 3;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* éléments du main */
+.slideshow-container{
+    grid-column: 1 / span 3;
+    margin: 5% auto 2% auto;
+}
+
+.slides{
+    display: none;
+    -webkit-animation: fade 1.5s ease-in-out;
+    animation: fade 1.5s ease-in-out;
+}
+
+#about{
+    grid-column: 1 / span 3;
+    justify-self: center;
+    margin-bottom: 2%;
+    width: 60%;
+    font-size: 1.3em;
+}
+
+figure{
+    margin: 5%;
+}
+
+figure img{
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+/* animations */
+@-webkit-keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
