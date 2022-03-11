@@ -116,12 +116,19 @@ footer{
 footer section:first-child{
     grid-column: 1 / span 12;
     margin-bottom: 2%;
+    padding-top: 2%;
     padding: 5%;
     background-color: var(--highlight-color);
 }
 
 footer section:nth-child(n+2){
     grid-column: span 2;
+}
+
+footer img{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 5%;
 }
 
 footer svg{
