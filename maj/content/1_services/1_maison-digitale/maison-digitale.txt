@@ -1,3 +1,0 @@
-Title: Maison Digitale
-----
-Description: Espace public permettant l’accès aux outils numérique.

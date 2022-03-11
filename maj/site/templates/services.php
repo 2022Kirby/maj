@@ -7,7 +7,7 @@
         <?php foreach ($pages->find('services')->children()->listed() as $service):?>
                 <figure>
                     <a href="<?= $service->url() ?>">
-                        <img src="" alt="">
+                        <img src="https://picsum.photos/400" alt="">
                     </a>
                     <figcaption>
                         <h2>

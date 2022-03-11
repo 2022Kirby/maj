@@ -13,7 +13,7 @@
 }
 
 body{
-    margin: 2%;
+    margin: 5%;
     font-family: var(--font-family);
     color: var(--primary-color);
 }
@@ -25,6 +25,7 @@ li{
 
 a{
     color: var(--primary-color);
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -35,87 +36,97 @@ a:hover{
 /* mise en place de la grille */
 header, main, footer{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(12, 1fr);
 }
 
 /* éléments du header */
 /* logo */
-header{
-    justify-content: center;
-    align-items: center;
-}
-
-header h1{
+h1{
     grid-column: 1;
+    width: auto;
     font-size: 5em;
     font-weight: bold;
 }
 
+#enter{
+    grid-column: 2 / span 11;
+    align-self: flex-start;
+    justify-self: end;
+    font-size: 1.5em;
+}
+
+header h1+a{
+    grid-column: 2;
+    align-self: center;
+    margin-left: 10%;
+    font-size: 1.5em;
+}
+
 /* navbar */
 header nav{
-    grid-column: 2 / span 2;
+    grid-column: 1 / span 12;
+    margin: 2% 0 2% 0;
     width: 100%;
 }
 
 header ul{
     display: flex;
-    justify-content: center;
-    gap: 5%;
+    gap: 2%;
 }
 
-/* éléments du footer */
-footer section{
-    grid-column: 1 / span 3;
-    justify-content: center;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+header li{
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 /* éléments du main */
-.slideshow-container{
-    grid-column: 1 / span 3;
-    margin: 5% auto 2% auto;
-}
-
-.slides{
-    display: none;
-    -webkit-animation: fade 1.5s ease-in-out;
-    animation: fade 1.5s ease-in-out;
-}
-
 #about{
-    grid-column: 1 / span 3;
-    justify-self: center;
+    grid-column: 1 / span 12;
+    margin: 2% 0 2% 0;
+    width: 80%;
+    font-size: 2em;
+}
+
+h2{
+    grid-column: 1 / span 12;
+    line-height: 1em;
     margin-bottom: 2%;
-    width: 60%;
-    font-size: 1.3em;
 }
 
 figure{
-    margin: 5%;
+    grid-column: span 3;
+    margin: 5% 5% 5% 0;
+    width: 80%;
 }
 
 figure img{
-    width: 100%;
     margin-bottom: 2%;
+    width: 100%;
 }
 
-/* animations */
-@-webkit-keyframes fade{
-    from{
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* éléments du footer */
+footer{
+    bottom: 0;
+    margin-top: 2%;
+    padding-top: 2%;
+    width: 100%;
+    border-top: solid 2px var(--primary-color)
 }
 
-@keyframes fade{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+footer section:first-child{
+    grid-column: 1 / span 12;
+    margin-bottom: 2%;
+    padding: 5%;
+    background-color: var(--highlight-color);
+}
+
+footer section:nth-child(n+2){
+    grid-column: span 2;
+}
+
+footer svg{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 10%;
+    fill: var(--primary-color);
 }

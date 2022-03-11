@@ -10,8 +10,8 @@ City: Moissac
 ----
 Number: 05 63 95 25 09
 ----
-Facebook: www.facebook.com/AssociationMAJ/
+Facebook: https://www.facebook.com/AssociationMAJ
 ----
 Twitter: https://twitter.com/associationmaj
 ----
-Instagram: https://www.instagram.com/moissac_animation_jeunes/
+Instagram: https://www.instagram.com/moissac_animation_jeunes
