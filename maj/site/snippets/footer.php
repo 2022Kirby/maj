@@ -9,7 +9,7 @@
         
         <!-- adresse & numéro -->
         <section>
-            <p><strong>Où nous trouver ?</strong><br></p>
+            <a href="<?= $pages->find('contact')->url() ?>">Où nous trouver ?</a>
             <p><?= $site->acronym() ?></p>
             <p><?= $site->street() ?></p>
             <p><?= $site->postcode() ?> <?= $site->city() ?></p>

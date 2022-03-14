@@ -2,17 +2,17 @@
 <?php snippet('head') ?>
 
 <body>
-    <main>
-        <!-- logo renvoyant sur page d'accueil -->
+    <header>
+        <!-- logo MAJ -->
         <h1>
-            <a href="<?= $page->url() ?>">
-                <?= $site->acronym() ?>
-            </a>
+            <?= $site->acronym() ?>
         </h1>
 
         <!-- entrez renvoyant sur page actualités -->
         <a id="enter" href="<?= $pages->find('actualites')->url() ?>">entrez</a>
-
+    </header>
+    
+    <main>
         <!-- texte d'introduction sur l'association -->
         <p id="about"><?= $page->text() ?></p>
     </main>

@@ -8,6 +8,8 @@
     <link rel="icon" href="" />
     <title><?= $site->acronym() ?> / <?= $page->title() ?></title>
     
-    <!-- lien vers feuille de style -->
+    <!-- lien vers feuille de style générale -->
     <?= css('assets/css/index.css') ?>
+    <!-- lien vers feuille de style splidejs -->
+    <?= css('assets/css/splide.min.css') ?>
 </head>

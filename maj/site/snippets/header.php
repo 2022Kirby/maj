@@ -1,11 +1,9 @@
     <header>
-        <!-- logo renvoyant sur page d'accueil -->
+        <!-- logo -->
         <h1>
-            <a href="<?= $site->url() ?>">
-                    <?= $site->acronym() ?>
-            </a>
+            <a href="<?= $pages->find('actualites')->url() ?>"> <?= $site->acronym() ?> </a>
         </h1>
-        <!-- qui renvoyant sur page d'accueil -->
+        <!-- qui ? renvoyant sur page d'accueil -->
         <a href="<?= $site->url() ?>">qui ?</a>
 
         <!-- menu de navigation -->
