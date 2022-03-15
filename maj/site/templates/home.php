@@ -4,9 +4,7 @@
 <body>
     <header>
         <!-- logo MAJ -->
-        <h1>
-            <?= $site->acronym() ?>
-        </h1>
+        <h1><?= $site->acronym() ?></h1>
 
         <!-- entrez renvoyant sur page actualités -->
         <a id="enter" href="<?= $pages->find('actualites')->url() ?>">entrez</a>
@@ -14,7 +12,7 @@
     
     <main>
         <!-- texte d'introduction sur l'association -->
-        <p id="about"><?= $page->text() ?></p>
+        <p id="about"><?= $page->introduction() ?></p>
     </main>
 </body>
 </html>

@@ -1,0 +1,31 @@
+Title: Actualité
+
+columns:
+  - width: 1/2
+    sections:
+      textes:
+        type: fields
+        fields:
+          category:
+            label: Catégorie
+            type: text
+          introduction:
+            label: Introduction
+            type: textarea
+            size: small
+            required: true
+          caption:
+            label: En-tête
+            type: text
+            required: true
+          paragraph:
+            label: Paragraphe
+            type: textarea
+            size: large
+            required: true
+
+  - width: 1/2
+    sections:
+      galerie:
+        type: files
+        layout: cards

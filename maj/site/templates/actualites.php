@@ -24,7 +24,13 @@
         <div class="splide" id="slider">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <!-- chaque slide correspond à un élément li dans lequel on insère le contenu  -->
+                    <!-- boucle foreach affichant chaque image de la page actualités -->
+                    <!-- < ?php foreach ($page->images() as $image):?> -->
+                    <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
+                    <!-- <li class="splide__slide"><img src="< ?= $image->url() ?>" alt=""></li>
+                    < ?php endforeach ?> -->
+                    
+                    <!-- pour les besoins de la démo, insertion de lorem picsum -->
                     <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=1" alt=""></li>
                     <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=2" alt=""></li>
                     <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=3" alt=""></li>
@@ -43,21 +49,24 @@
         <!-- title de la page -->
         <h2><?= $page->title() ?></h2>
 
-        <!-- boucle foreach affichant pour chaque page enfant de la page actualité une image ainsi que les fields title et description de la page -->
+        <!-- boucle foreach affichant pour chaque page enfant de la page actualité la première image ainsi que les fields title et introduction de la page -->
         <?php foreach ($pages->find('actualites')->children()->listed() as $actualite):?>
-                <figure>
+        <figure>
+            <a href="<?= $actualite->url() ?>">
+                <!-- insertion de la première image de la page avec un echo de l'url  -->
+                <!-- <img src="< ?= $actualite->image()->url() ?>" alt=""> -->
+                <!-- pour les besoins de la démo, utilisation d'un lorem picsum -->
+                <img src="https://picsum.photos/400" alt="">
+            </a>
+            <figcaption>
+                <h3>
                     <a href="<?= $actualite->url() ?>">
-                        <img src="https://picsum.photos/400" alt="">
+                        <?= $actualite->title() ?>
                     </a>
-                    <figcaption>
-                        <h3>
-                            <a href="<?= $actualite->url() ?>">
-                                <?= $actualite->title() ?>
-                            </a>
-                        </h3>
-                        <p><?= $actualite->description() ?></p>
-                    </figcaption>
-                </figure>
+                </h3>
+                <p><?= $actualite->introduction() ?></p>
+            </figcaption>
+        </figure>
         <?php endforeach ?>
     </main>
 
@@ -78,7 +87,8 @@
                 // configuration du ticker
                 type: 'loop',
                 drag: 'free',
-                perPage: 4,
+                perPage: 3,
+                autoWidth: true,
                 autoScroll: {
                     speed: 1,
                     },

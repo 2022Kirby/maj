@@ -16,7 +16,8 @@
             <p><?= $site->acronym() ?><br>
             <?= $site->street() ?><br>
             <?= $site->postcode() ?> <?= $site->city() ?><br>
-            <?= $site->number() ?></p>
+            <?= $site->number() ?>
+            </p>
 
             <!-- google map récupérée du site précédent,
             à actualiser -->

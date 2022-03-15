@@ -13,18 +13,16 @@
 
         <!-- article -->
         <article>
+            <!-- insertion de l'image de la page avec un echo de l'url  -->
+            <!-- <img src="< ?= $page->images()->nth()->url() ?>" alt=""> -->
+            <!-- pour les besoins de la démo, utilisation d'un lorem picsum -->
             <img src="https://picsum.photos/1500/300" alt="">
             
-            <!-- pour les besoins de la démo, insertion de lorem ipsum, via une boucle for -->
-            <?php for($i = 0 ; $i < 3 ; $i++):?>
-            <!-- l'article se découpera en sections, chacune contenant un h3 et un p, et possiblement des images -->
+            <!-- affichage du contenu textuel, correspondant aux champs caption et paragraph de la page -->
             <section>
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet vestibulum nibh. Mauris dapibus tortor eros, ut mollis lectus lobortis nec. Curabitur lacinia posuere rhoncus. Nunc sagittis cursus pellentesque. Proin hendrerit tempus sagittis. Curabitur feugiat, massa vel suscipit mollis, mi massa ornare justo, vel aliquet mauris justo ut ex. Aliquam pulvinar vulputate gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <br><br>
-                Aliquam id lorem vitae nibh iaculis venenatis nec ut leo. Sed dapibus velit at sodales hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas fermentum ipsum quis iaculis scelerisque. Pellentesque commodo cursus urna, a ultrices quam vestibulum id. Suspendisse consequat nulla eu ex condimentum, tempor accumsan magna varius. Sed hendrerit erat enim, in malesuada ante convallis ut. Nam fringilla velit id tellus volutpat porttitor. Donec aliquam nec mauris vel consectetur. Sed vitae orci sapien. Sed quis nulla ac nisl lacinia tincidunt a ut neque. Nulla eu velit dapibus elit semper lobortis.
-                </p>
+                <h3><?= $page->caption() ?></h3>
+                <p><?= $page->paragraph() ?></p>
             </section>
-            <?php endfor; ?> 
         </article>
     </main>
 

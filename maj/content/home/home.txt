@@ -1,3 +1,5 @@
-Title: Moissac Animation Jeunes
+Title: Accueil
+
 ----
-Text: L’association a pour objet de favoriser, dans le respect de la laïcité, l’information, la participation et l’intégration à la vie sociale, culturelle et sportive de Moissac, pour les jeunes en particulier, dans la perspective de l’éducation à la citoyenneté.
+
+Introduction: L’association a pour objet de favoriser, dans le respect de la laïcité, l’information, la participation et l’intégration à la vie sociale, culturelle et sportive de Moissac, pour les jeunes en particulier, dans la perspective de l’éducation à la citoyenneté.

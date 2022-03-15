@@ -1,0 +1,8 @@
+title: Accueil
+
+fields:
+  introduction:
+    label: Introduction
+    type: textarea
+    size: medium
+    required: true

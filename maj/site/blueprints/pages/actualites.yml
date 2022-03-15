@@ -1,0 +1,42 @@
+Title: Actualités
+
+sections:
+
+  ticker:
+    type: fields
+    fields:
+      caption:
+        label: En-tête
+        type: text
+      text:
+        label: Actualité
+        type: textarea
+        size: small
+
+  slider:
+    type: files
+    layout: cards
+
+  drafts:
+    headline: Brouillons
+    type: pages
+    template: actualite
+    info: "Catégorie: {{ page.category }}"
+    # help:
+    status: drafts
+    layout: list
+    limit: 5
+    images:
+      ratio: 1/1
+      cover: true
+
+  published:
+    headline: Pages publiées
+    type: pages
+    template: actualite
+    info: "Catégorie: {{ page.category }}"
+    status: published
+    layout: cards
+    images:
+      ratio: 1/1
+      cover: true

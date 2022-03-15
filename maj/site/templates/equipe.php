@@ -8,20 +8,20 @@
         <h2>Rencontrez notre équipe !</h2>
 
         <!-- équipe -->
-        <!-- boucle foreach affichant chaque image de la page équipe, ainsi que les champs Fullname et Role -->
+        <!-- boucle foreach affichant chaque image de la page équipe, ainsi que les champs title et caption de l'image -->
         <?php foreach ($page->images() as $image):?>
         <div class="team">
-            <!-- pour les besoins de la démo, les avatars utilisés proviennent de TheNounProject (licence Creative Commons)-->
+            <!-- pour les besoins de la démo, les photos utilisées proviennent de TheNounProject (licence Creative Commons)-->
             <img src="<?= $image->url() ?>" alt="">
             <dl>
-                <dt><?= $image->fullname() ?></dt>
-                <dd><?= $image->role() ?></dd>
+                <dt><?= $image->title() ?></dt>
+                <dd><?= $image->caption() ?></dd>
             </dl>
         </div>
         <?php endforeach ?>
 
-        <!-- crédits avatars (temporaire) -->
-        <h4><small>Avatars by Sarah Rudkin from NounProject.com</small></h4>
+        <!-- crédits photos (temporaire) -->
+        <h4><small>Photos by Jacob Lund Photography from NounProject.com</small></h4>
     </main>
 
     <?php snippet('footer') ?>

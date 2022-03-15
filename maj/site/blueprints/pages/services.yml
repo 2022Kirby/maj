@@ -1,0 +1,26 @@
+Title: Services
+
+sections:
+
+  drafts:
+    headline: Brouillons
+    type: pages
+    template: service
+    # info: "Catégorie: {{ page.category }}"
+    status: drafts
+    layout: list
+    limit: 5
+    images:
+      ratio: 1/1
+      cover: true
+
+  published:
+    headline: Pages publiées
+    type: pages
+    template: service
+    # info: "Catégorie: {{ page.category }}"
+    status: published
+    layout: cards
+    images:
+      ratio: 1/1
+      cover: true
