@@ -8,14 +8,13 @@
         <div class="splide" id="ticker">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <!-- pour les besoins de la démo, insertion de lorem ipsum, via une boucle for -->
-                    <?php for($i = 0 ; $i < 5 ; $i++):?>
-                    <!-- chaque élément du ticker correspond à un élément li et contiendra un h4 et un p -->
+                    <!-- boucle foreach affichant pour chaque élément du ticker, les fields caption et text -->
+                    <?php foreach ($page->items()->toStructure() as $item):?>
                     <li class="splide__slide">
-                        <h4>Lorem ipsum</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4><?= $item->caption() ?></h4>
+                        <p><?= $item->text() ?></p>
                     </li>
-                    <?php endfor; ?> 
+                    <?php endforeach ?>
                 </ul>
             </div>
         </div>
@@ -25,18 +24,10 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <!-- boucle foreach affichant chaque image de la page actualités -->
-                    <!-- < ?php foreach ($page->images() as $image):?> -->
+                    <?php foreach ($page->images() as $image):?>
                     <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
-                    <!-- <li class="splide__slide"><img src="< ?= $image->url() ?>" alt=""></li>
-                    < ?php endforeach ?> -->
-                    
-                    <!-- pour les besoins de la démo, insertion de lorem picsum -->
-                    <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=1" alt=""></li>
-                    <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=2" alt=""></li>
-                    <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=3" alt=""></li>
-                    <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=4" alt=""></li>
-                    <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=5" alt=""></li>
-                    <li class="splide__slide"><img src="https://picsum.photos/1200/400?random=6" alt=""></li>
+                    <li class="splide__slide"><img src="<?= $image->url() ?>" alt=""></li>
+                    <?php endforeach ?>
                 </ul>
             </div>
             <!-- barre de progression de la slide -->
@@ -50,13 +41,11 @@
         <h2><?= $page->title() ?></h2>
 
         <!-- boucle foreach affichant pour chaque page enfant de la page actualité la première image ainsi que les fields title et introduction de la page -->
-        <?php foreach ($pages->find('actualites')->children()->listed() as $actualite):?>
+        <?php foreach ($page->children()->listed() as $actualite):?>
         <figure>
             <a href="<?= $actualite->url() ?>">
                 <!-- insertion de la première image de la page avec un echo de l'url  -->
-                <!-- <img src="< ?= $actualite->image()->url() ?>" alt=""> -->
-                <!-- pour les besoins de la démo, utilisation d'un lorem picsum -->
-                <img src="https://picsum.photos/400" alt="">
+                <img src="<?= $actualite->image()->url() ?>" alt="">
             </a>
             <figcaption>
                 <h3>

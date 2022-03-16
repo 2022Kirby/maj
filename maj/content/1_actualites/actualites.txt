@@ -1,1 +1,16 @@
 Title: Actualités
+
+----
+
+Items:
+
+- 
+  caption: Lorem ipsum
+  text: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit.
+- 
+  caption: Lorem ipsum
+  text: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit.

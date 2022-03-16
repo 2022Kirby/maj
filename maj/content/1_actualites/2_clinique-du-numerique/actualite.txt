@@ -10,11 +10,65 @@ Introduction: La Clinique du Numérique vous propose un moment ouvert et convivi
 
 ----
 
-Caption: Lorem ipsum
+Paragraphs:
 
-----
-
-Paragraph: 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet vestibulum nibh. Mauris dapibus tortor eros, ut mollis lectus lobortis nec. Curabitur lacinia posuere rhoncus. Nunc sagittis cursus pellentesque. Proin hendrerit tempus sagittis. Curabitur feugiat, massa vel suscipit mollis, mi massa ornare justo, vel aliquet mauris justo ut ex. Aliquam pulvinar vulputate gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Aliquam id lorem vitae nibh iaculis venenatis nec ut leo. Sed dapibus velit at sodales hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas fermentum ipsum quis iaculis scelerisque. Pellentesque commodo cursus urna, a ultrices quam vestibulum id. Suspendisse consequat nulla eu ex condimentum, tempor accumsan magna varius. Sed hendrerit erat enim, in malesuada ante convallis ut. Nam fringilla velit id tellus volutpat porttitor. Donec aliquam nec mauris vel consectetur. Sed vitae orci sapien. Sed quis nulla ac nisl lacinia tincidunt a ut neque. Nulla eu velit dapibus elit semper lobortis.
+- 
+  caption: Lorem ipsum
+  text: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Sed sit amet cursus
+    metus. Nam ac quam a ante consectetur
+    tincidunt pulvinar a arcu. Duis sit amet
+    consequat arcu. Suspendisse ut nunc ut
+    lacus aliquet efficitur at id magna.
+    Vivamus semper pulvinar orci sed semper.
+    Aliquam vel mauris ipsum. Donec
+    sollicitudin hendrerit egestas. Aenean
+    volutpat mi tellus, id semper quam
+    condimentum ac. Aenean et nibh eu ligula
+    facilisis scelerisque. Curabitur id
+    elementum augue.
+- 
+  caption: Lorem ipsum
+  text: >
+    Sed ut auctor nunc, vitae maximus
+    lectus. Vivamus pellentesque turpis
+    efficitur mauris tristique tincidunt.
+    Sed varius metus vel lacus placerat,
+    eget placerat orci suscipit. Suspendisse
+    eu nunc dictum, tempus nisi vel,
+    vehicula felis. Fusce convallis nibh sed
+    aliquam accumsan. Aenean viverra tortor
+    at est tristique mollis. Praesent
+    imperdiet velit eu mattis vestibulum.
+    Nulla sagittis faucibus est, sed
+    bibendum tellus vehicula venenatis. Cras
+    ut diam ut dui vestibulum bibendum.
+    Integer varius lectus nunc, porttitor
+    cursus elit commodo sed. Maecenas
+    pulvinar mauris risus, non sodales arcu
+    mollis ut. Donec sit amet libero
+    egestas, vulputate sapien sit amet,
+    vestibulum turpis. Sed dignissim nisl
+    facilisis neque tincidunt, ut cursus
+    nunc faucibus. Donec non facilisis
+    felis, in lacinia tellus.
+- 
+  caption: Lorem ipsum
+  text: >
+    Maecenas sollicitudin orci facilisis
+    metus mattis dapibus. Praesent lobortis,
+    purus quis dictum consequat, justo arcu
+    venenatis augue, a condimentum risus
+    arcu vehicula sapien. Aliquam ac sapien
+    pharetra, pulvinar lorem eget, suscipit
+    enim. In hac habitasse platea dictumst.
+    Aliquam bibendum quam ut dolor porta
+    euismod. Suspendisse a mattis lorem, at
+    congue dolor. Quisque scelerisque nulla
+    ex, ac aliquam ex feugiat non. Cras sed
+    nulla ac urna hendrerit cursus ac a leo.
+    Suspendisse potenti. Aenean pellentesque
+    facilisis sem. Nunc non pharetra erat.
+    Donec ac turpis hendrerit, faucibus
+    lectus id, dapibus enim.

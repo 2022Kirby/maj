@@ -40,3 +40,6 @@
             </a>
         </section>
     </footer>
+
+    <!-- lien vers le script js de modification du lien actif -->
+    <?= js('assets/js/active.js') ?>

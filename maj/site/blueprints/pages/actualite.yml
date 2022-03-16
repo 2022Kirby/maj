@@ -3,7 +3,7 @@ Title: Actualité
 columns:
   - width: 1/2
     sections:
-      textes:
+      contenu:
         type: fields
         fields:
           category:
@@ -14,16 +14,21 @@ columns:
             type: textarea
             size: small
             required: true
-          caption:
-            label: En-tête
-            type: text
+          paragraphs:
+            label: Paragraphes
+            type: structure
             required: true
-          paragraph:
-            label: Paragraphe
-            type: textarea
-            size: large
-            required: true
-
+            fields:
+              caption:
+                label: En-tête
+                type: text
+                required: true
+              text:
+                label: Texte
+                type: textarea
+                size: medium
+                required: true
+  
   - width: 1/2
     sections:
       galerie:

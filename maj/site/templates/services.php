@@ -9,9 +9,7 @@
         <figure>
             <a href="<?= $service->url() ?>">
                 <!-- insertion de la première image de la page avec un echo de l'url  -->
-                <!-- <img src="< ?= $actualite->image()->url() ?>" alt=""> -->
-                <!-- pour les besoins de la démo, utilisation d'un lorem picsum -->
-                <img src="https://picsum.photos/400" alt="">
+                <img src="<?= $service->image()->url() ?>" alt="">
             </a>
             <figcaption>
                 <h3>

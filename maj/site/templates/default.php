@@ -13,16 +13,19 @@
 
         <!-- article -->
         <article>
-            <!-- insertion de l'image de la page avec un echo de l'url  -->
-            <!-- <img src="< ?= $page->images()->nth()->url() ?>" alt=""> -->
+            <!-- insertion de la seconde image de la page avec un echo de l'url  -->
+            <!-- <img src="< ?= $page->images()->nth(1)->url() ?>" alt=""> -->
+
             <!-- pour les besoins de la démo, utilisation d'un lorem picsum -->
-            <img src="https://picsum.photos/1500/300" alt="">
-            
-            <!-- affichage du contenu textuel, correspondant aux champs caption et paragraph de la page -->
+            <img src="https://picsum.photos/1200/400" alt="">
+
+            <!-- boucle foreach affichant pour chaque paragraphe les fields caption et text -->
+            <?php foreach ($page->paragraphs()->toStructure() as $paragraph):?>
             <section>
-                <h3><?= $page->caption() ?></h3>
-                <p><?= $page->paragraph() ?></p>
+                <h3><?= $paragraph->caption() ?></h3>
+                <p><?= $paragraph->text() ?></p>
             </section>
+            <?php endforeach ?>
         </article>
     </main>
 

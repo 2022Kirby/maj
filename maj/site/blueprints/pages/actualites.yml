@@ -1,42 +1,53 @@
 Title: Actualités
 
-sections:
+columns:
+  - width: 1/2
+    sections:
+      published:
+        headline: Pages publiées
+        type: pages
+        template: actualite
+        info: "Catégorie: {{ page.category }}"
+        status: published
+        layout: cards
+        limit: 4
+        image:
+          ratio: 2/2
+          cover: true
+      drafts:
+        headline: Brouillons
+        type: pages
+        template: actualite
+        info: "Catégorie: {{ page.category }}"
+        # help:
+        status: drafts
+        layout: list
+        limit: 5
+        image:
+          ratio: 1/1
+          cover: true
 
-  ticker:
-    type: fields
-    fields:
-      caption:
-        label: En-tête
-        type: text
-      text:
-        label: Actualité
-        type: textarea
-        size: small
-
-  slider:
-    type: files
-    layout: cards
-
-  drafts:
-    headline: Brouillons
-    type: pages
-    template: actualite
-    info: "Catégorie: {{ page.category }}"
-    # help:
-    status: drafts
-    layout: list
-    limit: 5
-    images:
-      ratio: 1/1
-      cover: true
-
-  published:
-    headline: Pages publiées
-    type: pages
-    template: actualite
-    info: "Catégorie: {{ page.category }}"
-    status: published
-    layout: cards
-    images:
-      ratio: 1/1
-      cover: true
+  - width: 1/2
+    sections:
+      ticker:
+        type: fields
+        fields:
+          items:
+            label: Ticker
+            type: structure
+            fields:
+              caption:
+                label: En-tête
+                type: text
+                required: true
+              text:
+                label: Texte
+                type: textarea
+                size: small
+                required: true
+      slider:
+        type: files
+        layout: cards
+        image:
+          ratio: 3/1
+          cover: true

@@ -6,11 +6,11 @@ Introduction: Lieu de création, d’expérimentation et de réalisation ouvert 
 
 ----
 
-Caption: Lorem ipsum
+Paragraphs:
 
-----
-
-Paragraph:
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet vestibulum nibh. Mauris dapibus tortor eros, ut mollis lectus lobortis nec. Curabitur lacinia posuere rhoncus. Nunc sagittis cursus pellentesque. Proin hendrerit tempus sagittis. Curabitur feugiat, massa vel suscipit mollis, mi massa ornare justo, vel aliquet mauris justo ut ex. Aliquam pulvinar vulputate gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Aliquam id lorem vitae nibh iaculis venenatis nec ut leo. Sed dapibus velit at sodales hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas fermentum ipsum quis iaculis scelerisque. Pellentesque commodo cursus urna, a ultrices quam vestibulum id. Suspendisse consequat nulla eu ex condimentum, tempor accumsan magna varius. Sed hendrerit erat enim, in malesuada ante convallis ut. Nam fringilla velit id tellus volutpat porttitor. Donec aliquam nec mauris vel consectetur. Sed vitae orci sapien. Sed quis nulla ac nisl lacinia tincidunt a ut neque. Nulla eu velit dapibus elit semper lobortis.
+- 
+  caption: Lorem ipsum
+  text: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor sem velit, vitae vestibulum nulla imperdiet vel. Nunc velit mi, condimentum nec sodales sed, aliquet sit amet quam. Integer luctus felis vitae justo pretium gravida. Nulla ultrices lorem sed fringilla ultrices. Suspendisse in finibus arcu. Phasellus in iaculis dolor. Donec ac accumsan odio. Suspendisse in mi tincidunt, scelerisque mauris ut, interdum orci.
+    
+    Integer fringilla nec arcu sit amet ornare. Fusce egestas bibendum odio, ornare sodales lectus egestas non. Pellentesque efficitur semper purus, sed euismod orci euismod at. Nunc eget mi a est congue pretium eget suscipit purus. Donec sodales ultrices eros, id sagittis quam cursus ac. Proin nec purus et felis venenatis tincidunt mattis eget tortor. Suspendisse non neque in est posuere interdum eget vitae metus. Etiam ornare, ligula vel aliquam dignissim, lectus neque porttitor sapien, tristique vehicula est est sed nunc. Cras sodales eros risus. Duis sit amet tempus orci. Quisque accumsan neque lorem, id laoreet mauris ultricies ac. Sed accumsan pellentesque quam in blandit. Maecenas efficitur dolor ex, scelerisque mollis metus tempus sit amet. Phasellus sit amet arcu interdum, commodo mauris eget, fringilla lorem. Sed faucibus justo non risus condimentum, at condimentum dui eleifend. Suspendisse facilisis dolor in sapien lacinia venenatis.
