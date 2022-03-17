@@ -8,9 +8,6 @@
     <?php snippet('header') ?>
     
     <main>
-        <!-- title de la page -->
-        <h2><?= $page->title() ?></h2>
-
         <!-- article -->
         <article>
             <!-- insertion de la seconde image de la page avec un echo de l'url  -->
@@ -19,13 +16,11 @@
             <!-- pour les besoins de la démo, utilisation d'un lorem picsum -->
             <img src="https://picsum.photos/1200/400" alt="">
 
-            <!-- boucle foreach affichant pour chaque paragraphe les fields caption et text -->
-            <?php foreach ($page->paragraphs()->toStructure() as $paragraph):?>
-            <section>
-                <h3><?= $paragraph->caption() ?></h3>
-                <p><?= $paragraph->text() ?></p>
-            </section>
-            <?php endforeach ?>
+            <!-- title de la page -->
+            <h2><?= $page->titre() ?></h2>
+
+            <!-- contenu de la page -->
+            <p><?= $page->contenu() ?></p>
         </article>
     </main>
 

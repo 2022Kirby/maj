@@ -6,28 +6,20 @@ columns:
       contenu:
         type: fields
         fields:
-          category:
-            label: Catégorie
-            type: text
-          introduction:
-            label: Introduction
+          résumé:
+            label: Résumé
             type: textarea
             size: small
             required: true
-          paragraphs:
-            label: Paragraphes
-            type: structure
+          titre:
+            label: Titre
+            type: text
             required: true
-            fields:
-              caption:
-                label: En-tête
-                type: text
-                required: true
-              text:
-                label: Texte
-                type: textarea
-                size: medium
-                required: true
+          contenu:
+            label: Contenu
+            type: textarea
+            size: large
+            required: true
   
   - width: 1/2
     sections:

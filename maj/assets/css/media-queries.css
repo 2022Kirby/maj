@@ -1,0 +1,73 @@
+@media only screen and (max-width: 450px){
+    header, main, footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2{
+    font-size: 6vw;
+    }
+
+    h3{
+        font-size: 5vw;
+    }
+
+    h4{
+        font-size: 3vw;
+    }
+
+    p{
+        font-size: 3vw;
+    }
+    
+    header h1{
+        font-size: 20vw;
+    }
+
+    header h1+a{
+    grid-column: 2;
+    justify-self: flex-start;
+    margin-left: 5%;
+    }
+
+    header a:not(h1 a){
+        font-size: 5vw;
+    }
+
+    main > *{
+    grid-column: 1 / span 2;
+    }
+
+    #slider{
+        display: none;
+    }
+
+    figure{
+        width: 100%;
+    }
+
+    form input:not(input[type=submit]), form select, form textarea{
+        width: 95%;
+    }
+
+    footer section{
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    footer section:first-child{
+        grid-column: span 2;
+    }
+
+    footer section:nth-child(n+2){
+    grid-column: span 1;
+    }
+
+    footer a{
+        font-size: 3vw;
+    }
+
+    footer svg{
+        width: 10%;
+    }
+}

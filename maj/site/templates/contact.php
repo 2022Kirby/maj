@@ -8,15 +8,42 @@
             <h2>Nous contacter</h2>
 
             <!-- formulaire de contact -->
-            <p>Formulaire de contact à implémenter</p>
+            <form action="" method="post">
+                <div>
+                    <label for="name">Prénom Nom <span>*</span></label>
+                    <input type="text" name="name" id="name" required maxlength="50" placeholder="Votre prénom et nom">
+                </div>
+                <div>
+                    <label for="email">Email <span>*</span></label>
+                    <input type="email" name="email" id="email" required minlength="5" maxlength="50" placeholder="Votre adresse mail">
+                </div>
+                <div>
+                    <label for="service">Service <span>*</span></label>
+                    <select name="service" id="service" required>
+                        <option value="" selected disabled>Sélectionnez le service à joindre</option>
+                        <option value="pij">Point Information Jeunesse</option>
+                        <option value="sefi">Service Emploi Formation Insertion</option>
+                        <option value="accueilMineurs">Accueil de Mineurs</option>
+                        <option value="fablab">FabLab</option>
+                        <option value="coworking">Salle Coworking</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message">Message <span>*</span></label>
+                    <textarea name="message" id="message" required spellcheck=true rows="10" cols="50" minlength="10" maxlength="1000" placeholder="Votre message..."></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
         </section>
         
         <section>
             <h2>Nous trouver</h2>
-            <p><?= $site->acronym() ?><br>
-            <?= $site->street() ?><br>
-            <?= $site->postcode() ?> <?= $site->city() ?><br>
-            <?= $site->number() ?>
+            <p><?= $site->acronyme() ?><br>
+            <?= $site->rue() ?><br>
+            <?= $site->code() ?> <?= $site->ville() ?><br>
+            <?= $site->numéro() ?>
             </p>
 
             <!-- google map récupérée du site précédent,
@@ -29,5 +56,7 @@
     </main>
 
     <?php snippet('footer') ?>
+
+    <?php snippet('sendForm') ?>
 </body>
 </html>

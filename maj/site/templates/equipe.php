@@ -6,12 +6,12 @@
     <main>
         <!-- équipe -->
         <!-- boucle foreach affichant pour chaque membre les fields firstname, lastname et service -->
-        <?php foreach ($page->members()->toStructure() as $member):?>
+        <?php foreach ($page->membres()->toStructure() as $membre):?>
         <div class="team">
             <h2>
-                <?= $member->firstname() ?>
-                <span><?= $member->lastname() ?></span>
-                <sup><?= $member->service() ?></sup>
+                <?= $membre->prénom() ?>
+                <span><?= $membre->nom() ?></span>
+                <sup><?= $membre->service() ?></sup>
             </h2>
         </div>
         <?php endforeach ?>

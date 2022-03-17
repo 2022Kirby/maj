@@ -9,10 +9,10 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <!-- boucle foreach affichant pour chaque élément du ticker, les fields caption et text -->
-                    <?php foreach ($page->items()->toStructure() as $item):?>
+                    <?php foreach ($page->brèves()->toStructure() as $breve):?>
                     <li class="splide__slide">
-                        <h4><?= $item->caption() ?></h4>
-                        <p><?= $item->text() ?></p>
+                        <h4><?= $breve->titre() ?></h4>
+                        <p><?= $breve->contenu() ?></p>
                     </li>
                     <?php endforeach ?>
                 </ul>
@@ -53,7 +53,7 @@
                         <?= $actualite->title() ?>
                     </a>
                 </h3>
-                <p><?= $actualite->introduction() ?></p>
+                <p><?= $actualite->résumé() ?></p>
             </figcaption>
         </figure>
         <?php endforeach ?>

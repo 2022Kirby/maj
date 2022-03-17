@@ -2,15 +2,15 @@ Title: Actualités
 
 ----
 
-Items:
+Brèves:
 
 - 
-  caption: Lorem ipsum
-  text: >
+  titre: Lorem ipsum
+  contenu: >
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit.
 - 
-  caption: Lorem ipsum
-  text: >
+  titre: Lorem ipsum
+  contenu: >
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit.

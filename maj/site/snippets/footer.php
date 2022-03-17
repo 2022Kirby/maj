@@ -10,10 +10,10 @@
         <!-- adresse & numéro -->
         <section>
             <a href="<?= $pages->find('contact')->url() ?>">Où nous trouver ?</a>
-            <p><?= $site->acronym() ?></p>
-            <p><?= $site->street() ?></p>
-            <p><?= $site->postcode() ?> <?= $site->city() ?></p>
-            <p><?= $site->number() ?></p>
+            <p><?= $site->acronyme() ?></p>
+            <p><?= $site->rue() ?></p>
+            <p><?= $site->code() ?> <?= $site->ville() ?></p>
+            <p><?= $site->numéro() ?></p>
         </section>
         
         <!-- mentions légales -->

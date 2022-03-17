@@ -2,15 +2,13 @@ Title: Salle de coworking
 
 ----
 
-Introduction: Lieux de travail partagé en espace ouvert.
+Résumé: Lieux de travail partagé en espace ouvert.
 
 ----
 
-Paragraphs:
+Titre: Lorem ipsum
 
-- 
-  caption: Lorem ipsum
-  text: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent auctor sem velit, vitae vestibulum nulla imperdiet vel. Nunc velit mi, condimentum nec sodales sed, aliquet sit amet quam. Integer luctus felis vitae justo pretium gravida. Nulla ultrices lorem sed fringilla ultrices. Suspendisse in finibus arcu. Phasellus in iaculis dolor. Donec ac accumsan odio. Suspendisse in mi tincidunt, scelerisque mauris ut, interdum orci.
-    
-    Integer fringilla nec arcu sit amet ornare. Fusce egestas bibendum odio, ornare sodales lectus egestas non. Pellentesque efficitur semper purus, sed euismod orci euismod at. Nunc eget mi a est congue pretium eget suscipit purus. Donec sodales ultrices eros, id sagittis quam cursus ac. Proin nec purus et felis venenatis tincidunt mattis eget tortor. Suspendisse non neque in est posuere interdum eget vitae metus. Etiam ornare, ligula vel aliquam dignissim, lectus neque porttitor sapien, tristique vehicula est est sed nunc. Cras sodales eros risus. Duis sit amet tempus orci. Quisque accumsan neque lorem, id laoreet mauris ultricies ac. Sed accumsan pellentesque quam in blandit. Maecenas efficitur dolor ex, scelerisque mollis metus tempus sit amet. Phasellus sit amet arcu interdum, commodo mauris eget, fringilla lorem. Sed faucibus justo non risus condimentum, at condimentum dui eleifend. Suspendisse facilisis dolor in sapien lacinia venenatis.
+----
+
+Contenu: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium feugiat massa eu condimentum. Vestibulum congue mauris eget lacus ultrices placerat. Ut suscipit rhoncus blandit. Cras id varius metus. Maecenas eget metus nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam a nunc non sem cursus hendrerit. Cras porta varius magna, eu blandit metus congue et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce pretium velit quis ligula ornare blandit. Nullam justo lacus, sollicitudin vitae porta vitae, lobortis quis diam. Phasellus mi diam, porta ut auctor id, faucibus et lacus. Vivamus turpis purus, porttitor at nisi et, lacinia cursus velit.
+Integer venenatis pulvinar lacinia. Curabitur eu laoreet eros. Proin dapibus, metus sit amet aliquam congue, tortor enim porttitor metus, non fringilla odio lacus nec eros. Curabitur dignissim eget sem eu vulputate. Donec eu lacus aliquet lorem elementum dapibus eget eu augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas id enim non felis auctor blandit vel quis nunc. Duis vel nulla maximus, dictum velit vitae, lobortis odio. Nullam sodales tincidunt nisl eu hendrerit. Quisque vehicula molestie diam, vel feugiat erat porta sed. Nulla posuere vehicula odio, a varius mauris ornare ac. Maecenas eget dictum massa. Proin sagittis augue sit amet nisi auctor suscipit. 

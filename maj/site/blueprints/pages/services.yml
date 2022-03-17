@@ -5,7 +5,6 @@ sections:
     headline: Pages publiées
     type: pages
     template: service
-    # info: "Catégorie: {{ page.category }}"
     status: published
     layout: cards
     image:
@@ -15,7 +14,6 @@ sections:
     headline: Brouillons
     type: pages
     template: service
-    # info: "Catégorie: {{ page.category }}"
     status: drafts
     layout: list
     limit: 5

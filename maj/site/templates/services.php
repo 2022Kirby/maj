@@ -17,7 +17,7 @@
                         <?= $service->title() ?>
                     </a>
                 </h3>
-                <p><?= $service->introduction() ?></p>
+                <p><?= $service->résumé() ?></p>
             </figcaption>
         </figure>
         <?php endforeach ?>

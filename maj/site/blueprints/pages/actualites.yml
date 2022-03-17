@@ -7,7 +7,7 @@ columns:
         headline: Pages publiées
         type: pages
         template: actualite
-        info: "Catégorie: {{ page.category }}"
+        info: "Catégorie: {{ page.catégorie }}"
         status: published
         layout: cards
         limit: 4
@@ -19,7 +19,6 @@ columns:
         type: pages
         template: actualite
         info: "Catégorie: {{ page.category }}"
-        # help:
         status: drafts
         layout: list
         limit: 5
@@ -32,16 +31,16 @@ columns:
       ticker:
         type: fields
         fields:
-          items:
+          brèves:
             label: Ticker
             type: structure
             fields:
-              caption:
-                label: En-tête
+              titre:
+                label: Titre
                 type: text
                 required: true
-              text:
-                label: Texte
+              contenu:
+                label: Contenu
                 type: textarea
                 size: small
                 required: true
