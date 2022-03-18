@@ -11,7 +11,7 @@
             <form action="" method="post">
                 <div>
                     <label for="name">Prénom Nom <span>*</span></label>
-                    <input type="text" name="name" id="name" required maxlength="50" placeholder="Votre prénom et nom">
+                    <input type="text" name="name" id="name" required maxlength="50" pattern="[a-zA-Z]+" placeholder="Votre prénom et nom">
                 </div>
                 <div>
                     <label for="email">Email <span>*</span></label>

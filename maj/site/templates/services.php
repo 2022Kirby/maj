@@ -4,7 +4,7 @@
     <?php snippet('header') ?>
     
     <main>
-        <!-- boucle foreach affichant pour chaque page enfant de la page services la première image ainsi que les fields title et introduction de la page-->
+        <!-- boucle foreach affichant pour chaque page enfant de la page services la première image ainsi que les fields title et résumé de la page-->
         <?php foreach ($pages->find('services')->children()->listed() as $service):?>
         <figure>
             <a href="<?= $service->url() ?>">

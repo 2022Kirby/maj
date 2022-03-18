@@ -1,0 +1,17 @@
+Title: Bonjour
+
+----
+
+Categorie: 
+
+----
+
+Résumé: le monde!
+
+----
+
+Titre: Bonjour
+
+----
+
+Contenu: Lorem ipsum

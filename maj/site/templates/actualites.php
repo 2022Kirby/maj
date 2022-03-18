@@ -40,23 +40,35 @@
         <!-- title de la page -->
         <h2><?= $page->title() ?></h2>
 
-        <!-- boucle foreach affichant pour chaque page enfant de la page actualité la première image ainsi que les fields title et introduction de la page -->
-        <?php foreach ($page->children()->listed() as $actualite):?>
-        <figure>
+        <!-- boucle foreach affichant pour chaque page enfant de la page actualité la première image ainsi que les fields title et résumé de la page -->
+        <?php foreach ($articles = $page->children()->listed()->paginate(3) as $actualite):?>
+        <div class="news">
             <a href="<?= $actualite->url() ?>">
-                <!-- insertion de la première image de la page avec un echo de l'url  -->
-                <img src="<?= $actualite->image()->url() ?>" alt="">
-            </a>
-            <figcaption>
-                <h3>
-                    <a href="<?= $actualite->url() ?>">
-                        <?= $actualite->title() ?>
-                    </a>
-                </h3>
+                <h3><?= $actualite->title() ?></h3>
                 <p><?= $actualite->résumé() ?></p>
+            </a>
             </figcaption>
-        </figure>
+        </div>
         <?php endforeach ?>
+
+        <!-- exemple test pagination kirby -->
+        <?php if ($articles->pagination()->hasPages()): ?>
+            <nav class="pagination">
+
+            <?php if ($articles->pagination()->hasNextPage()): ?>
+                <a class="next" href="<?= $articles->pagination()->nextPageURL() ?>">
+                    older posts ›
+                </a>
+            <?php endif ?>
+
+            <?php if ($articles->pagination()->hasPrevPage()): ?>
+                <a class="prev" href="<?= $articles->pagination()->prevPageURL() ?>">
+                    ‹ newer posts 
+                </a>
+            <?php endif ?>
+
+            </nav>
+        <?php endif ?>
     </main>
 
     <?php snippet('footer') ?>

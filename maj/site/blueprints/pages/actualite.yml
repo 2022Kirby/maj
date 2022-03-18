@@ -13,7 +13,6 @@ columns:
             label: Résumé
             type: textarea
             size: small
-            required: true
           titre:
             label: Titre
             type: text

@@ -1,0 +1,17 @@
+Title: Hello
+
+----
+
+Categorie: 
+
+----
+
+Résumé: world !
+
+----
+
+Titre: Hello
+
+----
+
+Contenu: Lorem ipsum

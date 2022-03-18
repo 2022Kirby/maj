@@ -38,9 +38,9 @@
     grid-column: 1 / span 2;
     }
 
-    #slider{
+    /* #slider{
         display: none;
-    }
+    } */
 
     figure{
         width: 100%;

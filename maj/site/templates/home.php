@@ -11,7 +11,7 @@
     </header>
     
     <main>
-        <!-- texte d'introduction sur l'association -->
+        <!-- résumé sur l'association -->
         <p id="about"><?= $page->résumé() ?></p>
     </main>
 </body>
