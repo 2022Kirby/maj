@@ -2,7 +2,7 @@ Title: Actualités
 
 ----
 
-Brèves:
+Breves:
 
 - 
   titre: Lorem ipsum

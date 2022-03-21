@@ -6,11 +6,7 @@ Categorie:
 
 ----
 
-Résumé: le monde!
-
-----
-
-Titre: Bonjour
+Resume: le monde!
 
 ----
 

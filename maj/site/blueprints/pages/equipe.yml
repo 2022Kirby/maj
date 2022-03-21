@@ -1,9 +1,0 @@
-title: Équipe
-
-sections:
-  galerie:
-    type: files
-    layout: cards
-    image:
-      ratio: 1/1
-      cover: true

@@ -1,7 +1,7 @@
 title: Accueil
 
 fields:
-  résumé:
+  resume:
     label: Résumé
     type: textarea
     size: medium

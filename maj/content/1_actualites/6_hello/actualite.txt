@@ -6,11 +6,7 @@ Categorie:
 
 ----
 
-Résumé: world !
-
-----
-
-Titre: Hello
+Resume: world !
 
 ----
 

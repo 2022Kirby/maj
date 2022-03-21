@@ -4,25 +4,40 @@
     <?php snippet('header') ?>
     
     <main>
-        <!-- boucle foreach affichant pour chaque page enfant de la page services la première image ainsi que les fields title et résumé de la page-->
+        <!-- boucle foreach affichant pour chaque page enfant de la page services un bouton contenant le field title et une div contenant le field résumé du service-->
         <?php foreach ($pages->find('services')->children()->listed() as $service):?>
-        <figure>
-            <a href="<?= $service->url() ?>">
-                <!-- insertion de la première image de la page avec un echo de l'url  -->
-                <img src="<?= $service->image()->url() ?>" alt="">
-            </a>
-            <figcaption>
-                <h3>
-                    <a href="<?= $service->url() ?>">
-                        <?= $service->title() ?>
-                    </a>
-                </h3>
-                <p><?= $service->résumé() ?></p>
-            </figcaption>
-        </figure>
+            <button class="accordion"><?= $service->title() ?></button>
+            <div class="panel">
+                <p><?= $service->resume() ?></p>
+
+                <!-- si le champ horaire existe -->
+                <?php if ($service->horaires()->exists()): ?>
+                    <p><b>Horaires</b></p>
+                    <?php foreach ($service->horaires()->toStructure() as $horaire): ?>
+                        <p>
+                            <?= $horaire->jour() ?> : 
+                            <!-- si le champ horaire matin n'est pas vide -->
+                            <?php if ($horaire->horaireDebutMatin()->isNotEmpty()): ?>
+                                <span>
+                                    <?= $horaire->horaireDebutMatin() ?> - <?= $horaire->horaireFinMatin() ?> |
+                                </span>
+                            <?php endif ?>
+                            <!-- si le champ horaire après-midi n'est pas vide -->
+                            <?php if ($horaire->horaireDebutAprem()->isNotEmpty()): ?>
+                                <span>
+                                    <?= $horaire->horaireDebutAprem() ?> - <?= $horaire->horaireFinAprem() ?>
+                                </span>
+                            <?php endif ?>
+                        </p>
+                    <?php endforeach ?>
+                <?php endif ?>
+            </div>
         <?php endforeach ?>
     </main>
 
     <?php snippet('footer') ?>
+
+    <!-- lien vers le script js de l'accordéon -->
+    <?= js('assets/js/accordion.js') ?>
 </body>
 </html>

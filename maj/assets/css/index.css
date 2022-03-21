@@ -10,8 +10,7 @@
     --font-family: Roboto, sans-serif;
     --primary-color: #000000;
     --secondary-color: #ffffff;
-    --highlight-color: #be41be;
-    --bg-color-blue: #009ece;
+    --highlight-color: #009ece;
 }
 
 body{
@@ -22,18 +21,14 @@ body{
 
 /* style général des titres */
 h2{
-    margin: 2% 0 1% 0;
+    margin: 3% 0 1% 0;
     font-size: 3vw;
 }
 
 h3{
-    margin-bottom: 1%;
+    margin-bottom: 3%;
     font-size: 2vw;
     line-height: 1.1em;
-}
-
-h4{
-    font-size: 1.3vw;
 }
 
 /* style général du texte */
@@ -41,7 +36,7 @@ p{
     font-size: 1.3vw;
 }
 
-p:not(footer p){
+p:not(#ticker p, .news p, footer p){
     margin-bottom: 2%;
 }
 
@@ -58,7 +53,7 @@ a{
     transition: border-bottom 0.25s;
 }
 
-a:hover:not(h1 a, section:last-child a, .current){
+a:hover:not(header h1 a, footer section:last-child a, .current){
     border-bottom: 2px solid var(--primary-color);
 }
 
@@ -154,42 +149,86 @@ main > *{
     width: auto;
 }
 
-/* billets actualités / services */
+#ticker p:nth-child(1){
+    font-weight: bold;
+}
+
+/* billets actualités */
 .news{
     grid-column: span 4;
-    /* margin: 0 5% 5% 0; */
-    width: 90%;
+    margin: 0 5% 5% 0;
+    padding: 10%;
+    height: 11vw;
     border: solid 2px black;
 }
 
-.news h3{
-    margin: 10% 10% 0 10%;
+.news a{
+    transition: color 0.25s;
+}
+
+.news a:hover{
+    color: var(--highlight-color);
 }
 
 .news p{
-    margin: 2% 10% 10% 10%;
+    font-weight: normal;
 }
 
-figure{
-    grid-column: span 3;
-    /* margin: 0 5% 5% 0; */
-    width: 80%;
+#pagination{
+    display: flex;
+    gap: 2%;
 }
 
-figure img{
-    margin-bottom: 2%;
+/* services */
+/* boutons permettant d'ouvrir / fermer les panels */
+.accordion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    width: 100%;
+    font-size: 3vw;
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25s;
 }
 
-figure h3{
-    margin-top: 5%;
+/* si bouton actif ou en survol, changement de couleur */
+.active, .accordion:hover{
+    background-color: var(--highlight-color);
 }
 
-figure p{
-    margin-top: 3%;
-    margin-bottom: 2%;
+/* ajout du plus */
+.accordion:after{
+    content: '+';
+    margin-right: 3%;
+    font-size: 3vw;
+    color: var(--primary-color);
 }
 
-/* articles actualités / services */
+/* si bouton actif, transformation du plus en moins */
+.active:after{
+    content: "-";
+}
+
+/* panel contenant les infos du service */
+.panel{
+    display: none;
+    margin: 1%;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+}
+
+.panel p{
+    font-size: 2vw;
+}
+
+/* articles actualités */
 article img{
     margin-bottom: 2%;
 }
@@ -248,16 +287,18 @@ footer{
 /* partenaires */
 footer section:first-child{
     grid-column: 1 / span 12;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /* gap: 1%; */
     margin-bottom: 2%;
-    padding: 5% 0 5% 0;
     width: 100%;
-    background-color: lightgray;
 }
 
 footer img{
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 5%;
+    margin: 1%;
+    width: 8%;
+    max-height: 60px;
 }
 
 /* où nous trouver / mentions légales / réseau sociaux */

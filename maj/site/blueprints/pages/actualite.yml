@@ -6,22 +6,21 @@ columns:
       contenu:
         type: fields
         fields:
-          catégorie:
+          categorie:
             label: Catégorie
             type: text
-          résumé:
+            help: "Affichée sur le panneau d'administration uniquement."
+          resume:
             label: Résumé
             type: textarea
             size: small
-          titre:
-            label: Titre
-            type: text
-            required: true
+            help: "Apparaîtra sur la page actualités."
           contenu:
             label: Contenu
             type: textarea
             size: large
             required: true
+            help: "Différencier les titres des paragraphes."
   
   - width: 1/2
     sections:

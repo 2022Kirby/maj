@@ -7,18 +7,19 @@ columns:
         headline: Pages publiées
         type: pages
         template: actualite
-        info: "Catégorie: {{ page.catégorie }}"
+        info: "{{ page.categorie }}"
         status: published
         layout: list
-        limit: 6
+        limit: 5
         image:
           ratio: 1/1
           cover: true
+        help: "De la plus récente à la plus ancienne."
       drafts:
         headline: Brouillons
         type: pages
         template: actualite
-        info: "Catégorie: {{ page.category }}"
+        info: "{{ page.categorie }}"
         status: drafts
         layout: list
         limit: 5
@@ -31,7 +32,7 @@ columns:
       ticker:
         type: fields
         fields:
-          brèves:
+          breves:
             label: Ticker
             type: structure
             fields:
@@ -44,9 +45,11 @@ columns:
                 type: textarea
                 size: small
                 required: true
+            help: "Chaque brève est constituée d'un titre et d'un texte court."
       slider:
         type: files
         layout: cards
         image:
           ratio: 3/1
           cover: true
+        help: "Images format bannière seulement."

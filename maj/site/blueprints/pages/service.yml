@@ -1,28 +1,36 @@
 Title: Service
 
-columns:
-  - width: 1/2
-    sections:
-      contenu:
-        type: fields
-        fields:
-          résumé:
-            label: Résumé
-            type: textarea
-            size: small
-            required: true
-          titre:
-            label: Titre
-            type: text
-            required: true
-          contenu:
-            label: Contenu
-            type: textarea
-            size: large
-            required: true
-  
-  - width: 1/2
-    sections:
-      galerie:
-        type: files
-        layout: cards
+fields:
+  resume:
+    label: Résumé
+    type: textarea
+    size: small
+    required: true
+    help: "Apparaîtra sous le nom du service."
+
+  horaires:
+    label: Horaires
+    type: structure
+    fields:
+      jour:
+        label: Jour(s)
+        type: text
+        required: true
+        help: "Format: Lundi / Lundi et Mardi / Lundi au Mardi"
+      horaireDebutMatin:
+        label: Horaire ouverture matin
+        type: text
+        help: "Format: Xh"
+      horaireFinMatin:
+        label: Horaire fermeture matin
+        type: text
+        help: "Format: Xh"
+      horaireDebutAprem:
+        label: Horaire ouverture après-midi
+        type: text
+        help: "Format: Xh"
+      horaireFinAprem:
+        label: Horaire fermeture après-midi
+        type: text
+        help: "Format: Xh"
+    help: "Apparaîtra sous le résumé du service."

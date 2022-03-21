@@ -12,7 +12,7 @@
     
     <main>
         <!-- résumé sur l'association -->
-        <p id="about"><?= $page->résumé() ?></p>
+        <p id="about"><?= $page->resume() ?></p>
     </main>
 </body>
 </html>

@@ -1,7 +1,6 @@
     <footer>
         <!-- partenaires -->
         <section>
-            <p>Partenaires</p>
             <?php foreach ($site->images() as $image):?>
                 <img src="<?= $image->url() ?>" alt="">
             <?php endforeach ?>

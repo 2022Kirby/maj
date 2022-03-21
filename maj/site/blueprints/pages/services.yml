@@ -6,10 +6,9 @@ sections:
     type: pages
     template: service
     status: published
-    layout: cards
-    image:
-      ratio: 1/1
-      cover: true
+    layout: list
+    limit: 8
+    help: "Liste apparaissant sur la page services."
   drafts:
     headline: Brouillons
     type: pages
@@ -17,6 +16,3 @@ sections:
     status: drafts
     layout: list
     limit: 5
-    image:
-      ratio: 1/1
-      cover: true

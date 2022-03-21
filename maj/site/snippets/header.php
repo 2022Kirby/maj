@@ -10,9 +10,9 @@
         <nav>
             <ul>
                 <?php foreach ($site->children()->listed() as $page):?>
-                <li>
-                    <a href="<?= $page->url() ?>"><?= $page->title() ?></a>
-                </li>
+                    <li>
+                        <a href="<?= $page->url() ?>"><?= $page->title() ?></a>
+                    </li>
                 <?php endforeach ?>
             </ul>
         </nav>

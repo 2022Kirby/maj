@@ -10,8 +10,4 @@ Resume:
 
 ----
 
-Titre: Nouveaux horaires !
-
-----
-
 Contenu: Lorem ipsum

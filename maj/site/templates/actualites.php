@@ -9,11 +9,11 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <!-- boucle foreach affichant pour chaque élément du ticker, les fields caption et text -->
-                    <?php foreach ($page->brèves()->toStructure() as $breve):?>
-                    <li class="splide__slide">
-                        <h4><?= $breve->titre() ?></h4>
-                        <p><?= $breve->contenu() ?></p>
-                    </li>
+                    <?php foreach ($page->breves()->toStructure() as $breve):?>
+                        <li class="splide__slide">
+                            <p><?= $breve->titre() ?></p>
+                            <p><?= $breve->contenu() ?></p>
+                        </li>
                     <?php endforeach ?>
                 </ul>
             </div>
@@ -25,8 +25,8 @@
                 <ul class="splide__list">
                     <!-- boucle foreach affichant chaque image de la page actualités -->
                     <?php foreach ($page->images() as $image):?>
-                    <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
-                    <li class="splide__slide"><img src="<?= $image->url() ?>" alt=""></li>
+                        <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
+                        <li class="splide__slide"><img src="<?= $image->url() ?>" alt="image bannière"></li>
                     <?php endforeach ?>
                 </ul>
             </div>
@@ -38,35 +38,31 @@
         </div>
 
         <!-- title de la page -->
-        <h2><?= $page->title() ?></h2>
+        <h2 id="ancre"><?= $page->title() ?></h2>
 
         <!-- boucle foreach affichant pour chaque page enfant de la page actualité la première image ainsi que les fields title et résumé de la page -->
-        <?php foreach ($articles = $page->children()->listed()->paginate(3) as $actualite):?>
-        <div class="news">
-            <a href="<?= $actualite->url() ?>">
-                <h3><?= $actualite->title() ?></h3>
-                <p><?= $actualite->résumé() ?></p>
-            </a>
-            </figcaption>
-        </div>
+        <?php foreach ($actualites = $page->children()->listed()->paginate(3) as $actualite):?>
+            <div class="news">
+                <a href="<?= $actualite->url() ?>">
+                    <h3><?= $actualite->title() ?></h3>
+                    
+                    <?php if($actualite->resume()->exists()):?> <!-- si l'actualité possède un champ résumé -->
+                        <p><?= $actualite->resume() ?></p>
+                    <?php endif ?>
+                </a>
+            </div>
         <?php endforeach ?>
 
-        <!-- exemple test pagination kirby -->
-        <?php if ($articles->pagination()->hasPages()): ?>
-            <nav class="pagination">
-
-            <?php if ($articles->pagination()->hasNextPage()): ?>
-                <a class="next" href="<?= $articles->pagination()->nextPageURL() ?>">
-                    older posts ›
-                </a>
-            <?php endif ?>
-
-            <?php if ($articles->pagination()->hasPrevPage()): ?>
-                <a class="prev" href="<?= $articles->pagination()->prevPageURL() ?>">
-                    ‹ newer posts 
-                </a>
-            <?php endif ?>
-
+        <!-- pagination -->
+        <?php if ($actualites->pagination()->hasPages()): ?>
+            <nav id="pagination">
+                <?php if ($actualites->pagination()->hasPrevPage()):?>
+                    <a class="prev" href="<?= $actualites->pagination()->prevPageURL() ?>#ancre">‹ plus récent</a>
+                <?php endif ?>
+                
+                <?php if ($actualites->pagination()->hasNextPage()):?>
+                    <a class="next" href="<?= $actualites->pagination()->nextPageURL() ?>#ancre">plus ancien ›</a> <!-- ajout de l'id anchor à la fin de l'url pour éviter à l'utilisateur de scroller entre chaque changement de page -->
+                <?php endif ?>
             </nav>
         <?php endif ?>
     </main>
