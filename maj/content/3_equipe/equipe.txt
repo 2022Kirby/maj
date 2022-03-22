@@ -1,1 +1,60 @@
 Title: Équipe
+
+----
+
+Membres:
+
+- 
+  prenom: Prénom
+  nom: Nom
+  service: FabLab
+  detail: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Etiam fringilla sed sem
+    in scelerisque. Sed tincidunt ante et
+    diam vehicula, in lacinia sapien
+    commodo. Quisque malesuada consectetur
+    nunc non ultricies. Nulla cursus dictum
+    nisl. Donec id aliquam velit. Cras ac
+    augue at dui cursus viverra nec in
+    magna. Quisque sagittis, velit vitae
+    vulputate consequat, dui tellus finibus
+    est, posuere porta mauris metus congue
+    ex.
+  telephone: 00 00 00 00 00
+- 
+  prenom: Prénom
+  nom: Nom
+  service: PIJ
+  detail: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Etiam fringilla sed sem
+    in scelerisque. Sed tincidunt ante et
+    diam vehicula, in lacinia sapien
+    commodo. Quisque malesuada consectetur
+    nunc non ultricies. Nulla cursus dictum
+    nisl. Donec id aliquam velit. Cras ac
+    augue at dui cursus viverra nec in
+    magna. Quisque sagittis, velit vitae
+    vulputate consequat, dui tellus finibus
+    est, posuere porta mauris metus congue
+    ex.
+  telephone: 00 00 00 00 00
+- 
+  prenom: Prénom
+  nom: Nom
+  service: Accueil Jeunes
+  detail: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Etiam fringilla sed sem
+    in scelerisque. Sed tincidunt ante et
+    diam vehicula, in lacinia sapien
+    commodo. Quisque malesuada consectetur
+    nunc non ultricies. Nulla cursus dictum
+    nisl. Donec id aliquam velit. Cras ac
+    augue at dui cursus viverra nec in
+    magna. Quisque sagittis, velit vitae
+    vulputate consequat, dui tellus finibus
+    est, posuere porta mauris metus congue
+    ex.
+  telephone: 00 00 00 00 00

@@ -6,13 +6,17 @@
     <main>
         <!-- boucle foreach affichant pour chaque page enfant de la page services un bouton contenant le field title et une div contenant le field résumé du service-->
         <?php foreach ($pages->find('services')->children()->listed() as $service):?>
-            <button class="accordion"><?= $service->title() ?></button>
+            <button class="accordion">
+                <h2>
+                    <?= $service->title() ?>
+                </h2>
+            </button>
             <div class="panel">
                 <p><?= $service->resume() ?></p>
 
                 <!-- si le champ horaire existe -->
                 <?php if ($service->horaires()->exists()): ?>
-                    <p><b>Horaires</b></p>
+                    <h3>Horaires</h3>
                     <?php foreach ($service->horaires()->toStructure() as $horaire): ?>
                         <p>
                             <?= $horaire->jour() ?> : 

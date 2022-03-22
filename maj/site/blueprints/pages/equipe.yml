@@ -1,0 +1,36 @@
+Title: Équipe
+
+fields:
+  membres:
+    label: Membres
+    type: structure
+    fields:
+      prenom:
+        label: Prénom
+        type: text
+        required: true
+      nom:
+        label: Nom
+        type: text
+        required: true
+      service:
+        label: Service
+        type: select
+        options:
+          Accueil Jeunes: Accueil Jeunes
+          PIJ: PIJ
+          SEFI: SEFI
+          FabLab: FabLab
+        required: true
+      detail:
+        label: Détail
+        type: textarea
+        size: small
+        help: "Présentation de la personne et de sa fonction."
+        required: true
+      telephone:
+        label: Numéro de téléphone
+        type: tel
+        required: true
+        help: "Format: xx xx xx xx xx"
+    help: "Apparaîtront sur la page équipe."

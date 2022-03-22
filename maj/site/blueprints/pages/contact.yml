@@ -1,0 +1,32 @@
+Title: Contact
+
+fields:
+  accueilJeunes:
+    label: Accueil Jeunes
+    type: email
+    required: true
+  pij:
+    label: PIJ
+    type: email
+    required: true
+  maisonDigitale:
+    label: Maison Digitale
+    type: email
+    required: true
+  sefi:
+    label: SEFI
+    type: email
+    required: true
+  fablab:
+    label: FabLab
+    type: email
+    required: true
+  coworking:
+    label: Salle Coworking
+    type: email
+    required: true
+  partenaires:
+    label: Permanence partenaires
+    type: email
+    required: true
+    help: "Ces mails sont utilisés pour le formulaire de contact."

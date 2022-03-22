@@ -10,7 +10,8 @@
     --font-family: Roboto, sans-serif;
     --primary-color: #000000;
     --secondary-color: #ffffff;
-    --highlight-color: #009ece;
+    --highlight-color: #45accc;
+    --bg-color: #ececec;
 }
 
 body{
@@ -21,23 +22,12 @@ body{
 
 /* style général des titres */
 h2{
-    margin: 3% 0 1% 0;
     font-size: 3vw;
-}
-
-h3{
-    margin-bottom: 3%;
-    font-size: 2vw;
-    line-height: 1.1em;
 }
 
 /* style général du texte */
 p{
     font-size: 1.3vw;
-}
-
-p:not(#ticker p, .news p, footer p){
-    margin-bottom: 2%;
 }
 
 /* style général des liens */
@@ -153,6 +143,10 @@ main > *{
     font-weight: bold;
 }
 
+#slider{
+    margin-bottom: 3%;
+}
+
 /* billets actualités */
 .news{
     grid-column: span 4;
@@ -170,6 +164,12 @@ main > *{
     color: var(--highlight-color);
 }
 
+.news h3{
+    margin-bottom: 3%;
+    font-size: 2vw;
+    line-height: 1.1em;
+}
+
 .news p{
     font-weight: normal;
 }
@@ -179,22 +179,39 @@ main > *{
     gap: 2%;
 }
 
-/* services */
+/* articles actualités */
+article img{
+    margin-bottom: 3%;
+}
+
+article h2{
+    margin-bottom: 1%;
+}
+
+/* services / équipe */
 /* boutons permettant d'ouvrir / fermer les panels */
 .accordion{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2%;
     padding: 1%;
     width: 100%;
-    font-size: 3vw;
-    font-weight: bold;
-    background-color: transparent;
+    background-color: var(--bg-color);
     color: var(--primary-color);
     border: none;
     outline: none;
     cursor: pointer;
     transition: 0.25s;
+}
+
+.accordion h2{
+    font-size: 3vw;
+}
+
+.accordion sup{
+    font-size: 1.2vw;
+    opacity: 0.6;
 }
 
 /* si bouton actif ou en survol, changement de couleur */
@@ -218,19 +235,25 @@ main > *{
 /* panel contenant les infos du service */
 .panel{
     display: none;
-    margin: 1%;
+    padding: 2%;
     max-height: 0;
     overflow: hidden;
     transition: 0.2s ease-out;
+    background-color: var(--bg-color);
 }
 
-.panel p{
-    font-size: 2vw;
-}
-
-/* articles actualités */
-article img{
+.panel p:first-child{
     margin-bottom: 2%;
+}
+
+.panel h3{
+    font-size: 1.5vw;
+}
+
+.panel div{
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 3%;
 }
 
 /* contact */
