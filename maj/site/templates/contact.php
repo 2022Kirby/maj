@@ -11,7 +11,7 @@
             <form action="" method="post">
                 <div>
                     <label for="name">Prénom Nom <span>*</span></label>
-                    <input type="text" name="name" id="name" required maxlength="50" pattern="[a-zA-Z]+" placeholder="Votre prénom et nom">
+                    <input type="text" name="name" id="name" required maxlength="50" placeholder="Votre prénom et nom">
                 </div>
                 <div>
                     <label for="email">Email <span>*</span></label>
@@ -31,6 +31,7 @@
                             <option value="fablab">FabLab</option>
                             <option value="coworking">Salle Coworking</option>
                             <option value="partenaires">Permanence partenaires</option>
+                            <option value="autre">Autre</option>
                         </select>
                     </div>
                 <!-- si paramètre présent dans l'url, déclaration de la variable $service avec pour valeur le paramètre -->
@@ -69,13 +70,14 @@
 
                             <option value="coworking">Salle Coworking</option>
                             <option value="partenaires">Permanence partenaires</option>
+                            <option value="autre">Autre</option>
                         </select>
                     </div>
                 <?php endif ?>
 
                 <div>
                     <label for="message">Message <span>*</span></label>
-                    <textarea name="message" id="message" required spellcheck=true rows="10" cols="50" minlength="10" maxlength="1000" placeholder="Votre message..."></textarea>
+                    <textarea name="message" id="message" required spellcheck=true rows="10" cols="50" minlength="10" maxlength="1500" placeholder="Votre message..."></textarea>
                 </div>
                 <div>
                     <input type="submit" value="Envoyer">

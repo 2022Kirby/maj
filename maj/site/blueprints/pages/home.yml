@@ -4,5 +4,21 @@ fields:
   resume:
     label: Résumé
     type: textarea
+    size: small
+    required: true
+  histoire:
+    label: Notre histoire
+    type: textarea
     size: medium
     required: true
+  missions:
+    label: Nos missions
+    type: textarea
+    size: medium
+    required: true
+  adhesion:
+    label: Adhésion
+    type: textarea
+    size: medium
+    required: true
+    help: "Apparaîtront sur la page d'accueil."

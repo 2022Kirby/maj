@@ -16,13 +16,13 @@
         font-size: 20vw;
     }
 
-    header h1+a{
+    #enter, header h1+a{
         grid-column: 2;
         justify-self: flex-start;
         margin-left: 5%;
     }
 
-    header a:not(h1 a){
+    #enter, header a:not(h1 a){
         font-size: 5vw;
     }
 
@@ -30,8 +30,16 @@
         grid-column: 1 / span 3;
     }
 
-    #about{
-    font-size: 6vw;
+    #about h2{
+        font-size: 6vw;
+    }
+
+    #about p:nth-child(1){
+        font-size: 6vw;
+    }
+
+    #about p{
+        font-size: 5vw;
 }
 
     .news{

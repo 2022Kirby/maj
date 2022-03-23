@@ -1,1 +1,5 @@
-Title: Echec de l'envoi du formulaire
+Title: Échec
+
+----
+
+Message: Votre message n'a pas pu être envoyé.

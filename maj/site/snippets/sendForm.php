@@ -1,65 +1,85 @@
 <?php
     // si les champs ne sont pas vides
-    if(!empty($_POST['name'])&& !empty($_POST['email']) && !empty($_POST['service']) && !empty($_POST['message'])){
+    if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['service']) && !empty($_POST['message'])) {
         // déclaration de variables contenant la valeur des champs
-        $name = trim($_POST['name']); // trim() pour supprimer les espaces en début et fin de chaîne
-        $email = trim($_POST['email']);
+        $nameUser = strip_tags(trim($_POST['name'])); // strip_tags() pour supprimer les balises html et php d'une chaîne
+        $emailUser = strip_tags(trim($_POST['email'])); // trim() pour supprimer les espaces en début et fin de chaîne
         $service = $_POST['service'];
-        $message = strip_tags(trim($_POST['message'])); // strip_tags supprime les balises html et php d'une chaîne
+        $message = strip_tags(trim(wordwrap($_POST['message'], 70, "\r\n"))); // wordwrap() dans le cas où les lignes du message comportent plus de 70 caractères (pour satisfaire les conventions php propres à l'envoi de mail)
+
+        // déclaration de variables contenant les adresses mails des différents services (via récupération des champs de la page contact)
+        $emailMaj = $pages->find('contact')->maj();
+        $emailAccueilJeunes = $pages->find('contact')->accueilJeunes();
+        $emailPij = $pages->find('contact')->pij();
+        $emailSefi = $pages->find('contact')->sefi();
+        $emailFablab = $pages->find('contact')->fablab();
+        $emailDev = $pages->find('contact')->dev();
 
         // déclaration de variables qui vont contenir les éléments du mail
         $to; // destinataire du mail
         $subject; // objet du mail
-        $headers =  "From: $email" . "\r\n" . // en-têtes supplémentaires
-                    "Reply-To: $email" . "\r\n" .
-                    "X-Mailer: PHP/" . phpversion(); 
+        // en-têtes supplémentaires
+        $headers =  "From: $emailUser" . "\r\n" . // expéditeur
+                    "Reply-To: $emailUser" . "\r\n" . // répondre à
+                    "Bcc: $emailDev" . "\r\n" . // dev en copie carbone invisible
+                    "X-Mailer: PHP/" . phpversion();
         
-        try{
+        try {
             // switch qui vérifie la valeur de $service et change la valeur de $to et $subject en conséquence
-            switch($service){
+            switch($service) {
                 case '':
-                    $to = '';
-                    $subject = '';
                     break;
                 case 'accueilJeunes':
-                    $to = $pages->find('contact')->accueilJeunes();
-                    $subject = $name . ' - Demande d\'informations Accueil Jeunes';
+                    $to = $emailAccueilJeunes;
+                    $subject = $nameUser . ' - Demande d\'informations Accueil Jeunes';
                     break;
                 case 'pij':
-                    $to = '2022kirby@gmail.com';
-                    $subject = $name . ' - Demande d\'informations PIJ';
+                    $to = $emailPij;
+                    $subject = $nameUser . ' - Demande d\'informations PIJ';
                     break;
                 case 'maisonDigitale':
-                    $to = '';
-                    $subject = $name . ' - Demande d\'informations Maison Digitale';
+                    $to = $emailMaj;
+                    $subject = $nameUser . ' - Demande d\'informations Maison Digitale';
                     break;
                 case 'sefi':
-                    $to = '';
-                    $subject = $name . ' - Demande d\'informations SEFI';
+                    $to = $emailSefi;
+                    $subject = $nameUser . ' - Demande d\'informations SEFI';
                     break;
                 case 'fablab':
-                    $to = '';
-                    $subject = $name . ' - Demande d\'informations FabLab';
+                    $to = $emailFablab;
+                    $subject = $nameUser . ' - Demande d\'informations FabLab';
                     break;
                 case 'coworking':
-                    $to = '';
-                    $subject = $name . ' - Demande d\'informations Salle Coworking';
+                    $to = $emailFablab;
+                    $subject = $nameUser . ' - Demande d\'informations Salle Coworking';
                     break;
                 case 'partenaires':
-                    $to = '';
-                    $subject = $name . ' - Demande d\'informations Permanence partenaires';
+                    $to = $emailMaj;
+                    $subject = $nameUser . ' - Demande d\'informations Permanence partenaires';
+                    break;
+                case 'autre':
+                    $to = $emailMaj;
+                    $subject = $nameUser . ' - Demande d\'informations MAJ';
                     break;
             }
 
             // si envoi du mail est true
-            if(mail($to, $subject, $message, $headers)){
-                header('Location: http://devkirby.e-maj.org/contact/succes'); // redirection du navigateur vers page de confirmation
-                exit; // s'assurer que la suite du code n'est' pas exécutée une fois la redirection effectuée
-            } else{ // si false
-                header('Location: http://devkirby.e-maj.org/contact/echec'); // redirection du navigateur vers page d'erreur
-                exit; // s'assurer que la suite du code n'est' pas exécutée une fois la redirection effectuée
+            if(mail($to, $subject, $message, $headers)) {
+                // on envoie une copie du message à l'utilisateur
+                $messageCopy = "Votre demande à MAJ a bien été reçue, nous vous répondrons dans les plus brefs délais.\r\n \r\nVotre message:\r\n$message\r\n \r\nMerci de ne pas répondre à ce mail.";
+                mail($emailUser, $subject, $messageCopy, 'From: ' . $emailMaj);
+
+                // puis redirection du navigateur vers page de confirmation
+                header('Location: ' . $pages->find('contact/confirmation')->url()); 
+                // s'assurer que la suite du code n'est pas exécutée une fois la redirection effectuée
+                exit; 
+            } else { // si envoi du mail est false
+                // redirection du navigateur vers page d'erreur
+                header('Location: ' . $pages->find('contact/echec')->url()); 
+                // s'assurer que la suite du code n'est pas exécutée une fois la redirection effectuée
+                exit; 
             }
-        } catch (Exception $e){
+        } catch (Exception $e) {
             echo 'Erreur: ' . $e->getMessage();
         }
     }

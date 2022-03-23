@@ -1,0 +1,5 @@
+Title: Confirmation
+
+----
+
+Message: Votre message a bien été envoyé.

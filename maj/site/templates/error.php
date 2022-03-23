@@ -6,7 +6,7 @@
     <main>
         <div class="message">
             <p><?= $page->message() ?></p>
-            <a href="<?= $pages->find('contact')->url() ?>">Retour</a>
+            <a href="<?= $pages->find('actualites')->url() ?>">Retour</a>
         </div>
     </main>
 
