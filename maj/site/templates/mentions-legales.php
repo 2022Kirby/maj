@@ -1,12 +1,13 @@
 <?php snippet('head') ?>
 
 <body>
-    <?php snippet('header') ?>
-    
     <main>
-        <h2><?= $page->title() ?></h2> 
-    </main>
+        <article>
+            <a href="<?= $pages->find('actualites')->url() ?>">Retour</a>
 
-    <?php snippet('footer') ?>
+            <h1><?= $page->title() ?></h1> 
+            <p><?= $page->contenu()->kirbytext() ?></p>
+        </article>
+    </main>
 </body>
 </html>

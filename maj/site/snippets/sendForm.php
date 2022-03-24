@@ -21,7 +21,7 @@
         // en-têtes supplémentaires
         $headers =  "From: $emailUser" . "\r\n" . // expéditeur
                     "Reply-To: $emailUser" . "\r\n" . // répondre à
-                    "Bcc: $emailDev" . "\r\n" . // dev en copie carbone invisible
+                    "Bcc: $emailDev" . "\r\n" . // copie carbone invisible
                     "X-Mailer: PHP/" . phpversion();
         
         try {

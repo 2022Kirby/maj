@@ -6,9 +6,10 @@
     <main>
         <!-- boucle foreach affichant pour chaque membre, les champs prénom, nom, détail et téléphone -->
         <?php foreach ($page->membres()->toStructure() as $membre):?>
-            <button class="accordion" class="team">
+            <button class="accordion">
                 <h2>
-                    <?= $membre->prenom() ?> <?= $membre->nom() ?>
+                    <?= $membre->prenom() ?>
+                    <span><?= $membre->nom() ?></span>
                     <sup><?= $membre->service() ?></sup>
                 </h2>
             </button>

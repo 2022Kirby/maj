@@ -1,8 +1,9 @@
     <footer>
         <!-- partenaires -->
         <section>
-            <?php foreach ($site->images() as $image):?>
-                <img src="<?= $image->url() ?>" alt="">
+            <!-- boucle foreach affichant chaque image contenant un string "partenaire" -->
+            <?php foreach ($site->files()->filterBy('filename', '*=', 'partenaire') as $image):?>
+                <img src="<?= $image->url() ?>" alt="logo partenaire">
             <?php endforeach ?>
         </section>
         
@@ -39,6 +40,3 @@
             </a>
         </section>
     </footer>
-
-    <!-- lien vers le script js de modification du lien actif -->
-    <?= js('assets/js/currentPage.js') ?>

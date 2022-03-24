@@ -1,10 +1,11 @@
+/* //////////////////// style général //////////////////// */
+
 /* reset des marges extérieures et intérieures */
 *{
     margin: 0;
     padding: 0;
 }
 
-/* style général */
 :root{
     /* variables globales à modifier selon la charte graphique */
     --font-family: Roboto, sans-serif;
@@ -14,27 +15,39 @@
     --bg-color: #ececec;
 }
 
+/* conteneurs */
 body{
     margin: 5%;
     font-family: var(--font-family);
     color: var(--primary-color);
 }
 
-/* style général des titres */
-h2{
+header, main, footer{
+    /* mise en place de la grille */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* column-gap: 5%; */
+}
+
+/* titres */
+h1{
     font-size: 3vw;
 }
 
-/* style général du texte */
+h2{
+    font-size: 2.5vw;
+}
+
+h3{
+    font-size: 1.5vw;
+}
+
+/* textes */
 p{
-    font-size: 1.3vw;
+    font-size: 1.5vw;
 }
 
-/* style général des liens */
-li{
-    list-style-type: none;
-}
-
+/* liens */
 a{
     font-weight: bold;
     text-decoration: none;
@@ -43,16 +56,11 @@ a{
     transition: border-bottom 0.25s;
 }
 
-a:hover:not(header h1 a, footer section:last-child a, .current){
+a:hover:not(header #logo, footer section:last-child a, .current){
     border-bottom: 2px solid var(--primary-color);
 }
 
-.current{
-    color: var(--highlight-color);
-    border-bottom: 2px solid var(--highlight-color);
-}
-
-/* style général des images */
+/* images */
 img{
     display: block;
     margin: auto;
@@ -60,23 +68,19 @@ img{
     height: auto;
 }
 
-/* mise en place de la grille */
-header, main, footer{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* column-gap: 5%; */
+/* //////////////////// éléments du header //////////////////// */
+
+/* logo MAJ */
+header #logo{
+    grid-column: 1;
 }
 
-/* éléments du header */
-/* logo MAJ */
-header h1{
-    grid-column: 1;
-    font-size: 7vw;
-    font-weight: bold;
+header #logo img{
+    width: 20vw;
 }
 
 /* entrez / qui ? */
-#enter, header h1+a{
+#entrez, #qui{
     grid-column: 2 / span 11;
     margin-left: 2%;
     align-self: center;
@@ -91,41 +95,47 @@ header nav{
     width: 100%;
 }
 
-header ul{
+header nav ul{
     display: flex;
     gap: 2%;
 }
 
-header li{
+header nav ul li {
     font-size: 1.8vw;
     font-weight: bold;
+    list-style-type: none;
     text-transform: lowercase;
 }
 
-/* éléments du main */
+.current{
+    color: var(--highlight-color);
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+/* //////////////////// éléments du main //////////////////// */
+
+/* tous les éléments du main */
 main > *{
     grid-column: 1 / span 12;
 }
 
-/* texte d'introduction */
-#about h2{
+/* accueil > à propos */
+#apropos h2{
     margin-bottom: 0;
     font-size: 2.5vw;
 }
 
-#about p:nth-child(1){
-    font-size: 3vw;
+#apropos p:nth-child(1){
+    font-size: 4vw;
 }
 
-#about p{
-    /* grid-column: 1 / span 12; */
+#apropos p{
     margin-bottom: 3%;
     width: 100%;
     font-size: 2vw;
 }
 
-/* ticker et slider */
-/* ticker */
+/* actualités > ticker + slider */
 #ticker{
     overflow: hidden;;
 }
@@ -149,7 +159,7 @@ main > *{
     margin-bottom: 3%;
 }
 
-/* billets actualités */
+/* actualités > billets actualités */
 .news{
     grid-column: span 4;
     margin: 0 5% 5% 0;
@@ -181,7 +191,7 @@ main > *{
     gap: 2%;
 }
 
-/* articles actualités */
+/* actualités > articles actualités */
 article img{
     margin-bottom: 3%;
 }
@@ -190,8 +200,7 @@ article h2{
     margin-bottom: 1%;
 }
 
-/* services / équipe */
-/* boutons permettant d'ouvrir / fermer les panels */
+/* services / équipe > boutons */
 .accordion{
     display: flex;
     justify-content: space-between;
@@ -211,30 +220,34 @@ article h2{
     font-size: 3vw;
 }
 
+.accordion span{
+    text-transform: uppercase;
+}
+
 .accordion sup{
     font-size: 1.2vw;
     opacity: 0.6;
 }
 
-/* si bouton actif ou en survol, changement de couleur */
 .active, .accordion:hover{
+    /* si bouton actif ou en survol, changement de couleur */
     background-color: var(--highlight-color);
 }
 
-/* ajout du plus */
 .accordion:after{
+    /* ajout du plus */
     content: '+';
     margin-right: 3%;
     font-size: 3vw;
     color: var(--primary-color);
 }
 
-/* si bouton actif, transformation du plus en moins */
 .active:after{
+    /* si bouton actif, changement du plus en moins */
     content: "-";
 }
 
-/* panel contenant les infos du service */
+/* services / équipe > panel */
 .panel{
     display: none;
     padding: 2%;
@@ -258,8 +271,7 @@ article h2{
     column-gap: 3%;
 }
 
-/* contact */
-/* formulaire */
+/* contact > formulaire */
 form{
     margin-top: 1%;
     margin-bottom: 3%;
@@ -291,22 +303,15 @@ input[type=submit]{
     align-self: flex-start;
 }
 
-/* google map */
+/* contact > carte */
 iframe{
     margin-top: 2%;
     width: 100%;
     height: 300px;
 }
 
-/* équipe */
+/* //////////////////// éléments du footer //////////////////// */
 
-
-/* crédits */
-h4{
-    margin-top: 2%;
-}
-
-/* éléments du footer */
 footer{
     bottom: 0;
     margin-top: 5%;

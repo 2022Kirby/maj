@@ -4,6 +4,9 @@
     <?php snippet('header') ?>
     
     <main>
+        <!-- titre de la page -->
+        <h1><?= $page->title() ?></h1>
+        
         <!-- ticker -->
         <div class="splide" id="ticker">
             <div class="splide__track">
@@ -24,8 +27,8 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <!-- boucle foreach affichant chaque image de la page actualités -->
+                    <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
                     <?php foreach ($page->images() as $image):?>
-                        <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
                         <li class="splide__slide"><img src="<?= $image->url() ?>" alt="image bannière"></li>
                     <?php endforeach ?>
                 </ul>
@@ -37,8 +40,8 @@
             </div>
         </div>
 
-        <!-- title de la page -->
-        <h2 id="ancre"><?= $page->title() ?></h2>
+        <!-- ancre pour éviter à l'utilisateur de scroller entre chaque changement de pagination -->
+        <div id="ancre"></div>
 
         <!-- boucle foreach affichant pour chaque page enfant de la page actualité la première image ainsi que les fields title et résumé de la page -->
         <?php foreach ($actualites = $page->children()->listed()->paginate(3) as $actualite):?>
@@ -57,11 +60,11 @@
         <?php if ($actualites->pagination()->hasPages()): ?>
             <nav id="pagination">
                 <?php if ($actualites->pagination()->hasPrevPage()):?>
-                    <a class="prev" href="<?= $actualites->pagination()->prevPageURL() ?>#ancre">‹ plus récent</a>
+                    <a class="prev" href="<?= $actualites->pagination()->prevPageURL() ?>#ancre">‹ plus récent</a> <!-- ajout de l'id ancre à la fin de l'url  -->
                 <?php endif ?>
                 
                 <?php if ($actualites->pagination()->hasNextPage()):?>
-                    <a class="next" href="<?= $actualites->pagination()->nextPageURL() ?>#ancre">plus ancien ›</a> <!-- ajout de l'id anchor à la fin de l'url pour éviter à l'utilisateur de scroller entre chaque changement de page -->
+                    <a class="next" href="<?= $actualites->pagination()->nextPageURL() ?>#ancre">plus ancien ›</a>
                 <?php endif ?>
             </nav>
         <?php endif ?>
@@ -73,36 +76,8 @@
     <?= js('assets/js/splide-extension-auto-scroll.min.js') ?>
     <!-- lien vers le script js du slider -->
     <?= js('assets/js/splide.min.js') ?>
+    <!-- lien vers le script js de montage du ticker / slider -->
+    <?= js('assets/js/splide-mount.js') ?>
     
-    <!-- insertion ticker / slider 
-    voir https://splidejs.com/ -->
-    <script>
-        // vérification du chargement du contenu avant la construction des éléments
-        document.addEventListener( 'DOMContentLoaded', function() {
-            // déclaration d'une variable ticker contenant une instanciation de classe Splide
-            const ticker = new Splide( '#ticker', {
-                // configuration du ticker
-                type: 'loop',
-                drag: 'free',
-                perPage: 3,
-                autoWidth: true,
-                autoScroll: {
-                    speed: 1,
-                    },
-            } );
-            // montage du ticker
-            ticker.mount(window.splide.Extensions);
-
-            // déclaration d'une variable slider contenant une instanciation de classe Splide
-            const slider = new Splide( '#slider', {
-                // configuration du slider
-                type: 'loop',
-                autoplay: true,
-                resetProgress: false,
-            } );
-            // montage du slider
-            slider.mount();
-        } );
-    </script>
 </body>
 </html>

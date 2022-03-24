@@ -1,1 +1,78 @@
 Title: Mentions légales
+
+----
+
+Contenu:
+
+## Présentation du site
+### Propriétaire
+Association Moissac Animation Jeunes aussi désignée sous le nom de MAJ ou bien l’Association.
+### Créateur
+MAJ
+### Responsable de la publication
+Laure PINTO
+### Hébergeur
+OVH – 2 rue Kellermann – 59100 Roubaix – France
+### Crédits photo
+Certaines photos sont sous licence Creative Commons : la personne qui a associé une œuvre à cet acte a dédié l’œuvre au domaine public en renonçant dans le monde entier à ses droits sur l’œuvre selon les lois sur le droit d’auteur, droit voisin et connexes, dans la mesure permise par la loi. 
+
+## Conditions générales d’utilisation du site et des services proposés
+L’utilisation du site www.e-maj.org implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site www.e-maj.org sont donc invités à les consulter de manière régulière.
+Ce site est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par l’association MAJ, qui s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.
+Le site www.e-maj.org est mis à jour régulièrement par le webmaster et l’équipe de l’association. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.
+
+## Description des services fournis
+Le site www.e-maj.org a pour objet de fournir une information concernant l’ensemble des activités de l’association et de ses partenaires.
+L’association Moissac Animation Jeunes s’efforce de fournir sur le site www.e-maj.org des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+Toutes les informations indiquées sur le site www.e-maj.org sont données à titre indicatif et sont susceptible d’évoluer. Par ailleurs, les renseignements figurant sur le site www.e-maj.org ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.
+
+## Limitations contractuelles sur les données techniques
+Le site utilise la technologie CMS Kirby.
+Le site internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis à jour régulièrement.
+
+## Propriété intellectuelle et contrefaçons
+L’association MAJ est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, photos, graphismes, logo, icônes et logiciels…
+Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de l’association.
+Toute exploitation non autorisée du site ou de l’un des quelconques éléments qu’il contient sera considéré comme constitutive et poursuivie conformément aux dispositions des articles L.335-2 et suivants du code de la Propriété Intellectuelle.
+
+## Limitations de la responsabilité
+MAJ ne pourra être tenue responsable des dommages directs et indirects causés au matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.
+MAJ ne pourra également être tenu responsable des dommages indirects (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à l’utilisation du site www.e-maj.org.
+Des espaces interactifs (possibilité de poser des questions dans l’espace Contact ainsi qu’en bas de page de chaque service) sont à la disposition des utilisateurs. MAJ se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans ces espaces qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, l’association, MAJ se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffament ou pornographique, quel que soit le support utilisé (texte, photographie…).
+
+## Liens hypertextes
+Le site www.e-maj.org contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de l’association MAJ. Cependant, MAJ n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.
+
+## Formulaires
+Les formulaires présents sur ce site ne collectent aucune donnée. Leur fonction est de mettre en forme et d’envoyer un mail à MAJ à partir des informations saisies par l’utilisateur. Une fois l’email envoyé ces informations sont supprimées.
+
+## Outil d’analyse de fréquentations
+MAJ utilise l’outil d’analyse de fréquentation Matomo Analytics pour le suivi de l’activité des utilisateurs sur le site www.e-maj.org.
+MAJ prend la confidentialité très au sérieux et ne collecte aucune donnée à caractère personnel des utilisateurs du site www.e-maj.org.
+
+## Données collectées
+- Adresse IP de l’utilisateur anonymisée
+- Date et heure de la demande
+- Heure dans le fuseau horaire de l’utilisateur
+- Titre de la page consultée
+- URL de la page consultée
+- URL de la page de provenance anonymisée
+- Liens de sortie vers les domaines extérieurs
+- Temps de génération des pages
+- Localisation de l’utilisateur : pays, région, ville, latitude et longitude approximatives (géolocalisation) anonymisée
+- Résolution d’écran utilisée
+- Système d’exploitation
+- Pour le navigateur utilisé :
+Langue principale
+Nom
+Type
+
+Les données collectées listées ci-dessus sont des données à caractère non personnel, c’est à dire qu’une personne physique ne peut être identifiée, directement ou indirectement à partir de ces données.
+Cookie d'exclusion installé. Vos visites sur ce site web ne seront PAS enregistrées par notre outil d'analyse web. Note : si vous nettoyez vos cookies et supprimez le cookie d'exclusion, ou bien si vous changez d'ordinateur et/ou de navigateur, il vous faudra de nouveau effectuer la procédure d'exclusion.
+
+## Droit applicable et attribution de juridiction
+Tout litige en relation avec l’utilisation du site www.e-maj.org est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Montauban.
+
+## Les principales lois concernées
+Loi n°78-17 du 6 janvier 1978, notamment modifiée par la loi n°2004-801 du 6 août 2004 relative à l’informatique, aux fichiers et aux libertés.
+Loi n°2004-275 du 21 juin 2004 pour la confiance dans l’économie numérique.

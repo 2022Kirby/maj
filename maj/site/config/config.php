@@ -3,7 +3,7 @@ return [
     'debug'  => true,
     'markdown' => [
         'extra' => true,
-        'breaks' => false,
+        'breaks' => true,
     ]
 ];
 ?>
