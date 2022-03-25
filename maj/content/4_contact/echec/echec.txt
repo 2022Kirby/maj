@@ -1,5 +1,1 @@
 Title: Échec
-
-----
-
-Message: Votre message n'a pas pu être envoyé.

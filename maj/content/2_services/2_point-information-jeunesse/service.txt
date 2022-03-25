@@ -1,4 +1,4 @@
-Title: Point information jeunesse
+Title: Point Information Jeunesse
 
 ----
 
@@ -26,3 +26,7 @@ Horaires:
   horairefinmatin: 12h
   horairedebutaprem: 12h45
   horairefinaprem: 16h
+
+----
+
+Mails: 2022kirby@gmail.com

@@ -10,10 +10,14 @@
         <!-- menu de navigation -->
         <nav>
             <ul>
-                <?php foreach ($site->children()->listed() as $page): 
-                $classes = r($page->isOpen(), 'class="current"'); ?>
+                <!-- boucle affichant pour chaque page enfant du site un lien de navigation -->
+                <?php foreach ($site->children()->listed() as $page):
+                // si page active, ajout de la classe current
+                $class = r($page->isOpen(), 'class="current"'); ?>
                     <li>
-                        <a <?= $classes ?> href="<?= $page->url() ?>"><?= $page->title() ?></a>
+                        <a <?= $class ?> href="<?= $page->url() ?>">
+                            <?= $page->title() ?>
+                        </a>
                     </li>
                 <?php endforeach ?>
             </ul>

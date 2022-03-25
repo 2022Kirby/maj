@@ -7,7 +7,6 @@ fields:
     size: small
     required: true
     help: "Apparaîtra sous le nom du service."
-
   horaires:
     label: Horaires
     type: structure
@@ -34,3 +33,8 @@ fields:
         type: text
         help: "Format: Xh"
     help: "Apparaîtra sous le résumé du service."
+  mails:
+    label: Mail(s) de contact
+    type: email
+    required: true
+    help: "Utilisée(s) pour le formulaire de contact."

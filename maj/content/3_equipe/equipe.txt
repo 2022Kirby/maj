@@ -25,7 +25,7 @@ Membres:
 - 
   prenom: Prénom
   nom: Nom
-  service: PIJ
+  service: Point Information Jeunesse
   detail: >
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Etiam fringilla sed sem
@@ -43,7 +43,7 @@ Membres:
 - 
   prenom: Prénom
   nom: Nom
-  service: Accueil Jeunes
+  service: Accueil Collectif de Mineurs
   detail: >
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Etiam fringilla sed sem

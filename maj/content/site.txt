@@ -14,11 +14,11 @@ Code: 82200
 
 ----
 
-Ville: Moissac
+Ville: 82200 Moissac
 
 ----
 
-Numéro: 05 63 95 25 09
+Numero: 05 63 95 25 09
 
 ----
 

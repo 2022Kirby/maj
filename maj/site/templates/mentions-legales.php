@@ -2,12 +2,12 @@
 
 <body>
     <main>
-        <article>
-            <a href="<?= $pages->find('actualites')->url() ?>">Retour</a>
+        <!-- retour vers page appelante -->
+        <a href="javascript:history.back();">Retour</a>
 
-            <h1><?= $page->title() ?></h1> 
-            <p><?= $page->contenu()->kirbytext() ?></p>
-        </article>
+        <!-- titre et contenu -->
+        <h1><?= $page->title() ?></h1> 
+        <?= $page->contenu()->kirbytext() ?>
     </main>
 </body>
 </html>

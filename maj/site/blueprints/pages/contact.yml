@@ -2,27 +2,11 @@ Title: Contact
 
 fields:
   maj:
-    label: MAJ
-    type: email
-    required: true
-  accueilJeunes:
-    label: Accueil Jeunes
-    type: email
-    required: true
-  pij:
-    label: PIJ
-    type: email
-    required: true
-  sefi:
-    label: SEFI
-    type: email
-    required: true
-  fablab:
-    label: FabLab
+    label: Mail de contact MAJ
     type: email
     required: true
   dev:
-    label: Dev
+    label: Mail de contact développeur
     type: email
     required: true
     help: "Ces adresses mails sont utilisées pour le formulaire de contact."

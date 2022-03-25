@@ -4,15 +4,13 @@
     <?php snippet('header') ?>
     
     <main>
-        <!-- titre de la page -->
-        <h1><?= $page->title() ?></h1>
-        
         <!-- ticker -->
         <div class="splide" id="ticker">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <!-- boucle foreach affichant pour chaque élément du ticker, les fields caption et text -->
-                    <?php foreach ($page->breves()->toStructure() as $breve):?>
+                    <!-- boucle affichant pour chaque brève, les champs titre et contenu -->
+                    <!-- chaque brève correspond à un élément li dans lequel on insère le contenu -->
+                    <?php foreach ($page->breves()->toStructure() as $breve): ?>
                         <li class="splide__slide">
                             <p><?= $breve->titre() ?></p>
                             <p><?= $breve->contenu() ?></p>
@@ -24,50 +22,60 @@
 
         <!-- slider -->
         <div class="splide" id="slider">
+            <!-- slides -->
             <div class="splide__track">
                 <ul class="splide__list">
-                    <!-- boucle foreach affichant chaque image de la page actualités -->
+                    <!-- boucle affichant chaque image de la page actualités -->
                     <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
-                    <?php foreach ($page->images() as $image):?>
-                        <li class="splide__slide"><img src="<?= $image->url() ?>" alt="image bannière"></li>
+                    <?php foreach ($page->images() as $image): ?>
+                        <li class="splide__slide">
+                            <img src="<?= $image->url() ?>" alt="bannière d'actualité">
+                        </li>
                     <?php endforeach ?>
                 </ul>
             </div>
             <!-- barre de progression de la slide -->
             <div class="splide__progress">
-                <div class="splide__progress__bar">
-                </div>
+                <div class="splide__progress__bar"></div>
             </div>
         </div>
 
-        <!-- ancre pour éviter à l'utilisateur de scroller entre chaque changement de pagination -->
-        <div id="ancre"></div>
+        <!-- titre de la page -->
+        <!-- l'id #ancre sera utilisé pour éviter à l'utilisateur de scroller entre chaque changement de pagination -->
+        <h1 id="ancre"><?= $page->title() ?></h1>
 
-        <!-- boucle foreach affichant pour chaque page enfant de la page actualité la première image ainsi que les fields title et résumé de la page -->
-        <?php foreach ($actualites = $page->children()->listed()->paginate(3) as $actualite):?>
-            <div class="news">
+        <!-- boucle affichant pour chaque page enfant de la page actualités les champs titre et résumé,
+        avec mise en place d'une pagination -->
+        <?php foreach ($actualites = $page->children()->listed()->paginate(3) as $actualite): ?>
+            <div class="actualites">
                 <a href="<?= $actualite->url() ?>">
-                    <h3><?= $actualite->title() ?></h3>
-                    
-                    <?php if($actualite->resume()->exists()):?> <!-- si l'actualité possède un champ résumé -->
+                    <h2><?= $actualite->title() ?></h2>
+
+                    <!-- si le champ résumé existe -->
+                    <?php if($actualite->resume()->exists()): ?>
                         <p><?= $actualite->resume() ?></p>
                     <?php endif ?>
                 </a>
             </div>
         <?php endforeach ?>
 
-        <!-- pagination -->
-        <?php if ($actualites->pagination()->hasPages()): ?>
-            <nav id="pagination">
-                <?php if ($actualites->pagination()->hasPrevPage()):?>
-                    <a class="prev" href="<?= $actualites->pagination()->prevPageURL() ?>#ancre">‹ plus récent</a> <!-- ajout de l'id ancre à la fin de l'url  -->
-                <?php endif ?>
-                
-                <?php if ($actualites->pagination()->hasNextPage()):?>
-                    <a class="next" href="<?= $actualites->pagination()->nextPageURL() ?>#ancre">plus ancien ›</a>
-                <?php endif ?>
-            </nav>
-        <?php endif ?>
+        <!-- pagination des actualités -->
+        <div class="pagination">
+            <!-- si d'autres pages existent, affichage d'un menu de navigation -->
+            <?php if($actualites->pagination()->hasPages()): ?>
+                <nav>
+                    <!-- si il y a des pages précédentes -->
+                    <?php if ($actualites->pagination()->hasPrevPage()): ?>
+                        <a class="prev" href="<?= $actualites->pagination()->prevPageURL() ?>#ancre">‹ plus récent</a> 
+                    <?php endif ?>
+                    
+                    <!-- si il y a des pages suivantes -->
+                    <?php if($actualites->pagination()->hasNextPage()): ?>
+                        <a class="next" href="<?= $actualites->pagination()->nextPageURL() ?>#ancre">plus ancien ›</a>
+                    <?php endif ?>
+                </nav>
+            <?php endif ?>
+        </div>
     </main>
 
     <?php snippet('footer') ?>

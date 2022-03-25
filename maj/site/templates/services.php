@@ -5,7 +5,7 @@
     
     <main>
         <!-- boucle foreach affichant pour chaque page enfant de la page services un bouton contenant le field title et une div contenant le field résumé du service-->
-        <?php foreach ($pages->find('services')->children()->listed() as $service):?>
+        <?php foreach ($pages->find('services')->children()->listed() as $service): ?>
             <button class="accordion">
                 <h2>
                     <?= $service->title() ?>

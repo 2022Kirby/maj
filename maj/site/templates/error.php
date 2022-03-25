@@ -4,10 +4,9 @@
     <?php snippet('header') ?>
     
     <main>
-        <div class="message">
-            <p><?= $page->message() ?></p>
-            <a href="<?= $pages->find('actualites')->url() ?>">Retour</a>
-        </div>
+        <!-- retour vers page appelante -->
+        <a href="javascript:history.back();">Retour</a>
+        <p>Erreur lors du chargement de la page.</p>
     </main>
 
     <?php snippet('footer') ?>

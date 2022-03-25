@@ -16,11 +16,10 @@ fields:
       service:
         label: Service
         type: select
-        options:
-          Accueil Jeunes: Accueil Jeunes
-          PIJ: PIJ
-          SEFI: SEFI
-          FabLab: FabLab
+        options: query
+        query: 
+          fetch: site.children.template("services").children
+          value: "{{ page.title }}"
         required: true
       detail:
         label: Détail

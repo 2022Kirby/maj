@@ -6,11 +6,11 @@ const ticker = new Splide('#ticker', {
     // configuration du ticker
     type: 'loop',
     drag: false,
-    pauseOnFocus: false,
     perPage: 3,
     autoWidth: true,
     autoScroll: {
         speed: 1,
+        pauseOnFocus: false,
     },
 });
 // montage du ticker

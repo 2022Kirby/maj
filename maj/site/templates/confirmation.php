@@ -4,10 +4,9 @@
     <?php snippet('header') ?>
     
     <main>
-        <div class="message">
-            <p><?= $page->message() ?></p>
-            <a href="<?= $pages->find('contact')->url() ?>">Retour</a>
-        </div>
+        <!-- retour vers page contact -->
+        <a href="<?= $pages->find('contact')->url() ?>">Retour</a>
+        <p>Votre message a bien été envoyé.</p>
     </main>
 
     <?php snippet('footer') ?>
