@@ -1,29 +1,21 @@
 Title: Actualité
 
-columns:
-  - width: 1/2
-    sections:
+sections:
+  image:
+    type: files
+    layout: cards
+    help: "Image format bannière seulement."
+  contenu:
+    type: fields
+    fields:
+      resume:
+        label: Résumé
+        type: textarea
+        size: small
+        help: "Apparaîtra sur la page actualités."
       contenu:
-        type: fields
-        fields:
-          categorie:
-            label: Catégorie
-            type: text
-            help: "Affichée sur le panneau d'administration uniquement."
-          resume:
-            label: Résumé
-            type: textarea
-            size: small
-            help: "Apparaîtra sur la page actualités."
-          contenu:
-            label: Contenu
-            type: textarea
-            size: large
-            required: true
-            help: "Différencier les titres des paragraphes."
-  
-  - width: 1/2
-    sections:
-      galerie:
-        type: files
-        layout: cards
+        label: Contenu
+        type: textarea
+        size: large
+        required: true
+        help: "Différencier les titres des paragraphes."

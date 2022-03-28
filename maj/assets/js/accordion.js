@@ -1,4 +1,4 @@
-const buttons = document.getElementsByClassName("accordion");
+const buttons = document.getElementsByClassName("accordion-button");
 
 // itération sur l'array buttons
 for(button of buttons){

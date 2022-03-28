@@ -32,4 +32,4 @@ fields:
         type: tel
         required: true
         help: "Format: xx xx xx xx xx"
-    help: "Apparaîtront sur la page équipe."
+    help: "Liste apparaissant sur la page équipe."

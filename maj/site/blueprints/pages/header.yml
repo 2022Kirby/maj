@@ -1,0 +1,7 @@
+Title: En-tête
+
+sections:
+  galerie:
+    headline: Logo MAJ
+    type: files
+    layout: cards

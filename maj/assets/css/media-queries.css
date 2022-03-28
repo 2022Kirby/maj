@@ -12,10 +12,6 @@
         font-size: 5vw;
     }
 
-    h3{
-        font-size: 3.5vw;
-    }
-
     p{
         font-size: 3vw;
     }
@@ -38,15 +34,15 @@
         grid-column: 1 / span 3;
     }
 
-    #apropos h2{
+    #a-propos h2{
         font-size: 6vw;
     }
 
-    #apropos p:nth-child(1){
+    #a-propos p:nth-child(1){
         font-size: 6vw;
     }
 
-    #apropos p{
+    #a-propos p{
         font-size: 5vw;
 }
 
@@ -66,15 +62,15 @@
         font-size: 3.5vw;
     }
 
-    .accordion h2{
+    .accordion-button h1{
         font-size: 4.5vw;
     }
 
-    .accordion sup{
+    .accordion-button sup{
         font-size: 1.8vw;
     }
 
-    .panel h3{
+    .accordion-panel h2{
         font-size: 3vw;
     }
 
@@ -82,12 +78,12 @@
         width: 95%;
     }
 
-    footer section{
+    footer div{
         margin-top: 2%;
         width: 100%;
     }
 
-    footer section:first-child{
+    footer div:first-child{
         grid-column: span 3;
         flex-flow: row wrap;
     }
@@ -98,8 +94,12 @@
         max-height: 30px;
     }
 
-    footer section:nth-child(n+2){
+    footer div:nth-child(n+2){
         grid-column: span 1;
+    }
+
+    footer div:nth-child(5){
+        grid-column: span 3;
     }
 
     footer a{

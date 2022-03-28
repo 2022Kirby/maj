@@ -21,14 +21,22 @@
                     'X-Mailer: PHP/' . phpversion();
 
         try {
-            foreach($pages->find('services')->children()->listed() as $service){
-                // vérification de la valeur de $nameService et changement de la valeur de $to et $subject en conséquence
-                if($service->title() == $nameService){
-                    $to = $service->mails();
-                    $subject .= $service->title();
+            // si le service sélectionné est autre
+            if($nameService == "Autre"){
+                // changement de la valeur de $to et $subject en conséquence
+                $to = $pages->find('contact')->maj();
+                $subject .= "MAJ";
+            } else{ //sinon
+                // pour chaque page enfant de services
+                foreach($pages->find('services')->children()->listed() as $service){
+                    // vérification de la valeur de $nameService et changement de la valeur de $to et $subject en conséquence
+                    if($service->title() == $nameService){
+                        $to = $service->mails();
+                        $subject .= $service->title();
+                    }
                 }
             }
-
+            
             // si envoi du mail est true
             if(mail($to, $subject, $message, $headers)) {
                 // on envoie une copie du message à l'utilisateur

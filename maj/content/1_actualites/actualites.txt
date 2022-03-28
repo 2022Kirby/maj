@@ -1,16 +1,1 @@
 Title: Actualités
-
-----
-
-Breves:
-
-- 
-  titre: Lorem ipsum
-  contenu: >
-    Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit.
-- 
-  titre: Lorem ipsum
-  contenu: >
-    Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit.

@@ -1,55 +1,20 @@
 Title: Actualités
 
-columns:
-  - width: 1/2
-    sections:
-      published:
-        headline: Pages publiées
-        type: pages
-        template: actualite
-        info: "{{ page.categorie }}"
-        status: published
-        layout: list
-        limit: 5
-        image:
-          ratio: 1/1
-          cover: true
-        help: "De la plus récente à la plus ancienne."
-      drafts:
-        headline: Brouillons
-        type: pages
-        template: actualite
-        info: "{{ page.categorie }}"
-        status: drafts
-        layout: list
-        limit: 5
-        image:
-          ratio: 1/1
-          cover: true
-
-  - width: 1/2
-    sections:
-      ticker:
-        type: fields
-        fields:
-          breves:
-            label: Ticker
-            type: structure
-            fields:
-              titre:
-                label: Titre
-                type: text
-                required: true
-              contenu:
-                label: Contenu
-                type: textarea
-                size: small
-                required: true
-            help: "Chaque brève est constituée d'un titre et d'un texte court."
-      slider:
-        type: files
-        layout: cards
-        image:
-          ratio: 3/1
-          cover: true
-        help: "Images format bannière seulement."
+sections:
+  published:
+    headline: Pages publiées
+    type: pages
+    template: actualite
+    # info: "{{ }}"
+    status: published
+    layout: list
+    limit: 10
+    help: "De la plus récente à la plus ancienne."
+  drafts:
+    headline: Brouillons
+    type: pages
+    template: actualite
+    # info: "{{ }}"
+    status: drafts
+    layout: list
+    limit: 5

@@ -4,33 +4,32 @@
     <?php snippet('header') ?>
     
     <main>
-        <!-- boucle foreach affichant pour chaque page enfant de la page services un bouton contenant le field title et une div contenant le field résumé du service-->
+        <!-- boucle affichant pour chaque page enfant de services, les champs title, résumé et horaires -->
         <?php foreach ($pages->find('services')->children()->listed() as $service): ?>
-            <button class="accordion">
-                <h2>
-                    <?= $service->title() ?>
-                </h2>
+            <!-- bouton pour ouvrir le panel -->
+            <button class="accordion-button">
+                <h1><?= $service->title() ?></h1>
             </button>
-            <div class="panel">
+
+            <!-- panel contenant les infos du service -->
+            <div class="accordion-panel">
                 <p><?= $service->resume() ?></p>
 
                 <!-- si le champ horaire existe -->
                 <?php if ($service->horaires()->exists()): ?>
-                    <h3>Horaires</h3>
+                    <h2>Horaires</h2>
+                    
+                    <!-- boucle affichant chaque champ horaire -->
                     <?php foreach ($service->horaires()->toStructure() as $horaire): ?>
                         <p>
-                            <?= $horaire->jour() ?> : 
+                                <?= $horaire->jour() ?> : 
                             <!-- si le champ horaire matin n'est pas vide -->
                             <?php if ($horaire->horaireDebutMatin()->isNotEmpty()): ?>
-                                <span>
-                                    <?= $horaire->horaireDebutMatin() ?> - <?= $horaire->horaireFinMatin() ?> |
-                                </span>
+                                <?= $horaire->horaireDebutMatin() ?> - <?= $horaire->horaireFinMatin() ?> |
                             <?php endif ?>
                             <!-- si le champ horaire après-midi n'est pas vide -->
                             <?php if ($horaire->horaireDebutAprem()->isNotEmpty()): ?>
-                                <span>
-                                    <?= $horaire->horaireDebutAprem() ?> - <?= $horaire->horaireFinAprem() ?>
-                                </span>
+                                <?= $horaire->horaireDebutAprem() ?> - <?= $horaire->horaireFinAprem() ?>
                             <?php endif ?>
                         </p>
                     <?php endforeach ?>

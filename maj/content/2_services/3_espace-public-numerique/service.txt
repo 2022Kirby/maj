@@ -1,0 +1,26 @@
+Title: Espace Public Numérique
+
+----
+
+Resume: Espace public permettant l’accès aux outils numérique.
+
+----
+
+Horaires:
+
+- 
+  jour: Lundi et Jeudi
+  horairedebutmatin: 8h30
+  horairefinmatin: 12h
+  horairedebutaprem: 13h30
+  horairefinaprem: 17h
+- 
+  jour: Mercredi
+  horairedebutmatin: 10h
+  horairefinmatin: 12h
+  horairedebutaprem: 13h30
+  horairefinaprem: 17h
+
+----
+
+Mails: 2022kirby@gmail.com

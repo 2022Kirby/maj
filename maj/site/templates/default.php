@@ -1,5 +1,5 @@
 <!-- Ceci est le template utilisé par défaut, en cas d'absence de template propre à la page -->
-<!-- Le template est actuellement utilisé par les pages d'actualités -->
+<!-- Le template est actuellement utilisé par les pages d'actualités / de services -->
 
 <!-- insertion de head.php -->
 <?php snippet('head') ?>
@@ -10,7 +10,7 @@
     
     <main>
         <article>
-            <!-- insertion de la première image de la page avec un echo de l'url  -->
+            <!-- insertion de la première image de la page -->
             <!-- <img src="< ?= $page->image()->url() ?>" alt="image article"> -->
 
             <!-- pour les besoins de la démo, utilisation d'un lorem picsum -->

@@ -2,15 +2,26 @@ Title: Moissac Animation Jeunes
 
 ----
 
-Acronyme: MAJ
+Breves:
+
+- 
+  titre: Lorem ipsum
+  contenu: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit.
+- 
+  titre: Lorem ipsum
+  contenu: >
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit.
+
+----
+
+Nom: MAJ
 
 ----
 
 Rue: 27 rue de la Solidarité
-
-----
-
-Code: 82200
 
 ----
 

@@ -1,7 +1,7 @@
     <header>
         <!-- logo MAJ -->
         <a id="logo" href="<?= $pages->find('actualites')->url() ?>">
-            <img src="<?= $site->image()->url() ?>" alt="logo MAJ">
+            <img src="<?= $pages->find('header')->image()->url() ?>" alt="logo MAJ">
         </a>
 
         <!-- qui ? renvoyant sur page d'accueil -->

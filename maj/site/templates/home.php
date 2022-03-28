@@ -1,11 +1,10 @@
-<!-- insertion de head.php -->
 <?php snippet('head') ?>
 
 <body>
     <header>
         <!-- logo MAJ -->
         <a id="logo" href="<?= $pages->find('actualites')->url() ?>">
-            <img src="<?= $site->image()->url() ?>" alt="logo MAJ">
+            <img src="<?= $pages->find('header')->image()->url() ?>" alt="logo MAJ">
         </a>
 
         <!-- entrez renvoyant sur page actualités -->
@@ -13,8 +12,8 @@
     </header>
     
     <main>
-        <!-- contenu sur l'association -->
-        <article id="apropos">
+        <!-- affichage des champs résumé, histoire et missions de la page -->
+        <article id="a-propos">
             <p><?= $page->resume() ?></p>
 
             <h1>À propos</h1>

@@ -7,7 +7,7 @@ sections:
     template: service
     status: published
     layout: list
-    limit: 8
+    limit: 10
     help: "Liste apparaissant sur la page services."
   drafts:
     headline: Brouillons

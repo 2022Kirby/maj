@@ -4,23 +4,28 @@
     <?php snippet('header') ?>
     
     <main>
-        <!-- boucle foreach affichant pour chaque membre, les champs prénom, nom, détail et téléphone -->
+        <!-- boucle affichant pour chaque membre de la page équipe, les champs prénom, nom, détail et téléphone -->
         <?php foreach ($page->membres()->toStructure() as $membre):?>
-            <button class="accordion">
-                <h2>
+            <!-- bouton pour ouvrir le panel -->
+            <button class="accordion-button">
+                <h1>
                     <?= $membre->prenom() ?>
                     <span><?= $membre->nom() ?></span>
                     <sup><?= $membre->service() ?></sup>
-                </h2>
+                </h1>
             </button>
-            <div class="panel">
+
+            <!-- panel contenant les infos du membre -->
+            <div class="accordion-panel">
                 <p><?= $membre->detail() ?></p>
 
                 <div>
-                    <a href="<?= $pages->find('contact')->url() ?>?service=<?= $membre->service() ?>"> <!-- envoi du paramètre service dans l'url -->
-                    <!-- donne l'url suivante: http://maj.test/contact?service=NomService -->
+                    <!-- lien vers page de contact avec ajout d'un paramètre service dans l'url-->
+                    <!-- donne l'url suivante: http://maj.test/contact?service=Nom Service -->
+                    <a href="<?= $pages->find('contact')->url() ?>?service=<?= $membre->service() ?>">
                         <p>Formulaire de contact</p>
                     </a>
+
                     <p><b>Téléphone</b> <?= $membre->telephone() ?></p>
                 </div>
             </div>

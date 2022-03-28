@@ -1,19 +1,82 @@
-sections:
-  unlisted:
-    headline: Pages publiées
-    type: pages
-    status: unlisted
-    layout: list
-    limit: 5
-  listed:
-    headline: Menu de navigation
-    type: pages
-    status: listed
-    layout: list
-    limit: 5
-  drafts:
-    headline: Brouillons
-    type: pages
-    status: drafts
-    layout: list
-    limit: 5
+columns:
+  - width: 1/2
+    sections:
+      unlisted:
+        headline: Pages publiées
+        type: pages
+        status: unlisted
+        layout: list
+      listed:
+        headline: Menu de navigation
+        type: pages
+        status: listed
+        layout: list
+      drafts:
+        headline: Brouillons
+        type: pages
+        status: drafts
+        layout: list
+        limit: 5
+  
+  - width: 1/2
+    sections:
+      ticker:
+        type: fields
+        fields:
+          breves:
+            label: Ticker
+            type: structure
+            fields:
+              titre:
+                label: Titre
+                type: text
+                required: true
+              contenu:
+                label: Contenu
+                type: textarea
+                size: small
+                required: true
+            help: "Chaque brève est constituée d'un titre et d'un texte court."
+      slider:
+        type: files
+        layout: cards
+        image:
+          ratio: 3/1
+          cover: true
+        help: "Images format bannière seulement."
+
+  - width: 2/2
+    sections:
+      infos:
+        type: fields
+        fields:
+          nom:
+            label: Nom
+            type: text
+            required: true
+          rue:
+            label: Rue
+            type: text
+            required: true
+          ville:
+            label: Ville
+            type: text
+            required: true
+            help: "Code postal et commune."
+          numero:
+            label: Numéro de téléphone
+            type: tel
+            required: true
+          facebook:
+            label: Lien Facebook
+            type: url
+            required: true
+          twitter:
+            label: Lien Twitter
+            type: url
+            required: true
+          instagram:
+            label: Lien Instagram
+            type: url
+            required: true
+            help: "Apparaîtront en pied de page."
