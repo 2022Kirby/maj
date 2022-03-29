@@ -7,3 +7,20 @@ Maj: 2022kirby@gmail.com
 ----
 
 Dev: 2022kirby@gmail.com
+
+----
+
+Message:
+
+Votre demande à MAJ a bien été reçue, nous vous répondrons dans les plus brefs délais.
+Merci de ne pas répondre à ce mail.
+
+Votre message:
+
+----
+
+Confirmation: Votre message a bien été envoyé.
+
+----
+
+Echec: Votre message n'a pas pu être envoyé.

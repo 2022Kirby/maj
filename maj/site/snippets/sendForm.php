@@ -12,7 +12,7 @@
         $message = strip_tags(trim(wordwrap($_POST['message'], 70, "\r\n"))); 
 
         // déclaration de variables qui vont contenir les éléments du mail
-        $to; // destinataire du mail
+        $to = ''; // destinataire du mail
         $subject = $nameUser . ' - Demande d\'informations '; // objet du mail
         // en-têtes supplémentaires
         $headers =  'From: ' . $emailUser . "\r\n" . // expéditeur
@@ -29,9 +29,20 @@
             } else{ //sinon
                 // pour chaque page enfant de services
                 foreach($pages->find('services')->children()->listed() as $service){
-                    // vérification de la valeur de $nameService et changement de la valeur de $to et $subject en conséquence
+                    // si le nom du service est égal à la valeur de $nameService, on change la valeur de $to et $subject en conséquence
                     if($service->title() == $nameService){
-                        $to = $service->mails();
+                        // pour chaque champ mails du service
+                        foreach($service->mails()->toStructure() as $mail){
+                            // si l'index du champ est égal à 0 (string)
+                            if($mail == '0'){
+                                // concaténation de l'adresse mail seule
+                                $to .= $mail->adresse();
+                            } elseif($mail != '0'){ // sinon si l'index du champ est différent de 0 (string)
+                                // concaténation de l'adresse mail précédée d'une virgule
+                                $to .= ', ' . $mail->adresse();
+                            }
+                        }
+                        // concaténation du nom du service
                         $subject .= $service->title();
                     }
                 }
@@ -40,7 +51,8 @@
             // si envoi du mail est true
             if(mail($to, $subject, $message, $headers)) {
                 // on envoie une copie du message à l'utilisateur
-                $messageCopy = "Votre demande à MAJ a bien été reçue, nous vous répondrons dans les plus brefs délais.\r\n \r\nVotre message:\r\n$message\r\n \r\nMerci de ne pas répondre à ce mail.";
+                $messageCopy = $pages->find('contact')->message() . "\r\n" . $message;
+                
                 mail($emailUser, $subject, $messageCopy, 'From: ' . $pages->find('contact')->maj());
 
                 // puis on fait une redirection du navigateur vers la page de confirmation

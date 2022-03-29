@@ -49,6 +49,6 @@
 
         <div>
             <p><b>Adhésion</b></p>
-            <p><?= $pages->find('footer')->adhesion() ?></p>
+            <p><?= $site->adhesion() ?></p>
         </div>
     </footer>

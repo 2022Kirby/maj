@@ -5,11 +5,3 @@ sections:
     headline: Logos partenaires
     type: files
     layout: cards
-  contenu:
-    type: fields
-    fields:
-      adhesion:
-        label: Adhésion
-        type: textarea
-        size: small
-        help: "Apparaîtra dans le pied de page."

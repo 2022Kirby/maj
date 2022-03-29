@@ -35,6 +35,10 @@ fields:
     help: "Apparaîtra sous le résumé du service."
   mails:
     label: Mail(s) de contact
-    type: email
+    type: structure
+    fields:
+      adresse:
+        label: Adresse
+        type: email
     required: true
     help: "Utilisée(s) pour le formulaire de contact."

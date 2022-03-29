@@ -61,7 +61,7 @@
             <?php if($actualites->pagination()->hasPages()): ?>
                 <nav>
                     <!-- si il y a des pages précédentes -->
-                    <?php if ($actualites->pagination()->hasPrevPage()): ?>
+                    <?php if($actualites->pagination()->hasPrevPage()): ?>
                         <a class="prev" href="<?= $actualites->pagination()->prevPageURL() ?>">< plus récent</a> 
                     <?php endif ?>
                     

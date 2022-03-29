@@ -5,7 +5,7 @@
         <!-- retour vers page contact -->
         <a href="<?= $pages->find('contact')->url() ?>">< retour</a>
         
-        <p>Votre message a bien été envoyé.</p>
+        <p><?= $pages->find('contact')->confirmation() ?></p>
     </main>
 </body>
 </html>

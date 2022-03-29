@@ -11,7 +11,13 @@
                 <h1>
                     <?= $membre->prenom() ?>
                     <span><?= $membre->nom() ?></span>
-                    <sup><?= $membre->service() ?></sup>
+                    <sup>
+                        <?php $nameService = str_replace(' ','-',strtolower($membre->service())); ?>
+                            <a href="<?= $pages->find('services')->url() ?>/<?= $nameService ?>">
+                                <?= $membre->service() ?>
+                            </a>
+                        <?php ?>
+                    </sup>
                 </h1>
             </button>
 

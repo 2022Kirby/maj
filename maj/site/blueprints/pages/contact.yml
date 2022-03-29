@@ -1,12 +1,36 @@
 Title: Contact
 
-fields:
-  maj:
-    label: Mail de contact MAJ
-    type: email
-    required: true
-  dev:
-    label: Mail de contact développeur
-    type: email
-    required: true
-    help: "Ces adresses mails sont utilisées pour le formulaire de contact."
+sections:
+  mails:
+    type: fields
+    fields:
+      maj:
+        label: Mail général MAJ
+        type: email
+        required: true
+      dev:
+        label: Mail développeur
+        type: email
+        required: true
+        help: "Ces adresses mails sont utilisées pour le formulaire de contact."
+  formulaire:
+    type: fields
+    fields:
+      message:
+        label: Message mail
+        type: textarea
+        size: small
+        required: true
+        help: Ce message apparaîtra dans le mail de confirmation envoyé à l'utilisateur suite à l'envoi du formulaire.
+      confirmation:
+        label: Message de confirmation
+        type: textarea
+        size: small
+        required: true
+        help: Ce message apparaîtra sur la page de confirmation d'envoi du formulaire.
+      echec:
+        label: Message d'échec
+        type: textarea
+        size: small
+        required: true
+        help: Ce message apparaîtra sur la page d'échec d'envoi du formulaire.

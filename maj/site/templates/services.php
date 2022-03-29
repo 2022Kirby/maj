@@ -15,8 +15,10 @@
             <div class="accordion-panel">
                 <p><?= $service->resume() ?></p>
 
-                <!-- si le champ horaire existe -->
-                <?php if ($service->horaires()->exists()): ?>
+                <a href="<?= $service->url() ?>">En savoir plus</a>
+
+                <!-- si le champ horaire n'est pas vide -->
+                <?php if($service->horaires()->isNotEmpty()): ?>
                     <h2>Horaires</h2>
                     
                     <!-- boucle affichant chaque champ horaire -->
@@ -24,11 +26,11 @@
                         <p>
                                 <?= $horaire->jour() ?> : 
                             <!-- si le champ horaire matin n'est pas vide -->
-                            <?php if ($horaire->horaireDebutMatin()->isNotEmpty()): ?>
+                            <?php if($horaire->horaireDebutMatin()->isNotEmpty()): ?>
                                 <?= $horaire->horaireDebutMatin() ?> - <?= $horaire->horaireFinMatin() ?> |
                             <?php endif ?>
                             <!-- si le champ horaire après-midi n'est pas vide -->
-                            <?php if ($horaire->horaireDebutAprem()->isNotEmpty()): ?>
+                            <?php if($horaire->horaireDebutAprem()->isNotEmpty()): ?>
                                 <?= $horaire->horaireDebutAprem() ?> - <?= $horaire->horaireFinAprem() ?>
                             <?php endif ?>
                         </p>
