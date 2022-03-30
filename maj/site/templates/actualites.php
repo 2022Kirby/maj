@@ -10,7 +10,7 @@
                 <ul class="splide__list">
                     <!-- boucle affichant pour chaque brève, les champs titre et contenu -->
                     <!-- chaque brève correspond à un élément li dans lequel on insère le contenu -->
-                    <?php foreach ($site->breves()->toStructure() as $breve): ?>
+                    <?php foreach($site->breves()->toStructure() as $breve): ?>
                         <li class="splide__slide">
                             <p><?= $breve->titre() ?></p>
                             <p><?= $breve->contenu() ?></p>
@@ -27,7 +27,7 @@
                 <ul class="splide__list">
                     <!-- boucle affichant chaque image de la page actualités -->
                     <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
-                    <?php foreach ($site->images() as $image): ?>
+                    <?php foreach($pages->find('slider')->files()->sortBy('sort') as $image): ?>
                         <li class="splide__slide">
                             <img src="<?= $image->url() ?>" alt="bannière d'actualité">
                         </li>
@@ -42,7 +42,7 @@
 
         <!-- boucle affichant pour chaque page enfant de la page actualités les champs titre et résumé,
         avec mise en place d'une pagination -->
-        <?php foreach ($actualites = $page->children()->listed()->paginate(6) as $actualite): ?>
+        <?php foreach($actualites = $page->children()->listed()->paginate(6) as $actualite): ?>
             <div class="actualites">
                 <a href="<?= $actualite->url() ?>">
                     <?= $actualite->title() ?>

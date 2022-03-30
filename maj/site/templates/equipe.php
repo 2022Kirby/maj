@@ -28,9 +28,9 @@
                 <div>
                     <!-- lien vers page de contact avec ajout d'un paramètre service dans l'url-->
                     <!-- donne l'url suivante: http://maj.test/contact?service=Nom Service -->
-                    <a href="<?= $pages->find('contact')->url() ?>?service=<?= $membre->service() ?>">
-                        <p>Formulaire de contact</p>
-                    </a>
+                    <p>
+                        <a href="<?= $pages->find('contact')->url() ?>?service=<?= $membre->service() ?>">Formulaire de contact</a>
+                    </p>
 
                     <p><b>Téléphone</b> <?= $membre->telephone() ?></p>
                 </div>

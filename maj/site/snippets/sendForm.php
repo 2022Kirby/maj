@@ -17,15 +17,15 @@
         // en-têtes supplémentaires
         $headers =  'From: ' . $emailUser . "\r\n" . // expéditeur
                     'Reply-To: ' . $emailUser . "\r\n" . // répondre à
-                    'Bcc: ' . $pages->find('contact')->dev() . "\r\n" . // copie carbone invisible
+                    'Bcc: ' . $pages->find('contact')->dev() . "\r\n" . // A MODIFIER copie carbone invisible
                     'X-Mailer: PHP/' . phpversion();
 
         try {
             // si le service sélectionné est autre
             if($nameService == "Autre"){
                 // changement de la valeur de $to et $subject en conséquence
-                $to = $pages->find('contact')->maj();
-                $subject .= "MAJ";
+                $to = $pages->find('contact')->autre();
+                $subject .= "Autre";
             } else{ //sinon
                 // pour chaque page enfant de services
                 foreach($pages->find('services')->children()->listed() as $service){

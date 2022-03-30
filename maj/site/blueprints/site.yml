@@ -1,86 +1,111 @@
-columns:
-  - width: 1/2
-    sections:
-      unlisted:
-        headline: Pages publiées
-        type: pages
-        status: unlisted
-        layout: list
-      listed:
-        headline: Menu de navigation
-        type: pages
-        status: listed
-        layout: list
-      drafts:
-        headline: Brouillons
-        type: pages
-        status: drafts
-        layout: list
-        limit: 5
-  
-  - width: 1/2
-    sections:
-      ticker:
-        type: fields
-        fields:
-          breves:
-            label: Ticker
-            type: structure
+tabs:
+  site:
+    label: Site
+    columns:
+      - width: 1/2
+        sections:
+          unlisted:
+            headline: Pages publiées
+            type: pages
+            status: unlisted
+            layout: list
+            templates:
+              - contact
+              - home
+              - mentions-legales
+          listed:
+            headline: Menu de navigation
+            type: pages
+            status: listed
+            layout: list
+          drafts:
+            headline: Brouillons
+            type: pages
+            status: drafts
+            layout: list
+            limit: 5
+            
+      - width: 1/2
+        sections:
+          ticker:
+            type: fields
             fields:
-              titre:
-                label: Titre
+              breves:
+                label: Ticker
+                type: structure
+                fields:
+                  titre:
+                    label: Titre
+                    type: text
+                    required: true
+                  contenu:
+                    label: Contenu
+                    type: textarea
+                    size: small
+                    required: true
+                help: "Chaque brève est constituée d'un titre et d'un texte court."
+          slider:
+            label: Slider
+            type: files
+            query: site.find('slider').files
+            layout: cards
+            # image:
+              # ratio: 3/1
+              # cover: true
+            help: "Images format bannière seulement."
+
+  header:
+    label: En-tête
+    columns:
+      - width: 2/2
+        sections:
+          logo:
+            type: files
+            layout: cards
+
+  footer:
+    label: Pied de page
+    columns:
+      - width: 2/2
+        sections:
+          partenaires:
+            type: files
+            layout: cards
+          infos:
+            type: fields
+            fields:
+              nom:
+                label: Nom
                 type: text
                 required: true
-              contenu:
-                label: Contenu
+              rue:
+                label: Rue
+                type: text
+                required: true
+              ville:
+                label: Ville
+                type: text
+                required: true
+                help: "Code postal et commune."
+              numero:
+                label: Numéro de téléphone
+                type: tel
+                required: true
+              facebook:
+                label: Lien Facebook
+                type: url
+                required: true
+              twitter:
+                label: Lien Twitter
+                type: url
+                required: true
+              instagram:
+                label: Lien Instagram
+                type: url
+                required: true
+              adhesion:
+                label: Adhésion
                 type: textarea
                 size: small
                 required: true
-            help: "Chaque brève est constituée d'un titre et d'un texte court."
-      slider:
-        type: files
-        layout: cards
-        image:
-          ratio: 3/1
-          cover: true
-        help: "Images format bannière seulement."
-
-  - width: 2/2
-    sections:
-      infos:
-        type: fields
-        fields:
-          nom:
-            label: Nom
-            type: text
-            required: true
-          rue:
-            label: Rue
-            type: text
-            required: true
-          ville:
-            label: Ville
-            type: text
-            required: true
-            help: "Code postal et commune."
-          numero:
-            label: Numéro de téléphone
-            type: tel
-            required: true
-          facebook:
-            label: Lien Facebook
-            type: url
-            required: true
-          twitter:
-            label: Lien Twitter
-            type: url
-            required: true
-          instagram:
-            label: Lien Instagram
-            type: url
-            required: true
-          adhesion:
-            label: Adhésion
-            type: textarea
-            size: small
-            help: "Apparaîtront en pied de page."
+                help: "Ces informations apparaîtront en pied de page."

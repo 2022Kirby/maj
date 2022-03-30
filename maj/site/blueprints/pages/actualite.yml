@@ -1,11 +1,7 @@
 Title: Actualité
 
 sections:
-  image:
-    type: files
-    layout: cards
-    help: "Image format bannière seulement."
-  contenu:
+  infos:
     type: fields
     fields:
       resume:
@@ -13,6 +9,13 @@ sections:
         type: textarea
         size: small
         help: "Apparaîtra sur la page actualités."
+  image:
+    type: files
+    layout: cards
+    help: "Image format bannière seulement."
+  contenu:
+    type: fields
+    fields:
       contenu:
         label: Contenu
         type: textarea

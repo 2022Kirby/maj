@@ -119,13 +119,18 @@ main > *{
 }
 
 /* accueil > à propos */
+#a-propos h1{
+    margin-bottom: 2%;
+}
+
 #a-propos h2{
-    margin-bottom: 0;
+    margin-bottom: 0.5%;
     font-size: 2.5vw;
 }
 
 #a-propos p:nth-child(1){
-    font-size: 4vw;
+    margin-top: 3%;
+    font-size: 3vw;
 }
 
 #a-propos p{
@@ -199,7 +204,11 @@ article img{
     margin-bottom: 3%;
 }
 
-article h2{
+article h1{
+    margin-top: 2%;
+}
+
+article > h1, h2, p{
     margin-bottom: 1%;
 }
 
@@ -280,6 +289,7 @@ article h2{
     display: flex;
     flex-flow: row nowrap;
     column-gap: 3%;
+    height: auto;
 }
 
 /* contact > formulaire */
@@ -341,6 +351,7 @@ footer div:first-child{
     grid-column: 1 / span 12;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-around;
     align-items: center;
     /* gap: 1%; */
     margin-bottom: 2%;
@@ -349,7 +360,7 @@ footer div:first-child{
 
 footer img{
     margin: 1%;
-    width: 8%;
+    width: 6%;
     max-height: 60px;
 }
 

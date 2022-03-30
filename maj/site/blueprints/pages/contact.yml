@@ -4,6 +4,10 @@ sections:
   mails:
     type: fields
     fields:
+      autre:
+          label: Mail Autre
+          type: email
+          disabled: true
       maj:
         label: Mail général MAJ
         type: email
@@ -13,6 +17,15 @@ sections:
         type: email
         required: true
         help: "Ces adresses mails sont utilisées pour le formulaire de contact."
+      # dev:
+      #   label: Mail(s) développeur(s)
+      #   type: structure
+      #   fields:
+      #     adresse:
+      #       label: Adresse
+      #       type: email
+      #   required: true
+      #   help: "Ces adresses mails sont utilisées pour le formulaire de contact"
   formulaire:
     type: fields
     fields:

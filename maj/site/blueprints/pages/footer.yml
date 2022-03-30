@@ -1,7 +1,0 @@
-Title: Pied de page
-
-sections:
-  galerie:
-    headline: Logos partenaires
-    type: files
-    layout: cards

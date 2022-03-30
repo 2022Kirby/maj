@@ -34,8 +34,12 @@
         grid-column: 1 / span 3;
     }
 
+    #a-propos h1{
+        font-size: 5.5vw;
+    }
+
     #a-propos h2{
-        font-size: 6vw;
+        font-size: 4.5vw;
     }
 
     #a-propos p:nth-child(1){
@@ -43,7 +47,7 @@
     }
 
     #a-propos p{
-        font-size: 5vw;
+        font-size: 4vw;
 }
 
     .actualites{
@@ -86,6 +90,7 @@
     footer div:first-child{
         grid-column: span 3;
         flex-flow: row wrap;
+        justify-content: flex-start;
     }
 
     footer img{
