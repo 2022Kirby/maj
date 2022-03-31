@@ -1,19 +1,20 @@
 Title: Contact
 
-sections:
+tabs:
   mails:
+    label: Mails de contact
     type: fields
     fields:
       autre:
-          label: Mail Autre
+          label: Autre
           type: email
           disabled: true
       maj:
-        label: Mail général MAJ
+        label: MAJ
         type: email
         required: true
       dev:
-        label: Mail développeur
+        label: Développeur(s)
         type: email
         required: true
         help: "Ces adresses mails sont utilisées pour le formulaire de contact."
@@ -27,22 +28,23 @@ sections:
       #   required: true
       #   help: "Ces adresses mails sont utilisées pour le formulaire de contact"
   formulaire:
+    label: Messages formulaire
     type: fields
     fields:
       message:
-        label: Message mail
+        label: Mail à l'utilisateur
         type: textarea
         size: small
         required: true
         help: Ce message apparaîtra dans le mail de confirmation envoyé à l'utilisateur suite à l'envoi du formulaire.
       confirmation:
-        label: Message de confirmation
+        label: Confirmation
         type: textarea
         size: small
         required: true
         help: Ce message apparaîtra sur la page de confirmation d'envoi du formulaire.
       echec:
-        label: Message d'échec
+        label: Échec
         type: textarea
         size: small
         required: true

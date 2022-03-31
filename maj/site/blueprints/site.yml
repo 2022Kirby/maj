@@ -9,9 +9,12 @@ tabs:
             type: pages
             status: unlisted
             layout: list
+            sortBy: title asc
             templates:
-              - contact
               - home
+              - adhesion
+              - contact
+              - nous-trouver
               - mentions-legales
           listed:
             headline: Menu de navigation
@@ -47,20 +50,27 @@ tabs:
           slider:
             label: Slider
             type: files
-            query: site.find('slider').files
+            parent: site.children.find('actualites').find('slider')
             layout: cards
-            # image:
-              # ratio: 3/1
-              # cover: true
+            image:
+              ratio: 3/1
+              cover: true
             help: "Images format bannière seulement."
 
   header:
     label: En-tête
     columns:
-      - width: 2/2
+      - width: 1/2
         sections:
           logo:
             type: files
+            parent: site.children.find('header').find('logo')
+            layout: cards
+      - width: 1/2
+        sections:
+          favicon:
+            type: files
+            parent: site.children.find('header').find('favicon')
             layout: cards
 
   footer:
@@ -70,6 +80,7 @@ tabs:
         sections:
           partenaires:
             type: files
+            parent: site.children.find('footer')
             layout: cards
           infos:
             type: fields
@@ -78,15 +89,11 @@ tabs:
                 label: Nom
                 type: text
                 required: true
-              rue:
-                label: Rue
-                type: text
+              adresse:
+                label: Adresse
+                type: textarea
+                size: small
                 required: true
-              ville:
-                label: Ville
-                type: text
-                required: true
-                help: "Code postal et commune."
               numero:
                 label: Numéro de téléphone
                 type: tel

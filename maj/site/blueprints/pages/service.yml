@@ -1,7 +1,8 @@
 Title: Service
 
-sections:
+tabs:
   infos:
+    label: Infos
     type: fields
     fields:
       resume:
@@ -45,12 +46,18 @@ sections:
             type: email
         required: true
         help: "Utilisée(s) pour le formulaire de contact."
-  contenu:
-    type: fields
-    fields:
+  article:
+    label: Article
+    sections:
+      image:
+        type: files
+        layout: cards
+        help: "Image format bannière seulement."
       contenu:
-        label: Contenu
-        type: textarea
-        size: large
-        required: true
-        help: "Différencier les titres des paragraphes."
+        type: fields
+        fields:
+          contenu:
+            label: Contenu
+            type: textarea
+            size: large
+            help: "Différencier les titres des paragraphes."

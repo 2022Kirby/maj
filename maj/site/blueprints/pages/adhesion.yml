@@ -1,0 +1,9 @@
+title: Adhésion
+
+fields:
+  contenu:
+    label: Contenu
+    type: textarea
+    size: large
+    required: true
+    help: "Différencier les titres des paragraphes."

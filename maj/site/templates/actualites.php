@@ -27,7 +27,7 @@
                 <ul class="splide__list">
                     <!-- boucle affichant chaque image de la page actualités -->
                     <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
-                    <?php foreach($pages->find('slider')->files()->sortBy('sort') as $image): ?>
+                    <?php foreach($pages->find('actualites')->find('slider')->files()->sortBy('sort') as $image): ?>
                         <li class="splide__slide">
                             <img src="<?= $image->url() ?>" alt="bannière d'actualité">
                         </li>

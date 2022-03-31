@@ -14,8 +14,10 @@
             <!-- panel contenant les infos du service -->
             <div class="accordion-panel">
                 <p><?= $service->resume() ?></p>
-
-                <a href="<?= $service->url() ?>">En savoir plus</a>
+                
+                <?php if($service->contenu()->isNotEmpty()): ?>
+                    <a href="<?= $service->url() ?>">En savoir plus</a>
+                <?php endif ?>
 
                 <!-- si le champ horaire n'est pas vide -->
                 <?php if($service->horaires()->isNotEmpty()): ?>

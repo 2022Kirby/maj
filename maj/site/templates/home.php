@@ -4,7 +4,7 @@
     <header>
         <!-- logo MAJ -->
         <a id="logo" href="<?= $pages->find('actualites')->url() ?>">
-            <img src="<?= $pages->find('header')->files()->filterBy('filename', '*=', 'logo') ?>" alt="logo MAJ">
+            <img src="<?= $pages->find('header')->find('logo')->image()->url() ?>" alt="logo MAJ">
         </a>
 
         <!-- entrez renvoyant sur page actualités -->

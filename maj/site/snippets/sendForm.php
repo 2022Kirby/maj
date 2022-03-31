@@ -9,11 +9,17 @@
         $nameUser = strip_tags(trim($_POST['name'])); 
         $emailUser = strip_tags(trim($_POST['email'])); 
         $nameService = $_POST['service'];
-        $message = strip_tags(trim(wordwrap($_POST['message'], 70, "\r\n"))); 
+        $messageUser = strip_tags(trim(wordwrap($_POST['message'], 70, "\r\n")));
+        $date = date("d/m/y \à G:i");
 
         // déclaration de variables qui vont contenir les éléments du mail
         $to = ''; // destinataire du mail
-        $subject = $nameUser . ' - Demande d\'informations '; // objet du mail
+        $subject = 'Demande d\'informations '; // objet du mail
+        // message
+        $message =  $nameUser . "\r\n" . 
+                    $emailUser . "\r\n" .
+                    $date . "\r\n\r\n" .
+                    $messageUser;
         // en-têtes supplémentaires
         $headers =  'From: ' . $emailUser . "\r\n" . // expéditeur
                     'Reply-To: ' . $emailUser . "\r\n" . // répondre à

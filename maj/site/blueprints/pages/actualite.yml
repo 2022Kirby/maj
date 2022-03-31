@@ -1,7 +1,8 @@
 Title: Actualité
 
-sections:
-  infos:
+tabs:
+  billet:
+    label: Billet
     type: fields
     fields:
       resume:
@@ -9,16 +10,19 @@ sections:
         type: textarea
         size: small
         help: "Apparaîtra sur la page actualités."
-  image:
-    type: files
-    layout: cards
-    help: "Image format bannière seulement."
-  contenu:
-    type: fields
-    fields:
+  article:
+    label: Article
+    sections:
+      image:
+        type: files
+        layout: cards
+        help: "Image format bannière seulement."
       contenu:
-        label: Contenu
-        type: textarea
-        size: large
-        required: true
-        help: "Différencier les titres des paragraphes."
+        type: fields
+        fields:
+          contenu:
+            label: Contenu
+            type: textarea
+            size: large
+            required: true
+            help: "Différencier les titres des paragraphes."
