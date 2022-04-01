@@ -10,11 +10,22 @@ Maj: 2022kirby@gmail.com
 
 ----
 
-Dev: 2022kirby@gmail.com
+Dev:
+
+- 
+  adresse: 2022kirby@gmail.com
 
 ----
 
-Message:
+Objet: Demande d'informations
+
+----
+
+Message1: Ce mail a été envoyé via le formulaire de contact du site.
+
+----
+
+Message2:
 
 Votre demande à MAJ a bien été reçue, nous vous répondrons dans les plus brefs délais.
 Merci de ne pas répondre à ce mail.

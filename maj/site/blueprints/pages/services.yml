@@ -8,6 +8,8 @@ sections:
     status: published
     layout: list
     limit: 10
+    image:
+      cover: true
     help: "Liste apparaissant sur la page services."
   drafts:
     headline: Brouillons

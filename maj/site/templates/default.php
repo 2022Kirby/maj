@@ -10,17 +10,11 @@
     
     <main>
         <article>
-            <!-- insertion de la première image de la page -->
-            <!-- <img src="< ?= $page->image()->url() ?>" alt="image article"> -->
-
-            <!-- pour les besoins de la démo, utilisation d'un lorem picsum -->
-            <img src="https://picsum.photos/1200/400" alt="image article">
-
             <!-- titre de la page -->
             <h1><?= $page->title() ?></h1>
 
             <!-- contenu de la page -->
-            <?= $page->contenu()->kirbytext() ?>
+            <?= $page->contenu()->toBlocks() ?>
         </article>
     </main>
 

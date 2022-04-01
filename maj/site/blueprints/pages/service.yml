@@ -45,19 +45,22 @@ tabs:
             label: Adresse
             type: email
         required: true
-        help: "Utilisée(s) pour le formulaire de contact."
+        help: "Adresse(s) utilisée(s) pour le formulaire de contact."
   article:
     label: Article
     sections:
-      image:
+      images:
         type: files
         layout: cards
-        help: "Image format bannière seulement."
       contenu:
         type: fields
         fields:
           contenu:
             label: Contenu
-            type: textarea
-            size: large
-            help: "Différencier les titres des paragraphes."
+            type: blocks
+            fieldsets:
+              - heading
+              - text
+              - list
+              - markdown
+              - image

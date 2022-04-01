@@ -13,16 +13,18 @@ tabs:
   article:
     label: Article
     sections:
-      image:
+      images:
         type: files
         layout: cards
-        help: "Image format bannière seulement."
       contenu:
         type: fields
         fields:
           contenu:
             label: Contenu
-            type: textarea
-            size: large
-            required: true
-            help: "Différencier les titres des paragraphes."
+            type: blocks
+            fieldsets:
+              - heading
+              - text
+              - list
+              - markdown
+              - image

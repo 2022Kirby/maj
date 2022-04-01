@@ -1,9 +1,10 @@
 <?php snippet('head') ?>
 
 <body>
-    <?php snippet('header') ?>
-    
     <main>
+        <!-- retour vers page appelante -->
+        <a href="javascript:window.history.back();">< retour</a>
+        
         <!-- titre de la page -->
         <h1><?= $page->title() ?></h1>
 
@@ -56,8 +57,6 @@
             </div>
         </form>
     </main>
-
-    <?php snippet('footer') ?>
 
     <!-- lien vers le script php du formulaire -->
     <?php snippet('sendForm') ?>

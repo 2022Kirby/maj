@@ -201,7 +201,9 @@ main > *{
 
 /* actualités > articles actualités */
 article img{
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 90%;
 }
 
 article h1{

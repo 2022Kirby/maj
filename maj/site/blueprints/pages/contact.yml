@@ -9,34 +9,46 @@ tabs:
           label: Autre
           type: email
           disabled: true
+          help: "Adresse de destination si l'utilisateur choisit l'option \"Autre\"."
       maj:
         label: MAJ
         type: email
         required: true
+        help: "Adresse d'expédition utilisée pour l'envoi de mail à l'utilisateur."
       dev:
         label: Développeur(s)
-        type: email
+        type: structure
+        fields:
+          adresse:
+            label: Adresse
+            type: email
         required: true
-        help: "Ces adresses mails sont utilisées pour le formulaire de contact."
-      # dev:
-      #   label: Mail(s) développeur(s)
-      #   type: structure
-      #   fields:
-      #     adresse:
-      #       label: Adresse
-      #       type: email
-      #   required: true
-      #   help: "Ces adresses mails sont utilisées pour le formulaire de contact"
+        help: "Adresse(s) en copie carbone invisible."
+  mail:
+    label: Messages mail
+    type: fields
+    fields:
+      objet:
+        label: Objet mail équipe
+        type: text
+        required: true
+        help: Ce texte apparaîtra dans l'objet du mail envoyé aux équipes et sera suivi du nom du service.
+      message1:
+        label: Message mail équipe
+        type: textarea
+        size: small
+        required: true
+        help: Ce message apparaîtra dans le mail envoyé aux équipes et sera suivi des informations et du message de l'utilisateur.
+      message2:
+        label: Message mail utilisateur
+        type: textarea
+        size: small
+        required: true
+        help: Ce message apparaîtra dans le mail de confirmation envoyé à l'utilisateur et sera suivi d'une copie de son message.
   formulaire:
     label: Messages formulaire
     type: fields
     fields:
-      message:
-        label: Mail à l'utilisateur
-        type: textarea
-        size: small
-        required: true
-        help: Ce message apparaîtra dans le mail de confirmation envoyé à l'utilisateur suite à l'envoi du formulaire.
       confirmation:
         label: Confirmation
         type: textarea

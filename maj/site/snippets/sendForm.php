@@ -14,16 +14,30 @@
 
         // déclaration de variables qui vont contenir les éléments du mail
         $to = ''; // destinataire du mail
-        $subject = 'Demande d\'informations '; // objet du mail
+        $subject = $pages->find('contact')->objet(); // objet du mail
         // message
-        $message =  $nameUser . "\r\n" . 
-                    $emailUser . "\r\n" .
-                    $date . "\r\n\r\n" .
-                    $messageUser;
+        $message =  $pages->find('contact')->message1() . "\r\n\r\n" .
+                    'Prénom Nom : ' . $nameUser . "\r\n" . 
+                    'Adresse email : ' . $emailUser . "\r\n\r\n" .
+                    'Envoyé le '. $date . "\r\n" .
+                    'Contenu : ' . "\r\n" . $messageUser;
+        // mail(s) développeurs
+        $dev = '';
+        // pour chaque champ adresse dev de la page contact
+        foreach($pages->find('contact')->dev()->toStructure() as $mailDev){
+            // si l'index du champ est égal à 0 (string)
+            if($mailDev == '0'){
+                // concaténation de l'adresse mail seule
+                $dev .= $mailDev->adresse();
+            } elseif($mailDev != '0'){ // sinon si l'index du champ est différent de 0 (string)
+                // concaténation de l'adresse mail précédée d'une virgule
+                $dev .= ', ' . $mailDev->adresse();
+            }
+        }
         // en-têtes supplémentaires
         $headers =  'From: ' . $emailUser . "\r\n" . // expéditeur
                     'Reply-To: ' . $emailUser . "\r\n" . // répondre à
-                    'Bcc: ' . $pages->find('contact')->dev() . "\r\n" . // A MODIFIER copie carbone invisible
+                    'Bcc: ' . $dev . "\r\n" . // copie carbone invisible
                     'X-Mailer: PHP/' . phpversion();
 
         try {
@@ -37,19 +51,19 @@
                 foreach($pages->find('services')->children()->listed() as $service){
                     // si le nom du service est égal à la valeur de $nameService, on change la valeur de $to et $subject en conséquence
                     if($service->title() == $nameService){
-                        // pour chaque champ mails du service
-                        foreach($service->mails()->toStructure() as $mail){
+                        // pour chaque champ adresse mail du service
+                        foreach($service->mails()->toStructure() as $mailService){
                             // si l'index du champ est égal à 0 (string)
-                            if($mail == '0'){
+                            if($mailService == '0'){
                                 // concaténation de l'adresse mail seule
-                                $to .= $mail->adresse();
-                            } elseif($mail != '0'){ // sinon si l'index du champ est différent de 0 (string)
+                                $to .= $mailService->adresse();
+                            } elseif($mailService != '0'){ // sinon si l'index du champ est différent de 0 (string)
                                 // concaténation de l'adresse mail précédée d'une virgule
-                                $to .= ', ' . $mail->adresse();
+                                $to .= ', ' . $mailService->adresse();
                             }
                         }
                         // concaténation du nom du service
-                        $subject .= $service->title();
+                        $subject .= ' ' . $service->title();
                     }
                 }
             }
@@ -57,14 +71,18 @@
             // si envoi du mail est true
             if(mail($to, $subject, $message, $headers)) {
                 // on envoie une copie du message à l'utilisateur
-                $messageCopy = $pages->find('contact')->message() . "\r\n" . $message;
+                $messageCopy =  $pages->find('contact')->message2() . "\r\n" . 
+                                $messageUser;
                 
                 mail($emailUser, $subject, $messageCopy, 'From: ' . $pages->find('contact')->maj());
 
                 // puis on fait une redirection du navigateur vers la page de confirmation
-                header('Location: ' . $pages->find('contact/confirmation')->url()); 
+                header('Location: ' . $pages->find('contact/confirmation')->url()
+                    // ajout de paramètres dans l'url
+                    . '?name=' . $nameUser
+                    . '&mail=' . $emailUser); 
                 // enfin on s'assure que la suite du code n'est pas exécutée une fois la redirection effectuée
-                exit; 
+                exit;
             } else { // si false
                 // on fait une redirection du navigateur vers la page d'erreur
                 header('Location: ' . $pages->find('contact/echec')->url()); 

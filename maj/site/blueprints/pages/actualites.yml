@@ -6,8 +6,12 @@ sections:
     type: pages
     template: actualite
     status: published
-    layout: list
-    limit: 10
+    layout: cards
+    limit: 6
+    size: tiny
+    image:
+      ratio: 1/1
+      cover: true
     help: "De la plus récente à la plus ancienne."
   drafts:
     headline: Brouillons
