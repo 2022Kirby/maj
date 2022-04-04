@@ -4,7 +4,9 @@ sections:
   published:
     headline: Pages publiées
     type: pages
-    template: service
+    templates: 
+      - service
+      - permanences-partenaires
     status: published
     layout: list
     limit: 10

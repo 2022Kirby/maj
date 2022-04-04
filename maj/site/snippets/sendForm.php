@@ -10,7 +10,8 @@
         $emailUser = strip_tags(trim($_POST['email'])); 
         $nameService = $_POST['service'];
         $messageUser = strip_tags(trim(wordwrap($_POST['message'], 70, "\r\n")));
-        $date = date("d/m/y \à G:i");
+        $date = date('d.m.y');
+        $time = date('G:i');
 
         // déclaration de variables qui vont contenir les éléments du mail
         $to = ''; // destinataire du mail
@@ -18,8 +19,8 @@
         // message
         $message =  $pages->find('contact')->message1() . "\r\n\r\n" .
                     'Prénom Nom : ' . $nameUser . "\r\n" . 
-                    'Adresse email : ' . $emailUser . "\r\n\r\n" .
-                    'Envoyé le '. $date . "\r\n" .
+                    'Adresse email : ' . $emailUser . "\r\n" .
+                    'Envoyé le '. $date . ' à ' . $time . "\r\n" .
                     'Contenu : ' . "\r\n" . $messageUser;
         // mail(s) développeurs
         $dev = '';
@@ -77,10 +78,13 @@
                 mail($emailUser, $subject, $messageCopy, 'From: ' . $pages->find('contact')->maj());
 
                 // puis on fait une redirection du navigateur vers la page de confirmation
+                // avec ajout de paramètres dans l'url
                 header('Location: ' . $pages->find('contact/confirmation')->url()
-                    // ajout de paramètres dans l'url
-                    . '?name=' . $nameUser
-                    . '&mail=' . $emailUser); 
+                    . '?service=' . $nameService
+                    . '&name=' . $nameUser
+                    . '&mail=' . $emailUser
+                    . '&date=' . $date
+                    . '&time=' . $time);
                 // enfin on s'assure que la suite du code n'est pas exécutée une fois la redirection effectuée
                 exit;
             } else { // si false

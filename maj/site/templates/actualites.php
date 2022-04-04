@@ -12,6 +12,11 @@
                     <!-- chaque brève correspond à un élément li dans lequel on insère le contenu -->
                     <?php foreach($site->breves()->toStructure() as $breve): ?>
                         <li class="splide__slide">
+                            <!-- si le champ image n'est pas vide -->
+                            <?php if($breve->image()->isNotEmpty()): ?>
+                                <img src="<?= $breve->image()->toFiles() ?>" alt="<?= $breve->titre() ?>">
+                            <?php endif ?>
+                            
                             <p><?= $breve->titre() ?></p>
                             <p><?= $breve->contenu() ?></p>
                         </li>

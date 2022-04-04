@@ -15,7 +15,8 @@
             <div class="accordion-panel">
                 <p><?= $service->resume() ?></p>
                 
-                <?php if($service->contenu()->isNotEmpty()): ?>
+                <!-- si champ contenu du service n'est pas vide ou si le service a des enfants -->
+                <?php if($service->contenu()->isNotEmpty() || $service->partenaires()->isNotEmpty()): ?>
                     <a href="<?= $service->url() ?>">En savoir plus</a>
                 <?php endif ?>
 

@@ -1,0 +1,44 @@
+Title: Service
+
+tabs:
+  infos:
+    label: Infos
+    type: fields
+    fields:
+      resume:
+        label: Résumé
+        type: textarea
+        size: small
+        required: true
+        help: "Apparaîtra sous le nom du service."
+      mails:
+        label: Mail(s) de contact
+        type: structure
+        fields:
+          adresse:
+            label: Adresse
+            type: email
+        required: true
+        help: "Adresse(s) utilisée(s) pour le formulaire de contact."
+  partenaires:
+    label: Partenaires
+    type: fields
+    fields:
+      partenaires:
+        label: Partenaires
+        type: structure
+        fields:
+          logo:
+            type: files
+            layout: cards
+            image:
+              ratio: 1/1
+          nom:
+            label: Nom
+            type: text
+            required: true
+          telephone:
+            label: Numéro de téléphone
+            type: tel
+            required: true
+            help: "Format: xx xx xx xx xx"

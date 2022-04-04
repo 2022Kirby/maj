@@ -34,9 +34,12 @@ tabs:
             type: fields
             fields:
               breves:
-                label: Ticker
+                label: Brèves
                 type: structure
                 fields:
+                  image:
+                    type: files
+                    layout: cards
                   titre:
                     label: Titre
                     type: text
