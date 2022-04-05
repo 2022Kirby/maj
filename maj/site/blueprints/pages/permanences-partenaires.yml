@@ -28,7 +28,7 @@ tabs:
         label: Partenaires
         type: structure
         fields:
-          logo:
+          image:
             type: files
             layout: cards
             image:

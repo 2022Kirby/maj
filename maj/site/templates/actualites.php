@@ -10,7 +10,7 @@
                 <ul class="splide__list">
                     <!-- boucle affichant pour chaque brève, les champs titre et contenu -->
                     <!-- chaque brève correspond à un élément li dans lequel on insère le contenu -->
-                    <?php foreach($site->breves()->toStructure() as $breve): ?>
+                    <?php foreach($pages->find('actualites')->find('ticker')->breves()->toStructure() as $breve): ?>
                         <li class="splide__slide">
                             <!-- si le champ image n'est pas vide -->
                             <?php if($breve->image()->isNotEmpty()): ?>

@@ -2,9 +2,10 @@ tabs:
   site:
     label: Site
     columns:
-      - width: 1/2
+      - width: 1/3
+        sticky: true
         sections:
-          unlisted:
+          pagesPubliees:
             headline: Pages publiées
             type: pages
             status: unlisted
@@ -16,75 +17,20 @@ tabs:
               - contact
               - nous-trouver
               - mentions-legales
-          listed:
+          nav:
             headline: Menu de navigation
             type: pages
             status: listed
             layout: list
-          drafts:
+          pagesBrouillons:
             headline: Brouillons
             type: pages
             status: drafts
             layout: list
             limit: 5
             
-      - width: 1/2
+      - width: 2/3
         sections:
-          ticker:
-            type: fields
-            fields:
-              breves:
-                label: Brèves
-                type: structure
-                fields:
-                  image:
-                    type: files
-                    layout: cards
-                  titre:
-                    label: Titre
-                    type: text
-                    required: true
-                  contenu:
-                    label: Contenu
-                    type: textarea
-                    size: small
-                    required: true
-                help: "Chaque brève est constituée d'un titre et d'un texte court."
-          slider:
-            label: Slider
-            type: files
-            parent: site.children.find('actualites').find('slider')
-            layout: cards
-            image:
-              ratio: 3/1
-              cover: true
-            help: "Images format bannière seulement."
-
-  header:
-    label: En-tête
-    columns:
-      - width: 1/2
-        sections:
-          logo:
-            type: files
-            parent: site.children.find('header').find('logo')
-            layout: cards
-      - width: 1/2
-        sections:
-          favicon:
-            type: files
-            parent: site.children.find('header').find('favicon')
-            layout: cards
-
-  footer:
-    label: Pied de page
-    columns:
-      - width: 2/2
-        sections:
-          partenaires:
-            type: files
-            parent: site.children.find('footer')
-            layout: cards
           infos:
             type: fields
             fields:
@@ -119,3 +65,155 @@ tabs:
                 size: small
                 required: true
                 help: "Ces informations apparaîtront en pied de page."
+
+  header:
+    label: En-tête
+    columns:
+      - width: 1/2
+        sections:
+          logo:
+            type: files
+            parent: site.find('header').find('logo')
+            layout: cards
+      - width: 1/2
+        sections:
+          favicon:
+            type: files
+            parent: site.find('header').find('favicon')
+            layout: cards
+
+  footer:
+    label: Pied de page
+    columns:
+      - width: 2/2
+        sections:
+          partenaires:
+            type: files
+            parent: site.find('footer')
+            layout: cards
+  
+  actualites:
+    label: Actualités
+    columns:
+      - width: 2/2
+        sections:
+          ticker:
+            type: fields
+            fields:
+              breves:
+                label: Brèves
+                type: structure
+                query: site.find('actualites').find('ticker').breves #ne marche pas
+                fields:
+                  image:
+                    type: files
+                    layout: cards
+                  titre:
+                    label: Titre
+                    type: text
+                    required: true
+                  contenu:
+                    label: Contenu
+                    type: textarea
+                    size: small
+                    required: true
+                help: "Chaque brève est constituée d'un titre et d'un texte court."
+          slider:
+            label: Slider
+            type: files
+            parent: site.find('actualites').find('slider')
+            layout: cards
+            image:
+              ratio: 3/1
+              cover: true
+            help: "Images format bannière seulement."
+          actualitesPubliees:
+            headline: Actualités publiées
+            type: pages
+            parent: site.find('actualites')
+            template: actualite
+            status: published
+            layout: cards
+            limit: 6
+            size: tiny
+            image:
+              ratio: 1/1
+              cover: true
+            help: "De la plus récente à la plus ancienne."
+          actualitesBrouillons:
+            headline: Brouillons
+            type: pages
+            parent: site.find('actualites')
+            template: actualite
+            status: drafts
+            layout: list
+            limit: 5
+  
+  services:
+    label: Services
+    columns:
+      - width: 2/2
+        sections:
+          servicesPublies:
+            headline: Services publiés
+            type: pages
+            parent: site.find('services')
+            templates: 
+              - service
+              - permanences-partenaires
+            status: published
+            layout: list
+            limit: 10
+            image:
+              cover: true
+            help: "Liste apparaissant sur la page services."
+          servicesBrouillons:
+            headline: Brouillons
+            type: pages
+            parent: site.find('services')
+            template: service
+            status: drafts
+            layout: list
+            limit: 5
+  
+  equipe:
+    label: Équipe
+    columns:
+      -width: 2/2
+        sections:
+          equipe:
+            type: fields
+            fields:
+              membres:
+                label: Membres
+                type: structure
+                query: site.find('equipe').membres # ne marche pas
+                fields:
+                  prenom:
+                    label: Prénom
+                    type: text
+                    required: true
+                  nom:
+                    label: Nom
+                    type: text
+                    required: true
+                  service:
+                    label: Service
+                    type: select
+                    options: query
+                    query: 
+                      fetch: site.find('services').children
+                      value: "{{ page.title }}"
+                    required: true
+                  detail:
+                    label: Détail
+                    type: textarea
+                    size: small
+                    help: "Présentation de la personne et de sa fonction."
+                    required: true
+                  telephone:
+                    label: Numéro de téléphone
+                    type: tel
+                    required: true
+                    help: "Format: xx xx xx xx xx"
+                help: "Liste apparaissant sur la page équipe."

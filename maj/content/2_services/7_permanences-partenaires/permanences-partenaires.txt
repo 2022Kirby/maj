@@ -16,30 +16,30 @@ Mails:
 Partenaires:
 
 - 
-  logo:
+  image:
     - >
       logo-adiad-oy0l8h4ad68qa4b0nq8chcnnsu38vgmunlaq8uysx4.png
   nom: ADIAD Cap’Emploi
   telephone: 05 63 32 81 30
 - 
-  logo:
+  image:
     - >
       logo-1-construction-oy0l8h4ad68qa4b0nq8chcnnsu38vgmunlaq8uysx4.png
   nom: CIBC
   telephone: 05 68 66 51 87
 - 
-  logo:
+  image:
     - >
       19248076_1832998783684258_5456615688234553714_n-oy0l8f8lzi65mwdqypf3cd4qm2cig2fdzbzrab1l9k.jpg
   nom: CIDFF
   telephone: 05 68 66 11 61
 - 
-  logo:
+  image:
     - logo-mda.png
   nom: Maison des Ados
   telephone: 05 68 68 75 95
 - 
-  logo:
+  image:
     - >
       external-content.duckduckgo.com_-oy0l8g6g6c7fyicdt7tpwuw77g7vnrj4bgn8rl073c.png
   nom: Mission Locale
