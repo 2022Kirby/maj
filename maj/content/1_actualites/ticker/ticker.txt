@@ -12,15 +12,21 @@ Breves:
   contenu: >
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit.
+  toggle: 'false'
+  datefin: ""
 - 
   image: [ ]
   titre: Lorem ipsum
   contenu: >
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit.
+  toggle: 'true'
+  datefin: 2022-04-05
 - 
   image: [ ]
   titre: Lorem ipsum
   contenu: >
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit.
+  toggle: 'false'
+  datefin: ""

@@ -3,7 +3,7 @@
         <div>
             <!-- boucle affichant chaque image à la racine du site contenant un string "partenaire" -->
             <?php foreach($pages->find('footer')->files()->sortBy('sort') as $image): ?>
-                <img src="<?= $image->url() ?>" alt="logo partenaire">
+                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
             <?php endforeach ?>
         </div>
         

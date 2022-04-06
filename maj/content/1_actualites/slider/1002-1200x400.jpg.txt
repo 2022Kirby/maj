@@ -1,1 +1,13 @@
+Alt: bannière d'actualité
+
+----
+
+Toggle: true
+
+----
+
+Datefin: 2022-04-05
+
+----
+
 Sort: 1

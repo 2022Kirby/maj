@@ -1,2 +1,7 @@
-title: Default Page
-preset: page
+title: "{{ page.title }}"
+
+fields:
+  info:
+    label:
+    type: info
+    text: Cette page n'a pas de blueprint.

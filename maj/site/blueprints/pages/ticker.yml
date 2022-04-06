@@ -1,0 +1,34 @@
+title: Ticker
+
+fields:
+  breves:
+    label: Brèves
+    type: structure
+    fields:
+      image:
+        type: files
+        max: 1
+        layout: cards
+      titre:
+        label: Titre
+        type: text
+        required: true
+      contenu:
+        label: Contenu
+        type: textarea
+        size: small
+        required: true
+      toggle:
+        label: Date de fin d'affichage
+        type: toggle
+        text: 
+          - "non"
+          - "oui"
+      dateFin:
+        label: Date
+        type: date
+        display: DD/MM/YYYY
+        when:
+          toggle: true
+        required: true
+    help: "Chaque brève est constituée d'un titre et d'un texte court."

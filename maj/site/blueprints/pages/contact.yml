@@ -29,10 +29,10 @@ tabs:
     type: fields
     fields:
       objet:
-        label: Objet mail équipe
+        label: Objet mail
         type: text
         required: true
-        help: Ce texte apparaîtra dans l'objet du mail envoyé aux équipes et sera suivi du nom du service.
+        help: Ce texte apparaîtra dans l'objet du mail envoyé via le formulaire et sera suivi du nom du service.
       message1:
         label: Message mail équipe
         type: textarea

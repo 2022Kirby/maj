@@ -1,8 +1,8 @@
 Title: Services
 
 sections:
-  published:
-    headline: Pages publiées
+  servicesPublies:
+    headline: Services publiés
     type: pages
     templates: 
       - service
@@ -13,7 +13,7 @@ sections:
     image:
       cover: true
     help: "Liste apparaissant sur la page services."
-  drafts:
+  servicesBrouillons:
     headline: Brouillons
     type: pages
     template: service

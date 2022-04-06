@@ -74,11 +74,13 @@ tabs:
           logo:
             type: files
             parent: site.find('header').find('logo')
+            max: 1
             layout: cards
       - width: 1/2
         sections:
           favicon:
             type: files
+            max: 1
             parent: site.find('header').find('favicon')
             layout: cards
 
@@ -107,6 +109,7 @@ tabs:
                 fields:
                   image:
                     type: files
+                    max: 1
                     layout: cards
                   titre:
                     label: Titre
@@ -116,6 +119,19 @@ tabs:
                     label: Contenu
                     type: textarea
                     size: small
+                    required: true
+                  toggle:
+                    label: Date de fin d'affichage
+                    type: toggle
+                    text: 
+                      - "non"
+                      - "oui"
+                  dateFin:
+                    label: Date
+                    type: date
+                    display: DD/MM/YYYY
+                    when:
+                      toggle: true
                     required: true
                 help: "Chaque brève est constituée d'un titre et d'un texte court."
           slider:

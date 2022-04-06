@@ -1,0 +1,11 @@
+Title: Slider
+
+sections:
+  slider:
+    label: Slider
+    type: files
+    layout: cards
+    image:
+      ratio: 3/1
+      cover: true
+    help: "Images format bannière seulement."

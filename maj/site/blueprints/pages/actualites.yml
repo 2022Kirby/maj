@@ -2,37 +2,20 @@ Title: Actualités
 
 sections:
   ticker:
-    type: fields
-    fields:
-      breves:
-        label: Brèves
-        type: structure
-        fields:
-          image:
-            type: files
-            parent: site.find('actualites').find('ticker')
-            layout: cards
-          titre:
-            label: Titre
-            type: text
-            required: true
-          contenu:
-            label: Contenu
-            type: textarea
-            size: small
-            required: true
-        help: "Chaque brève est constituée d'un titre et d'un texte court."
+    headline: Ticker
+    type: pages
+    template: ticker
   slider:
     label: Slider
     type: files
-    parent: site.find('actualites').find('slider')
+    parent: page.find('slider')
     layout: cards
     image:
       ratio: 3/1
       cover: true
     help: "Images format bannière seulement."
-  published:
-    headline: Pages publiées
+  actualitesPubliees:
+    headline: Actualités publiées
     type: pages
     template: actualite
     status: published
@@ -43,7 +26,7 @@ sections:
       ratio: 1/1
       cover: true
     help: "De la plus récente à la plus ancienne."
-  drafts:
+  actualitesBrouillons:
     headline: Brouillons
     type: pages
     template: actualite

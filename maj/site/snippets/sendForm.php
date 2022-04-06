@@ -46,7 +46,7 @@
             if($nameService == "Autre"){
                 // changement de la valeur de $to et $subject en conséquence
                 $to = $pages->find('contact')->autre();
-                $subject .= "Autre";
+                $subject .= " Autre";
             } else{ //sinon
                 // pour chaque page enfant de services
                 foreach($pages->find('services')->children()->listed() as $service){

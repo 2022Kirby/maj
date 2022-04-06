@@ -95,7 +95,7 @@ header #logo img{
 /* navbar */
 header nav{
     grid-column: 1 / span 12;
-    margin: 2% 0 2% 0;
+    margin: 2% 0 1% 0;
     width: 100%;
 }
 
@@ -141,6 +141,7 @@ main > *{
 
 /* actualités > ticker + slider */
 #ticker{
+    margin-top: 0;
     overflow: hidden;;
 }
 
@@ -150,7 +151,7 @@ main > *{
 }
 
 #ticker .splide__slide{
-    margin: auto;
+    margin: auto auto 0 auto;
     padding: 2%;
     width: auto;
 }

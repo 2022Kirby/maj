@@ -1,0 +1,19 @@
+Title: Image
+
+fields:
+  alt:
+    label: Alt
+    type: text
+  toggle:
+    label: Date de fin d'affichage
+    type: toggle
+    text: 
+      - "non"
+      - "oui"
+  dateFin:
+    label: Date
+    type: date
+    display: DD/MM/YYYY
+    when:
+      toggle: true
+    required: true

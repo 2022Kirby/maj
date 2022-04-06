@@ -7,36 +7,59 @@
         <!-- ticker -->
         <div class="splide" id="ticker">
             <div class="splide__track">
+                <!-- slides -->
                 <ul class="splide__list">
+
                     <!-- boucle affichant pour chaque brève, les champs titre et contenu -->
-                    <!-- chaque brève correspond à un élément li dans lequel on insère le contenu -->
                     <?php foreach($pages->find('actualites')->find('ticker')->breves()->toStructure() as $breve): ?>
-                        <li class="splide__slide">
-                            <!-- si le champ image n'est pas vide -->
-                            <?php if($breve->image()->isNotEmpty()): ?>
-                                <img src="<?= $breve->image()->toFiles() ?>" alt="<?= $breve->titre() ?>">
-                            <?php endif ?>
-                            
-                            <p><?= $breve->titre() ?></p>
-                            <p><?= $breve->contenu() ?></p>
-                        </li>
+
+                        <!-- si le toggle est activé ET que la date courante est inférieure ou égale à la date de fin OU si le toggle est désactivé, on affiche la brève -->
+                        <?php if($breve->toggle()->toBool() == true && strtotime(date('Y-m-d')) <= $breve->dateFin()->toDate() || $breve->toggle()->toBool() == false): ?>
+
+                            <!-- chaque brève correspond à un élément li dans lequel on insère le contenu -->
+                            <li class="splide__slide">
+
+                                <!-- si le champ image n'est pas vide -->
+                                <?php if($breve->image()->isNotEmpty()): ?>
+                                    <?php $image = $breve->image()->toFiles() ?>
+                                        <img src="<?= $image ?>" alt="<?= $image->first()->alt() ?>">
+                                    <?php ?>
+                                <?php endif ?>
+                                
+                                <p><?= $breve->titre() ?></p>
+                                <p><?= $breve->contenu() ?></p>
+                                
+                            </li>
+
+                        <?php endif ?>
+
                     <?php endforeach ?>
+
                 </ul>
             </div>
         </div>
 
         <!-- slider -->
         <div class="splide" id="slider">
-            <!-- slides -->
             <div class="splide__track">
+                <!-- slides -->
                 <ul class="splide__list">
-                    <!-- boucle affichant chaque image de la page actualités -->
-                    <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
+
+                    <!-- boucle affichant chaque image du slider -->
                     <?php foreach($pages->find('actualites')->find('slider')->files()->sortBy('sort') as $image): ?>
-                        <li class="splide__slide">
-                            <img src="<?= $image->url() ?>" alt="bannière d'actualité">
-                        </li>
+
+                        <!-- si le toggle est activé ET que la date courante est inférieure ou égale à la date de fin OU si le toggle est désactivé, on affiche la slide -->
+                        <?php if($image->toggle()->toBool() == true && strtotime(date('Y-m-d')) <= $image->dateFin()->toDate() || $image->toggle()->toBool() == false): ?>
+
+                            <!-- chaque slide correspond à un élément li dans lequel on insère le contenu -->
+                            <li class="splide__slide">
+                                <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                            </li>
+
+                        <?php endif ?>
+
                     <?php endforeach ?>
+
                 </ul>
             </div>
             <!-- barre de progression de la slide -->

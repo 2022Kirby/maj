@@ -14,6 +14,8 @@ Dev:
 
 - 
   adresse: 2022kirby@gmail.com
+- 
+  adresse: dominique.vial@e-maj.org
 
 ----
 
@@ -27,10 +29,12 @@ Message1: Ce mail a été envoyé via le formulaire de contact du site.
 
 Message2:
 
-Votre demande à MAJ a bien été reçue, nous vous répondrons dans les plus brefs délais.
-Merci de ne pas répondre à ce mail.
-
-Votre message:
+Bonjour,
+ 
+Votre message depuis le formulaire de contact a bien été transmis. 
+Il sera traité dans les plus brefs délais.
+ 
+En voici le contenu :
 
 ----
 
