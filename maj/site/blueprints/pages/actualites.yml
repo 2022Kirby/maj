@@ -2,23 +2,26 @@ Title: Actualités
 
 sections:
   ticker:
-    headline: Ticker
     type: pages
+    parent: site.find('actualites')
     template: ticker
+    image:
+      query: false
   slider:
     label: Slider
     type: files
-    parent: page.find('slider')
+    parent: site.find('actualites').find('slider')
     layout: cards
     image:
       ratio: 3/1
       cover: true
     help: "Images format bannière seulement."
-  actualitesPubliees:
-    headline: Actualités publiées
+  actualites:
+    headline: Actualités
     type: pages
+    parent: site.find('actualites')
     template: actualite
-    status: published
+    status: all
     layout: cards
     limit: 6
     size: tiny
@@ -26,10 +29,3 @@ sections:
       ratio: 1/1
       cover: true
     help: "De la plus récente à la plus ancienne."
-  actualitesBrouillons:
-    headline: Brouillons
-    type: pages
-    template: actualite
-    status: drafts
-    layout: list
-    limit: 5

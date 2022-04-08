@@ -1,19 +1,30 @@
 Title: Image
 
-fields:
-  alt:
-    label: Alt
-    type: text
-  toggle:
-    label: Date de fin d'affichage
-    type: toggle
-    text: 
-      - "non"
-      - "oui"
-  dateFin:
-    label: Date
-    type: date
-    display: DD/MM/YYYY
-    when:
-      toggle: true
-    required: true
+columns:
+  - width: 1/2
+    sections:
+      alt:
+        type: fields
+        fields:
+          alt:
+            label: Alt
+            type: text
+  - width: 1/2
+    sections:
+      date:
+        type: fields
+        fields:
+          toggle:
+            label: Date de fin d'affichage
+            type: toggle
+            text: 
+              - "non"
+              - "oui"
+            help: "Cette date affectera l'affichage des images du slider."
+          dateFin:
+            label: Date
+            type: date
+            display: DD/MM/YYYY
+            when:
+              toggle: true
+            required: true

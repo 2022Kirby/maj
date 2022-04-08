@@ -1,5 +1,5 @@
 @media only screen and (max-width: 450px){
-    header, main, footer{
+    header, main{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -13,7 +13,11 @@
     }
 
     p{
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+
+    a{
+        font-size: 3.5vw;
     }
     
     header #logo img{
@@ -48,7 +52,7 @@
 
     #a-propos p{
         font-size: 4vw;
-}
+    }
 
     .actualites{
         grid-column: span 3;
@@ -58,12 +62,7 @@
     }
 
     .actualites a{
-        font-size: 2.8vw;
-    }
-
-    .actualites h3{
-        margin-bottom: 1%;
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     .accordion-button h1{
@@ -75,21 +74,44 @@
     }
 
     .accordion-panel h2{
+        font-size: 3.5vw;
+    }
+
+    .accordion-panel > #partenaires{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #partenaires img{
+        margin-bottom: 5%;
+        width: auto;
+        max-height: 40px;
+    }
+
+    #partenaires h2{
         font-size: 3vw;
+    }
+
+    article p{
+        font-size: 3.5vw;
     }
 
     form input:not(input[type=submit]), form select, form textarea{
         width: 95%;
     }
 
+    footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     footer div:first-child{
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 2;
         flex-flow: row wrap;
         justify-content: flex-start;
     }
 
     footer div:nth-child(2){
-        grid-column: span 3;
+        grid-column: span 2;
     }
 
     footer > div:nth-child(3){
@@ -100,12 +122,18 @@
         grid-column: 2 / span 1;
     }
 
+    footer div:nth-child(3) p,
+    footer div:nth-child(4) p{
+        margin-bottom: 2%;
+    }
+
     footer div:nth-child(5){
-        grid-column: 3 / span 1;
+        grid-column: 1 / span 1;
     }
 
     footer div:last-child{
-        grid-column: 3 / span 1;
+        grid-column: 2 / span 1;
+        align-self: flex-end;
     }
 
     footer img{
@@ -116,5 +144,10 @@
 
     footer #socials{
         margin: 2% 0 0 0;
+    }
+
+    footer svg{
+        margin-right: 5%;
+        width: 8%;
     }
 }

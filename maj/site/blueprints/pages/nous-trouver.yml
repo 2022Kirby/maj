@@ -1,1 +1,16 @@
 Title: Nous trouver
+
+fields:
+  carte:
+    label: Lien carte
+    type: url
+    required: true
+    help: Url de la carte pour l'iframe.
+  lien:
+    label: Lien extérieur
+    type: url
+    required: true
+    help: Url pour afficher la carte en plus grand.
+  style:
+    label: Attribut style
+    type: text

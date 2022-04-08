@@ -10,9 +10,11 @@
     /* variables globales à modifier selon la charte graphique */
     --font-family: Roboto, sans-serif;
     --primary-color: #000000;
-    --secondary-color: #ffffff;
-    --highlight-color: #45accc;
-    --bg-color: #ececec;
+    --secondary-color: #b3b3b3;
+    --highlight-color: #7a7a7a;
+    --highlight-secondary-color: #45accc;
+    --highlight-tertiary-color: #ff3557;
+    --bg-color: #ffffff;
 }
 
 /* conteneurs */
@@ -95,7 +97,7 @@ header #logo img{
 /* navbar */
 header nav{
     grid-column: 1 / span 12;
-    margin: 2% 0 1% 0;
+    margin: 2% 0 5% 0;
     width: 100%;
 }
 
@@ -120,7 +122,7 @@ main > *{
 
 /* accueil > à propos */
 #a-propos h1{
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 #a-propos h2{
@@ -128,13 +130,13 @@ main > *{
     font-size: 2.5vw;
 }
 
-#a-propos p:nth-child(1){
+#a-propos p:first-of-type{
     margin-top: 3%;
     font-size: 3vw;
 }
 
 #a-propos p{
-    margin-bottom: 3%;
+    margin-bottom: 2%;
     width: 100%;
     font-size: 2vw;
 }
@@ -162,15 +164,19 @@ main > *{
     max-height: 50px;
 }
 
+#ticker p{
+    margin: 0;
+}
+
 #ticker p:first-of-type{
     font-weight: bold;
 }
 
 #slider{
-    margin-bottom: 3%;
+    margin-bottom: 5%;
 }
 
-/* #slider img{
+#slider img{
     width: 90%;
 }
 
@@ -180,7 +186,16 @@ main > *{
 }
 
 #slider .splide__pagination{
-} */
+    bottom: -1.5em;
+}
+
+#slider .splide__pagination__page {
+    background: var(--secondary-color);
+}
+
+#slider .splide__pagination__page.is-active {
+    background: var(--highlight-color);
+}
 
 /* actualités > billets actualités */
 .actualites{
@@ -206,12 +221,11 @@ main > *{
     gap: 2%;
 }
 
-/* services / équipe > boutons */
+/* services > boutons */
 .accordion-button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2%;
     padding: 1%;
     width: 100%;
     background-color: var(--bg-color);
@@ -226,11 +240,7 @@ main > *{
     font-size: 3vw;
 }
 
-.accordion-button span{
-    text-transform: uppercase;
-}
-
-.accordion-button sup{
+/* .accordion-button sup{
     font-size: 1.2vw;
     border-bottom: 2px solid transparent;
     opacity: 0.6;
@@ -240,11 +250,11 @@ main > *{
 .accordion-button sup:hover{
     border-bottom: 2px solid var(--primary-color);
     opacity: 1;
-}
+} */
 
 .active, .accordion-button:hover{
     /* si bouton actif ou en survol, changement de couleur */
-    background-color: var(--highlight-color);
+    background-color: var(--highlight-secondary-color);
 }
 
 .accordion-button:after{
@@ -252,6 +262,7 @@ main > *{
     content: '+';
     margin-right: 3%;
     font-size: 3vw;
+    font-weight: bold;
     color: var(--primary-color);
 }
 
@@ -260,23 +271,27 @@ main > *{
     content: "-";
 }
 
-/* services / équipe > accordion-panel */
+/* services > accordion-panel */
 .accordion-panel{
     display: none;
     padding: 2%;
     max-height: 0;
     overflow: hidden;
     transition: 0.2s ease-out;
-    background-color: var(--bg-color);
+}
+
+.accordion-panel h2{
+    margin-top: 2%;
+    margin-bottom: 0;
+    font-size: 1.5vw;
 }
 
 .accordion-panel p:first-child{
     margin-bottom: 1%;
 }
 
-.accordion-panel h2{
-    margin-top: 2%;
-    font-size: 1.5vw;
+.accordion-panel p:nth-child(n+2){
+    margin-bottom: 0;
 }
 
 .accordion-panel > #partenaires{
@@ -286,8 +301,8 @@ main > *{
 }
 
 #partenaires figure{
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #partenaires img{
@@ -313,6 +328,35 @@ article h1{
 
 article > h1, h2, p{
     margin-bottom: 1%;
+}
+
+/* équipe */
+.equipe{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5%;
+}
+
+.equipe p{
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.equipe p:nth-child(odd){
+    grid-column: 1 / span 1;
+}
+
+.equipe p:nth-child(even){
+    grid-column: 2 / span 1;
+}
+
+.equipe p span{
+    text-transform: uppercase;
+}
+
+.equipe p:hover{
+    color: var(--highlight-tertiary-color);
+    cursor: pointer;
 }
 
 /* contact > formulaire */

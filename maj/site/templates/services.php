@@ -15,13 +15,13 @@
             <div class="accordion-panel">
                 <p><?= $service->resume() ?></p>
                 
-                <!-- si champ contenu du service n'est pas vide ou si le service a des enfants -->
-                <?php if($service->contenu()->isNotEmpty()): ?>
+                <!-- si le champ contenu du service existe et n'est pas vide -->
+                <?php if($service->contenu()->exists() && $service->contenu()->isNotEmpty()): ?>
                     <a href="<?= $service->url() ?>">En savoir plus</a>
                 <?php endif ?>
 
-                <!-- si le champ horaire n'est pas vide -->
-                <?php if($service->horaires()->isNotEmpty()): ?>
+                <!-- si le champ horaire existe et n'est pas vide -->
+                <?php if($service->horaires()->exists() && $service->horaires()->isNotEmpty()): ?>
                     <h2>Horaires</h2>
                     
                     <!-- boucle affichant chaque champ horaire -->
@@ -39,8 +39,16 @@
                         </p>
                     <?php endforeach ?>
                 <?php endif ?>
+                
+                <!-- si le champ téléphone existe et n'est pas vide -->
+                <?php if($service->telephone()->exists() && $service->telephone()->isNotEmpty()): ?>
+                    <h2>Téléphone</h2>
 
-                <?php if($service->partenaires()->isNotEmpty()): ?>
+                    <p><?= $service->telephone() ?></p>
+                <?php endif ?>
+
+                <!-- si le champ partenaires existe et n'est pas vide -->
+                <?php if($service->partenaires()->exists() && $service->partenaires()->isNotEmpty()): ?>
                     <div id="partenaires">
                         <!-- boucle affichant pour chaque partenaire, une image et les champs nom et téléphone -->
                         <?php foreach($service->partenaires()->toStructure() as $partenaire): ?>
@@ -52,12 +60,14 @@
 
                                 <figcaption>
                                     <h2><?= $partenaire->nom() ?></h2>
-                                    <p><b>Sur rendez-vous :</b> <?= $partenaire->telephone() ?></p>
+                                    <p><b>Sur rendez-vous :</b></p>
+                                    <p><?= $partenaire->telephone() ?></p>
                                 </figcaption>
                             </figure>
                         <?php endforeach ?>
                     </div>
                 <?php endif ?>
+                
             </div>
         <?php endforeach ?>
     </main>

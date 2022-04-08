@@ -1,1 +1,13 @@
 Title: Nous trouver
+
+----
+
+Carte: https://www.openstreetmap.org/export/embed.html?bbox=1.0886228084564211%2C44.10279718890034%2C1.0907605290412905%2C44.10392970938834&amp;layer=mapnik&amp;marker=44.1033636997035%2C1.0896939790002307
+
+----
+
+Lien: https://www.openstreetmap.org/?mlat=44.10336&amp;mlon=1.08969#map=19/44.10336/1.08969
+
+----
+
+Style: border: 1px solid black

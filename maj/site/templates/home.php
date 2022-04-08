@@ -21,10 +21,10 @@
             <h1>À propos</h1>
 
             <h2>Notre histoire</h2>
-            <p><?= $page->histoire() ?></p>
+            <p><?= $page->histoire()->kirbytext() ?></p>
 
             <h2>Nos missions</h2>
-            <p><?= $page->missions() ?></p>
+            <p><?= $page->missions()->kirbytext() ?></p>
         </article>
     </main>
 </body>

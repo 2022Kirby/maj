@@ -4,6 +4,6 @@ return [
     'markdown' => [
         'extra' => true,
         'breaks' => true,
-    ]
+    ],
 ];
 ?>

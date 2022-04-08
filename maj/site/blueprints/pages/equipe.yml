@@ -27,9 +27,4 @@ fields:
         size: small
         help: "Présentation de la personne et de sa fonction."
         required: true
-      telephone:
-        label: Numéro de téléphone
-        type: tel
-        required: true
-        help: "Format: xx xx xx xx xx"
     help: "Liste apparaissant sur la page équipe."

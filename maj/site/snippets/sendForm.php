@@ -74,24 +74,20 @@
                 // on envoie une copie du message à l'utilisateur
                 $messageCopy =  $pages->find('contact')->message2() . "\r\n" . 
                                 $messageUser;
-                
-                mail($emailUser, $subject, $messageCopy, 'From: ' . $pages->find('contact')->maj());
 
-                // puis on fait une redirection du navigateur vers la page de confirmation
-                // avec ajout de paramètres dans l'url
-                header('Location: ' . $pages->find('contact/confirmation')->url()
-                    . '?service=' . $nameService
-                    . '&name=' . $nameUser
-                    . '&mail=' . $emailUser
-                    . '&date=' . $date
-                    . '&time=' . $time);
-                // enfin on s'assure que la suite du code n'est pas exécutée une fois la redirection effectuée
-                exit;
+                mail($emailUser, $subject, $messageCopy, 'From: ' . $pages->find('contact')->maj());
+                
+                // et on affiche un message de confirmation
+                echo '<p>' . $pages->find('contact')->confirmation() . '</p>
+                    <p>
+                        <b>Prénom Nom : </b>' . $nameUser . '<br>
+                        <b>Adresse email : </b>' . $emailUser . '<br>
+                        <b>Service : </b>' . $nameService . '<br>
+                        <b>Message :</b> <br>' . $messageUser .
+                    '</p>';
             } else { // si false
-                // on fait une redirection du navigateur vers la page d'erreur
-                header('Location: ' . $pages->find('contact/echec')->url()); 
-                // enfin on s'assure que la suite du code n'est pas exécutée une fois la redirection effectuée
-                exit; 
+                // on affiche un message d'erreur
+                echo '<p>' . $pages->find('contact')->echec() . '</p>';
             }
         } catch (Exception $e) {
             echo 'Erreur: ' . $e->getMessage();

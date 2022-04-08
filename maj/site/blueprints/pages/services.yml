@@ -1,22 +1,16 @@
 Title: Services
 
 sections:
-  servicesPublies:
-    headline: Services publiés
+  services:
+    headline: Services
     type: pages
+    parent: site.find('services')
     templates: 
       - service
       - permanences-partenaires
-    status: published
+    status: all
     layout: list
     limit: 10
     image:
       cover: true
     help: "Liste apparaissant sur la page services."
-  servicesBrouillons:
-    headline: Brouillons
-    type: pages
-    template: service
-    status: drafts
-    layout: list
-    limit: 5

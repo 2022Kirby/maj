@@ -37,6 +37,10 @@ tabs:
             type: text
             help: "Format: Xh"
         help: "Apparaîtra sous le résumé du service."
+      telephone:
+        label: Numéro de téléphone
+        type: tel
+        help: "Format: xx xx xx xx xx"
       mails:
         label: Mail(s) de contact
         type: structure
