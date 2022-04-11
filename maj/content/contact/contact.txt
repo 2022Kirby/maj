@@ -38,10 +38,7 @@ En voici le contenu :
 
 ----
 
-Confirmation:
-
-Votre message a bien été envoyé.
-Voici un récapitulatif des informations transmises.
+Confirmation: Votre message a bien été envoyé. Voici un récapitulatif des informations transmises.
 
 ----
 

@@ -11,7 +11,7 @@
     --font-family: Roboto, sans-serif;
     --primary-color: #000000;
     --secondary-color: #b3b3b3;
-    --highlight-color: #7a7a7a;
+    --highlight-color: #505050;
     --highlight-secondary-color: #45accc;
     --highlight-tertiary-color: #ff3557;
     --bg-color: #ffffff;
@@ -202,22 +202,23 @@ main > *{
     grid-column: span 4;
     margin: 0 5% 5% 0;
     padding: 10%;
-    height: 11vw;
+    height: 12vw;
+    overflow: hidden;
     border: solid 2px black;
 }
 
 .actualites a{
     font-size: 2vw;
-    line-height: 1.3em;
+    line-height: 1.2em;
 }
 
 .actualites p{
     margin-top: 2%;
-    font-weight: normal;
 }
 
 .pagination nav{
     display: flex;
+    justify-content: space-between;
     gap: 2%;
 }
 

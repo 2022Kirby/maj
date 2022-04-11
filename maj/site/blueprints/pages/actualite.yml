@@ -9,7 +9,11 @@ tabs:
         label: Résumé
         type: textarea
         size: small
-        help: "Apparaîtra sur la page actualités."
+        help: "Apparaîtra sur la page actualités. Max 100 caractères."
+      tags:
+        label: Tags
+        type: tags
+        # max: 3
   article:
     label: Article
     sections:

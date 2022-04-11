@@ -28,4 +28,5 @@ sections:
     image:
       ratio: 1/1
       cover: true
+    info: "{{ page.tags }}"
     help: "De la plus récente à la plus ancienne."

@@ -78,7 +78,7 @@
                 mail($emailUser, $subject, $messageCopy, 'From: ' . $pages->find('contact')->maj());
                 
                 // et on affiche un message de confirmation
-                echo '<p>' . $pages->find('contact')->confirmation() . '</p>
+                echo '<p>' . $pages->find('contact')->confirmation()->kirbytext() . '</p>
                     <p>
                         <b>Prénom Nom : </b>' . $nameUser . '<br>
                         <b>Adresse email : </b>' . $emailUser . '<br>
