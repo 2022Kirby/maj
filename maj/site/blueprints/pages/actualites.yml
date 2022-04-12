@@ -5,6 +5,7 @@ sections:
     type: pages
     parent: site.find('actualites')
     template: ticker
+    create: false
     image:
       query: false
   slider:

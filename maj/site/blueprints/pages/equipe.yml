@@ -21,10 +21,8 @@ fields:
           fetch: site.find('services').children
           value: "{{ page.title }}"
         required: true
-      detail:
-        label: Détail
-        type: textarea
-        size: small
-        help: "Présentation de la personne et de sa fonction."
+      poste:
+        label: Poste
+        type: text
         required: true
     help: "Liste apparaissant sur la page équipe."

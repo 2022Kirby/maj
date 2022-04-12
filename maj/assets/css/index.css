@@ -11,9 +11,8 @@
     --font-family: Roboto, sans-serif;
     --primary-color: #000000;
     --secondary-color: #b3b3b3;
-    --highlight-color: #505050;
-    --highlight-secondary-color: #45accc;
-    --highlight-tertiary-color: #ff3557;
+    --highlight-color: #45accc;
+    --highlight-secondary-color: #505050;
     --bg-color: #ffffff;
 }
 
@@ -28,7 +27,6 @@ header, main, footer{
     /* mise en place de la grille */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    /* column-gap: 5%; */
 }
 
 /* titres */
@@ -194,7 +192,7 @@ main > *{
 }
 
 #slider .splide__pagination__page.is-active {
-    background: var(--highlight-color);
+    background: var(--highlight-secondary-color);
 }
 
 /* actualités > billets actualités */
@@ -241,21 +239,9 @@ main > *{
     font-size: 3vw;
 }
 
-/* .accordion-button sup{
-    font-size: 1.2vw;
-    border-bottom: 2px solid transparent;
-    opacity: 0.6;
-    transition: 0.25s;
-}
-
-.accordion-button sup:hover{
-    border-bottom: 2px solid var(--primary-color);
-    opacity: 1;
-} */
-
 .active, .accordion-button:hover{
     /* si bouton actif ou en survol, changement de couleur */
-    background-color: var(--highlight-secondary-color);
+    background-color: var(--highlight-color);
 }
 
 .accordion-button:after{
@@ -325,6 +311,7 @@ article img{
 
 article h1{
     margin-top: 2%;
+
 }
 
 article > h1, h2, p{
@@ -332,32 +319,34 @@ article > h1, h2, p{
 }
 
 /* équipe */
-.equipe{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 5%;
+#equipe .membre{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    column-gap: 2%;
+    margin-bottom: 1%;
 }
 
-.equipe p{
-    font-size: 3vw;
-    font-weight: bold;
+#equipe h1{
+    font-size: 3.5vw;
 }
 
-.equipe p:nth-child(odd){
-    grid-column: 1 / span 1;
-}
-
-.equipe p:nth-child(even){
-    grid-column: 2 / span 1;
-}
-
-.equipe p span{
+#equipe h1 span{
     text-transform: uppercase;
 }
 
-.equipe p:hover{
-    color: var(--highlight-tertiary-color);
-    cursor: pointer;
+#equipe .membre .infos{
+    display: flex;
+    flex-direction: column;
+}
+
+#equipe .membre .infos *{
+    font-size: 1.2vw;
+}
+
+#equipe .membre .infos p:first-child{
+    color: var(--highlight-secondary-color);
+    text-transform: lowercase;
 }
 
 /* contact > formulaire */

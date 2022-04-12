@@ -54,6 +54,45 @@
         font-size: 4vw;
     }
 
+    #ticker{
+        margin-bottom: 2%;
+    }
+
+    #ticker img {
+        max-height: 30px;
+    }
+
+    #slider {
+        margin-bottom: 10%;
+    }
+
+    #slider img{
+        width: 75%;
+    }
+
+    #slider .splide__progress {
+        width: 75%;
+    }
+
+    #slider .splide__arrow{
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #slider .splide__arrow svg {
+        width: 0.8em;
+        height: 0.8em;
+    }
+
+    #slider .splide__pagination {
+        bottom: -1.2em;
+    }
+
+    #slider .splide__pagination__page{
+        width: 7px;
+        height: 7px;
+    }
+
     .actualites{
         grid-column: span 3;
         margin: 0 2% 2% 0;
@@ -65,16 +104,16 @@
         font-size: 4vw;
     }
 
-    .accordion-button h1{
+    .accordion-button h1 {
         font-size: 4.5vw;
-    }
-
-    .accordion-button sup{
-        font-size: 1.8vw;
     }
 
     .accordion-panel h2{
         font-size: 3.5vw;
+    }
+
+    .accordion-panel p:last-child{
+        margin-bottom: 3%;
     }
 
     .accordion-panel > #partenaires{
@@ -93,6 +132,19 @@
 
     article p{
         font-size: 3.5vw;
+    }
+
+    #equipe .membre{
+        align-content: center;
+        margin-bottom: 3%;
+    }
+
+    #equipe h1{
+        font-size: 5.5vw;
+    }
+
+    #equipe .membre .infos *{
+        font-size: 2.2vw;
     }
 
     form input:not(input[type=submit]), form select, form textarea{
