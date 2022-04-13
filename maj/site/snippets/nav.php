@@ -3,8 +3,8 @@
             <ul>
                 <!-- boucle affichant pour chaque page enfant du site un lien de navigation -->
                 <?php foreach($site->children()->listed() as $page):
-                // si page active, ajout de la classe current
-                $class = r($page->isOpen(), 'class="current"'); ?>
+                // si page active, ajout de la classe courant
+                $class = r($page->isOpen(), 'class="courant"'); ?>
                     <li>
                         <a <?= $class ?> href="<?= $page->url() ?>">
                             <?= $page->title() ?>

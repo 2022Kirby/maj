@@ -9,9 +9,9 @@ Breves:
     - >
       kisspng-coffee-cup-teacup-icon-menu-icon-5a9e48c946fa32.2909676715203227612908.png
   titre: Lorem ipsum
-  contenu: >
-    Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit.
+  contenu: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit elit.
   toggle: 'false'
   datefin: ""
 - 
@@ -28,11 +28,5 @@ Breves:
   contenu: >
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit.
-  toggle: 'false'
-  datefin: ""
-- 
-  image: [ ]
-  titre: Test
-  contenu: test
   toggle: 'false'
   datefin: ""

@@ -26,52 +26,53 @@
 
     #entrez, #qui{
         grid-column: 2;
-        justify-self: flex-start;
-        margin-left: 5%;
+        margin-left: 15%;
+        font-size: 4vw;
+    }
+    
+    header nav{
+        grid-column: 2;
+        margin-left: 10%;
+    }
+    
+    header nav ul{
+        gap: 4%;
     }
 
-    #entrez, #qui, header a{
-        font-size: 5vw;
+    header nav ul li a{
+        font-size: 4vw;
     }
 
     main > *{
         grid-column: 1 / span 3;
     }
 
-    #a-propos h1{
-        font-size: 5.5vw;
+    #a-propos p:first-child{
+        font-size: 6vw;
     }
-
-    #a-propos h2{
+    
+    #a-propos section h1{
+        font-size: 5vw;
+    }
+    
+    #a-propos section p{
         font-size: 4.5vw;
     }
 
-    #a-propos p:nth-child(1){
-        font-size: 6vw;
-    }
-
-    #a-propos p{
-        font-size: 4vw;
-    }
-
-    #ticker{
-        margin-bottom: 2%;
+    #ticker .splide__slide{
+        max-width: 100%;
     }
 
     #ticker img {
         max-height: 30px;
     }
 
+    #ticker p{
+        font-size: 3vw;
+    }
+
     #slider {
-        margin-bottom: 10%;
-    }
-
-    #slider img{
-        width: 75%;
-    }
-
-    #slider .splide__progress {
-        width: 75%;
+        margin-bottom: 15%;
     }
 
     #slider .splide__arrow{
@@ -85,7 +86,7 @@
     }
 
     #slider .splide__pagination {
-        bottom: -1.2em;
+        top: 100%;
     }
 
     #slider .splide__pagination__page{

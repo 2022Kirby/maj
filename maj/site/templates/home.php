@@ -13,13 +13,15 @@
         <article id="a-propos">
             <p><?= $page->resume() ?></p>
 
-            <h1>À propos</h1>
+            <section>
+                <h1>Nos missions</h1>
+                <p><?= $page->missions()->kirbytext() ?></p>
+            </section>
 
-            <h2>Notre histoire</h2>
-            <p><?= $page->histoire()->kirbytext() ?></p>
-
-            <h2>Nos missions</h2>
-            <p><?= $page->missions()->kirbytext() ?></p>
+            <section>
+                <h1>Notre histoire</h1>
+                <p><?= $page->histoire()->kirbytext() ?></p>
+            </section>
         </article>
     </main>
 </body>

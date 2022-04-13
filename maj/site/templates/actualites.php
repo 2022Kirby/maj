@@ -27,7 +27,7 @@
                                 <?php endif ?>
                                 
                                 <p><?= $breve->titre() ?></p>
-                                <p><?= $breve->contenu() ?></p>
+                                <p><?= $breve->contenu()->kirbytext() ?></p>
                                 
                             </li>
 
