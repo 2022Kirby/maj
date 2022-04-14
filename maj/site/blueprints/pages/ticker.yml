@@ -17,7 +17,7 @@ fields:
         label: Contenu
         type: textarea
         size: small
-        maxlength: 120
+        maxlength: 100
         required: true
       toggle:
         label: Date de fin d'affichage

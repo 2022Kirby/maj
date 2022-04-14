@@ -10,12 +10,27 @@ Membres:
   service: FabLab
   poste: Médiateur numérique
 - 
-  prenom: Prénom
-  nom: Nom
-  service: Point Information Jeunesse
-  poste: Médiateur
+  prenom: Pierre-Georges
+  nom: Chambaron
+  service: FabLab
+  poste: Animateur
 - 
-  prenom: Prénom
-  nom: Nom
+  prenom: Anne
+  nom: Bellot
+  service: Point Information Jeunesse
+  poste: Responsable
+- 
+  prenom: Nadine
+  nom: Lavoisier
+  service: Service Emploi Formation Insertion
+  poste: Responsable
+- 
+  prenom: Kamel
+  nom: Fallouk
   service: Accueil Collectif de Mineurs
-  poste: Médiateur
+  poste: Directeur
+- 
+  prenom: Melissa
+  nom: Cancho
+  service: ""
+  poste: Médiatrice

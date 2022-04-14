@@ -11,7 +11,7 @@ Breves:
   titre: Lorem ipsum
   contenu: |
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit elit.
+    Lorem ipsum dolor sit amet, consectetur.
   toggle: 'false'
   datefin: ""
 - 

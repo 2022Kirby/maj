@@ -13,7 +13,7 @@
     --secondary-color: #b3b3b3;
     --highlight-color: #45accc;
     --highlight-secondary-color: #505050;
-    --bg-color: #ebebeb;
+    --bg-color: #dddddd;
 }
 
 /* conteneurs */
@@ -45,11 +45,11 @@ p{
 
 /* liens */
 a{
-    justify-self: flex-start;
+    /* justify-self: flex-start; */
     font-size: 1.4vw;
     font-weight: bold;
     text-decoration: underline;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
     text-underline-offset: 10%;
     color: var(--primary-color);
     transition: 0.25s;
@@ -83,14 +83,26 @@ header #logo img{
     width: 24vw;
 }
 
-/* entrez / qui ? */
-#entrez, #qui, header nav{
+/* description acronyme */
+header #description{
+    grid-column: 1 / span 12;
+    float: inherit;
+    font-size: 2vw;
+    color: #c7c7c7;
+}
+
+/* entrer / qui ? */
+#entrer, #qui, header nav{
     grid-column: 2 / span 11;
-    align-self: flex-start;
+    align-self: flex-end;
     justify-self: flex-start;
-    margin-top: 1%;
+    margin-bottom: 0.5%;
     margin-left: 4%;
     font-size: 2vw;
+}
+
+#entrer svg{
+    width: 1.3vw;
 }
 
 #qui{
@@ -160,7 +172,7 @@ main > *{
 
 /* actualités > ticker + slider */
 #ticker{
-    margin-top: 0;
+    margin-top: 5%;
     margin-bottom: 4%;
     overflow: hidden;;
 }
@@ -171,15 +183,17 @@ main > *{
 }
 
 #ticker .splide__slide{
-    margin: auto auto 0 auto;
+    display: flex;
+    margin: 0 auto auto auto;
     padding: 0 3% 0 3%;
-    max-width: 48%;
+    max-width: 55vw;
+    max-height: 6vw;
 }
 
 #ticker img{
-    margin: 0;
+    margin-right: 5px;
     width: auto;
-    max-height: 50px;
+    max-height: inherit;
 }
 
 #ticker p{
@@ -220,6 +234,11 @@ main > *{
     background-color: var(--bg-color);
 }
 
+.actualites:hover, .actualites:hover > *{
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
 .actualites a{
     font-size: 2vw;
     line-height: 1.2em;
@@ -227,6 +246,7 @@ main > *{
 
 .actualites p{
     margin-top: 2%;
+    font-weight: normal;
 }
 
 .pagination{

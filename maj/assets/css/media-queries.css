@@ -60,11 +60,8 @@
     }
 
     #ticker .splide__slide{
-        max-width: 100%;
-    }
-
-    #ticker img {
-        max-height: 30px;
+        max-width: 100vw;
+        max-height: 12vw;
     }
 
     #ticker p{
@@ -163,6 +160,12 @@
         justify-content: flex-start;
     }
 
+    footer img {
+        margin: 2%;
+        width: 12%;
+        max-height: 30px;
+    }
+
     footer div:nth-child(2){
         grid-column: span 2;
     }
@@ -187,12 +190,6 @@
     footer div:last-child{
         grid-column: 2 / span 1;
         align-self: flex-end;
-    }
-
-    footer img{
-        margin: 2%;
-        width: 12%;
-        max-height: 30px;
     }
 
     footer #socials{

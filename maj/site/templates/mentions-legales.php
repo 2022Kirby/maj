@@ -3,7 +3,7 @@
 <body>
     <main>
         <!-- retour vers page appelante -->
-        <a href="javascript:history.back();">< retour</a>
+        <a href="javascript:history.back();">retour</a>
 
         <article>
             <!-- titre de la page -->

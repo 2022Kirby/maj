@@ -26,9 +26,10 @@
                                     <?php ?>
                                 <?php endif ?>
                                 
-                                <p><?= $breve->titre() ?></p>
-                                <p><?= $breve->contenu()->kirbytext() ?></p>
-                                
+                                <div>
+                                    <p><?= $breve->titre() ?></p>
+                                    <p><?= $breve->contenu()->kirbytext() ?></p>
+                                </div>
                             </li>
 
                         <?php endif ?>
@@ -74,12 +75,12 @@
             <div class="actualites">
                 <a href="<?= $actualite->url() ?>">
                     <?= $actualite->title() ?>
-                </a>
                 
-                <!-- si le champ résumé existe -->
-                <?php if($actualite->resume()->exists()): ?>
-                    <p><?= $actualite->resume() ?></p>
-                <?php endif ?>
+                    <!-- si le champ résumé existe -->
+                    <?php if($actualite->resume()->exists()): ?>
+                        <p><?= $actualite->resume() ?></p>
+                    <?php endif ?>
+                </a>
             </div>
         <?php endforeach ?>
 
