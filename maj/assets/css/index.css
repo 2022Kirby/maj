@@ -47,9 +47,8 @@ p{
 a{
     /* justify-self: flex-start; */
     font-size: 1.4vw;
-    font-weight: bold;
     text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
     text-underline-offset: 10%;
     color: var(--primary-color);
     transition: 0.25s;
@@ -58,10 +57,12 @@ a{
 a:hover:not(#logo, #socials a),
 a:active:not(#logo, #socials a){
     color: var(--highlight-color);
+    text-decoration-thickness: 2px;
 }
 
 .courant{
     color: var(--highlight-color);
+    text-decoration-thickness: 2px;
 }
 
 /* images */
@@ -85,10 +86,10 @@ header #logo img{
 
 /* description acronyme */
 header #description{
-    grid-column: 1 / span 12;
-    float: inherit;
-    font-size: 2vw;
-    color: #c7c7c7;
+    position: absolute;
+    margin-left: 26.5%;
+    font-size: 4vw;
+    color: #dbdbdb;
 }
 
 /* entrer / qui ? */
@@ -132,7 +133,7 @@ header nav ul li a{
 /* //////////////////// éléments du main //////////////////// */
 
 main{
-    margin: 5% 0 5% 0;
+    margin: 8% 0 5% 0;
 }
 
 /* tous les éléments du main */
@@ -142,7 +143,6 @@ main > *{
 
 /* accueil > à propos */
 #a-propos p:first-child{
-    margin-top: 5%;
     font-size: 4vw;
     text-align: justify;
     hyphens: auto;
@@ -172,7 +172,6 @@ main > *{
 
 /* actualités > ticker + slider */
 #ticker{
-    margin-top: 5%;
     margin-bottom: 4%;
     overflow: hidden;;
 }
@@ -186,8 +185,8 @@ main > *{
     display: flex;
     margin: 0 auto auto auto;
     padding: 0 3% 0 3%;
-    max-width: 55vw;
-    max-height: 6vw;
+    max-width: 70vw;
+    max-height: 8vw;
 }
 
 #ticker img{
@@ -198,6 +197,7 @@ main > *{
 
 #ticker p{
     margin: 0;
+    font-size: 2vw;
 }
 
 #ticker p:first-of-type{
@@ -225,8 +225,13 @@ main > *{
 }
 
 /* actualités > billets actualités */
-.actualites{
-    grid-column: span 4;
+#actualites{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.actualite{
+    grid-column: span 1;
     margin: 0 5% 5% 0;
     padding: 10%;
     height: 12vw;
@@ -234,22 +239,45 @@ main > *{
     background-color: var(--bg-color);
 }
 
-.actualites:hover, .actualites:hover > *{
+.actualite:hover, .actualite:hover > *{
     cursor: pointer;
     color: var(--highlight-color);
 }
 
-.actualites a{
+.actualite h1{
     font-size: 2vw;
     line-height: 1.2em;
 }
 
-.actualites p{
+.actualite p{
     margin-top: 2%;
     font-weight: normal;
 }
 
-.pagination{
+.load-more{
+    justify-self: start;
+    font-size: 1.4vw;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 10%;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.load-more:hover{
+    color: var(--highlight-color);
+    text-decoration-thickness: 2px;
+}
+
+.no-js .load-more{
+    display: none;
+}
+
+/* .pagination{
     margin-bottom: 5%;
 }
 
@@ -257,7 +285,7 @@ main > *{
     display: flex;
     justify-content: space-between;
     gap: 2%;
-}
+} */
 
 /* services > boutons */
 .accordion-button{
@@ -306,38 +334,51 @@ main > *{
     transition: 0.2s ease-out;
 }
 
+.accordion-panel .partenaires{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.accordion-panel .partenaires img{
+    margin: 1%;
+    width: auto;
+    max-height: 65px;
+}
+
 .accordion-panel h2{
     margin-top: 2%;
     margin-bottom: 0;
     font-size: 1.5vw;
 }
 
-.accordion-panel p:first-child{
+.accordion-panel p:first-of-type{
     margin-bottom: 1%;
 }
 
-.accordion-panel p:nth-child(n+2){
+.accordion-panel p:not(p:first-of-type){
     margin-bottom: 0;
 }
 
-.accordion-panel > #partenaires{
+.accordion-panel > #permanences-partenaires{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
 }
 
-#partenaires figure{
+#permanences-partenaires figure{
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-#partenaires img{
+#permanences-partenaires img{
     margin-bottom: 5%;
     width: auto;
     max-height: 60px;
 }
 
-#partenaires h2{
+#permanences-partenaires h2{
     font-size: 1.8vw;
 }
 
@@ -346,11 +387,6 @@ article img{
     margin-top: 2%;
     margin-bottom: 2%;
     width: 90%;
-}
-
-article h1{
-    margin-top: 2%;
-
 }
 
 article > h1, h2, p{
@@ -445,17 +481,17 @@ footer > div{
 /* partenaires */
 footer div:first-child{
     grid-column: 1 / span 12;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: flex-start;
     align-items: center;
     margin: 5% 0 4% 0;
     width: 100%;
 }
 
 footer img{
-    margin: 1%;
-    width: 6%;
-    max-height: 60px;
+    margin-right: 1%;
+    width: auto;
+    max-height: 80px;
 }
 
 /* où nous trouver / adhésion / nous contacter / mentions légales */

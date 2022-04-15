@@ -24,10 +24,13 @@
         width: 35vw;
     }
 
+    header #description{
+        margin-left: 38%;
+    }
+
     #entrez, #qui{
         grid-column: 2;
-        margin-left: 15%;
-        font-size: 4vw;
+        margin-left: 25%;
     }
     
     header nav{
@@ -72,16 +75,6 @@
         margin-bottom: 15%;
     }
 
-    #slider .splide__arrow{
-        width: 1.5em;
-        height: 1.5em;
-    }
-
-    #slider .splide__arrow svg {
-        width: 0.8em;
-        height: 0.8em;
-    }
-
     #slider .splide__pagination {
         top: 100%;
     }
@@ -91,19 +84,27 @@
         height: 7px;
     }
 
-    .actualites{
+    .actualite{
         grid-column: span 3;
         margin: 0 2% 2% 0;
         padding: 5%;
         height: auto;
     }
 
-    .actualites a{
+    .actualite a{
         font-size: 4vw;
+    }
+
+    .load-more {
+        font-size: 3vw;
     }
 
     .accordion-button h1 {
         font-size: 4.5vw;
+    }
+
+    .accordion-panel .partenaires img{
+        max-height: 50px;
     }
 
     .accordion-panel h2{
@@ -161,9 +162,7 @@
     }
 
     footer img {
-        margin: 2%;
-        width: 12%;
-        max-height: 30px;
+        max-height: 35px;
     }
 
     footer div:nth-child(2){

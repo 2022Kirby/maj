@@ -1,7 +1,7 @@
     <footer>
         <!-- logos partenaires -->
         <div>
-            <!-- boucle affichant chaque image à la racine du site contenant un string "partenaire" -->
+            <!-- boucle affichant chaque image du footer -->
             <?php foreach($pages->find('footer')->files()->sortBy('sort') as $image): ?>
                 <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
             <?php endforeach ?>

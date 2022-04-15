@@ -71,36 +71,31 @@
 
         <!-- boucle affichant pour chaque page enfant de la page actualités les champs titre et résumé,
         avec mise en place d'une pagination -->
-        <?php foreach($actualites = $page->children()->listed()->paginate(6) as $actualite): ?>
-            <div class="actualites">
-                <a href="<?= $actualite->url() ?>">
-                    <?= $actualite->title() ?>
-                
-                    <!-- si le champ résumé existe -->
-                    <?php if($actualite->resume()->exists()): ?>
-                        <p><?= $actualite->resume() ?></p>
-                    <?php endif ?>
-                </a>
-            </div>
-        <?php endforeach ?>
+        <div id="actualites" data-page="<?= $pagination->nextPage() ?>">
+            <?php foreach($actualites as $actualite): ?>
+                <?php snippet('actualites', ['actualite' => $actualite]) ?>
+            <?php endforeach ?>
+        </div>
+
+        <button class="load-more">Plus d'actualités</button>
 
         <!-- pagination des actualités -->
-        <div class="pagination">
+        <!-- <div class="pagination"> -->
             <!-- si d'autres pages existent, affichage d'un menu de navigation -->
-            <?php if($actualites->pagination()->hasPages()): ?>
-                <nav>
+            <!-- < ?php if($actualites->pagination()->hasPages()): ?>
+                <nav> -->
                     <!-- si il y a des pages précédentes -->
-                    <?php if($actualites->pagination()->hasPrevPage()): ?>
-                        <a class="prev" href="<?= $actualites->pagination()->prevPageURL() ?>">< plus récent</a> 
-                    <?php endif ?>
+                    <!-- < ?php if($actualites->pagination()->hasPrevPage()): ?>
+                        <a class="prev" href="< ?= $actualites->pagination()->prevPageURL() ?>">< plus récent</a> 
+                    < ?php endif ?> -->
                     
                     <!-- si il y a des pages suivantes -->
-                    <?php if($actualites->pagination()->hasNextPage()): ?>
-                        <a class="next" href="<?= $actualites->pagination()->nextPageURL() ?>">plus ancien ></a>
-                    <?php endif ?>
+                    <!-- < ?php if($actualites->pagination()->hasNextPage()): ?>
+                        <a class="next" href="< ?= $actualites->pagination()->nextPageURL() ?>">plus ancien ></a>
+                    < ?php endif ?>
                 </nav>
-            <?php endif ?>
-        </div>
+            < ?php endif ?>
+        </div> -->
     </main>
 
     <?php snippet('footer') ?>
@@ -111,5 +106,7 @@
     <?= js('assets/js/splide.min.js') ?>
     <!-- lien vers le script js de montage du ticker / slider -->
     <?= js('assets/js/splide-mount.js') ?>
+    <!-- lien vers le script js de la pagination -->
+    <?= js('assets/js/actualites.js') ?>
 </body>
 </html>

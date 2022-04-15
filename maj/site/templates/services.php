@@ -13,6 +13,18 @@
 
             <!-- panel contenant les infos du service -->
             <div class="accordion-panel">
+                <h1 style="font-size:0.5vw;visibility:hidden"><?= $service->title() ?></h1>
+
+                <!-- si le service a un dossier enfant partenaires et que ce dossier a des images -->
+                <?php if($service->hasChildren() && $service->find('partenaires')->hasImages()): ?>
+                    <div class="partenaires">
+                        <!-- boucle affichant chaque logo partenaire -->
+                        <?php foreach($service->find('partenaires')->files()->sortBy('sort') as $image): ?>
+                            <img src="<?= $image->url() ?>" alt="<?= $image->alt() ?>">
+                        <?php endforeach ?>
+                    </div>
+                <?php endif ?>
+
                 <p><?= $service->resume() ?></p>
                 
                 <!-- si le champ contenu du service existe et n'est pas vide -->
@@ -49,7 +61,7 @@
 
                 <!-- si le champ partenaires existe et n'est pas vide -->
                 <?php if($service->partenaires()->exists() && $service->partenaires()->isNotEmpty()): ?>
-                    <div id="partenaires">
+                    <div id="permanences-partenaires">
                         <!-- boucle affichant pour chaque partenaire, une image et les champs nom et téléphone -->
                         <?php foreach($service->partenaires()->toStructure() as $partenaire): ?>
                             <figure>
