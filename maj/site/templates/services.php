@@ -72,7 +72,7 @@
 
                                 <figcaption>
                                     <h2><?= $partenaire->nom() ?></h2>
-                                    <p><b>Sur rendez-vous :</b></p>
+                                    <p>Sur rendez-vous :</p>
                                     <p><?= $partenaire->telephone() ?></p>
                                 </figcaption>
                             </figure>

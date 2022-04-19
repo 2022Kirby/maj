@@ -5,12 +5,12 @@
         <!-- si les champs du formulaire ont été envoyés, affichage d'une page vierge dans laquelle on va insérer un message de confirmation et les inputs de l'utilisateur -->
         <?php if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['service']) && !empty($_POST['message'])): ?>
             <!-- retour vers page appelante -->
-            <a href="javascript:history.go(-2);">retour</a>
+            <a class="retour" href="javascript:history.go(-2);">retour</a>
         
         <!-- sinon, affichage du formulaire-->
         <?php else: ?>
             <!-- retour vers page appelante -->
-            <a href="javascript:history.back()">retour</a>
+            <a class="retour" href="javascript:history.back()">retour</a>
 
             <!-- titre de la page -->
             <h1><?= $page->title() ?></h1>

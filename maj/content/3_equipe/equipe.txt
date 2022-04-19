@@ -5,32 +5,47 @@ Title: Équipe
 Membres:
 
 - 
-  prenom: Dominique
-  nom: Vial
-  service: FabLab
-  poste: Médiateur numérique
+  prenom: Anne
+  nom: Bellot
+  service: Point Information Jeunesse
+  poste: Responsable
+- 
+  prenom: Melissa
+  nom: Cancho
+  service: ""
+  poste: Médiatrice
 - 
   prenom: Pierre-Georges
   nom: Chambaron
   service: FabLab
   poste: Animateur
 - 
-  prenom: Anne
-  nom: Bellot
-  service: Point Information Jeunesse
-  poste: Responsable
+  prenom: Alexandrie
+  nom: El-Khadri Lannes
+  service: Maison Digitale
+  poste: Animatrice Socio-Culturelle
+- 
+  prenom: Kamel
+  nom: Fallouk
+  service: Accueil Collectif de Mineurs
+  poste: Directeur ACM
 - 
   prenom: Nadine
   nom: Lavoisier
   service: Service Emploi Formation Insertion
   poste: Responsable
 - 
-  prenom: Kamel
-  nom: Fallouk
-  service: Accueil Collectif de Mineurs
-  poste: Directeur
-- 
-  prenom: Melissa
-  nom: Cancho
+  prenom: Isabelle
+  nom: Massat
   service: ""
-  poste: Médiatrice
+  poste: Secrétaire
+- 
+  prenom: Laure
+  nom: Pinto
+  service: ""
+  poste: Présidente
+- 
+  prenom: Dominique
+  nom: Vial
+  service: FabLab
+  poste: Médiateur numérique

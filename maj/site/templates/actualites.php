@@ -69,33 +69,15 @@
             </div>
         </div>
 
-        <!-- boucle affichant pour chaque page enfant de la page actualités les champs titre et résumé,
-        avec mise en place d'une pagination -->
+        <!-- boucle affichant chaque actualité -->
         <div id="actualites" data-page="<?= $pagination->nextPage() ?>">
             <?php foreach($actualites as $actualite): ?>
                 <?php snippet('actualites', ['actualite' => $actualite]) ?>
             <?php endforeach ?>
         </div>
 
+        <!-- bouton pour charger plus d'actualités -->
         <button class="load-more">Plus d'actualités</button>
-
-        <!-- pagination des actualités -->
-        <!-- <div class="pagination"> -->
-            <!-- si d'autres pages existent, affichage d'un menu de navigation -->
-            <!-- < ?php if($actualites->pagination()->hasPages()): ?>
-                <nav> -->
-                    <!-- si il y a des pages précédentes -->
-                    <!-- < ?php if($actualites->pagination()->hasPrevPage()): ?>
-                        <a class="prev" href="< ?= $actualites->pagination()->prevPageURL() ?>">< plus récent</a> 
-                    < ?php endif ?> -->
-                    
-                    <!-- si il y a des pages suivantes -->
-                    <!-- < ?php if($actualites->pagination()->hasNextPage()): ?>
-                        <a class="next" href="< ?= $actualites->pagination()->nextPageURL() ?>">plus ancien ></a>
-                    < ?php endif ?>
-                </nav>
-            < ?php endif ?>
-        </div> -->
     </main>
 
     <?php snippet('footer') ?>
