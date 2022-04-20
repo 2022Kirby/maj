@@ -90,7 +90,7 @@ header #description {
     position: absolute;
     margin-left: 26.5%;
     font-size: 4vw;
-    color: #dbdbdb;
+    color: #e8e8e8;
 }
 
 /* entrer / qui ? / nav */
@@ -329,31 +329,24 @@ main>* {
     transition: 0.2s ease-out;
 }
 
-.accordion-panel .partenaires {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin-bottom: 2%;
+.accordion-panel h1 {
+    font-size: 0.5vw;
+    visibility: hidden;
 }
 
-.accordion-panel .partenaires img {
-    margin: 1%;
-    width: auto;
-    max-height: 6vw;
-}
-
-.accordion-panel h2 {
-    margin-top: 2%;
-    margin-bottom: 0;
-    font-size: 1.5vw;
-}
-
-.accordion-panel p:first-of-type {
+.accordion-panel div {
     margin-bottom: 1%;
 }
 
-.accordion-panel p:not(p:first-of-type) {
+.accordion-panel>div:first-of-type {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5%;
+}
+
+.accordion-panel p {
     margin-bottom: 0;
+    font-size: 1.5vw;
 }
 
 .accordion-panel>#permanences-partenaires {
@@ -382,13 +375,33 @@ main>* {
     margin-bottom: 2%;
 }
 
-article img {
-    margin-top: 2%;
+article .partenaires {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1%;
     margin-bottom: 2%;
-    width: 90%;
 }
 
-article>h1,
+article .partenaires img {
+    margin: 0;
+    width: auto;
+    max-height: 6vw;
+}
+
+article .coordonnees {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+article .coordonnees p {
+    margin: 0;
+}
+
+article h1,
 h2 {
     margin-bottom: 1%;
 }
@@ -398,7 +411,14 @@ article p {
 }
 
 article ul {
+    margin-bottom: 2%;
     padding-left: 2%;
+}
+
+article img {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 90%;
 }
 
 /* équipe */

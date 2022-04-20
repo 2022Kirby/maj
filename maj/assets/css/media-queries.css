@@ -136,16 +136,16 @@
     }
 
     /* services > accordion-panel */
-    .accordion-panel .partenaires img {
-        max-height: 9vw;
+    .accordion-panel div {
+        margin-bottom: 2%;
     }
 
-    .accordion-panel h2 {
+    .accordion-panel>div:first-of-type {
+        flex-flow: column nowrap;
+    }
+
+    .accordion-panel p {
         font-size: 3.5vw;
-    }
-
-    .accordion-panel p:last-child {
-        margin-bottom: 3%;
     }
 
     .accordion-panel>#permanences-partenaires {
@@ -168,7 +168,15 @@
         margin-bottom: 5%;
     }
 
-    article>h1,
+    article .coordonnees {
+        flex-flow: row wrap;
+    }
+
+    article .coordonnees div {
+        margin-bottom: 2%;
+    }
+
+    article h1,
     h2 {
         margin-bottom: 3%;
     }
@@ -188,6 +196,10 @@
     article ul {
         padding-left: 5%;
         font-size: 3.5vw;
+    }
+
+    article .partenaires img {
+        max-height: 9vw;
     }
 
     /* équipe */
@@ -256,7 +268,7 @@
     footer #socials {
         margin: 2% 0 0 0;
     }
-    
+
     footer svg {
         margin-right: 5%;
         width: 8%;
