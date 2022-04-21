@@ -34,7 +34,10 @@
                 <?php if($page->telephone()->exists() && $page->telephone()->isNotEmpty()): ?>
                     <div>
                         <p><b>Téléphone</b></p>
-                        <p><?= $page->telephone() ?></p>
+                        <!-- boucle affichant chaque champ numéro -->
+                        <?php foreach($page->telephone()->toStructure() as $telephone): ?>
+                            <p><?= $telephone->numero() ?></p>
+                        <?php endforeach ?>
                     </div>
                 <?php endif ?>
 

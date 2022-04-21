@@ -23,6 +23,7 @@ sections:
     parent: site.find('actualites')
     template: actualite
     status: all
+    flip: true
     layout: cards
     limit: 6
     size: tiny

@@ -23,7 +23,7 @@ Horaires:
 
 ----
 
-Telephone: 00 00 00 00 00
+Telephone: 
 
 ----
 
@@ -34,4 +34,4 @@ Mails:
 
 ----
 
-Contenu: [{"content":{"text":"## Lorem ipsum \nLorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium feugiat massa eu condimentum. Vestibulum congue mauris eget lacus ultrices placerat. Ut suscipit rhoncus blandit. Cras id varius metus. Maecenas eget metus nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam a nunc non sem cursus hendrerit. Cras porta varius magna, eu blandit metus congue et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce pretium velit quis ligula ornare blandit. Nullam justo lacus, sollicitudin vitae porta vitae, lobortis quis diam. Phasellus mi diam, porta ut auctor id, faucibus et lacus. Vivamus turpis purus, porttitor at nisi et, lacinia cursus velit. Integer venenatis pulvinar lacinia. Curabitur eu laoreet eros. Proin dapibus, metus sit amet aliquam congue, tortor enim porttitor metus, non fringilla odio lacus nec eros. Curabitur dignissim eget sem eu vulputate. Donec eu lacus aliquet lorem elementum dapibus eget eu augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas id enim non felis auctor blandit vel quis nunc. Duis vel nulla maximus, dictum velit vitae, lobortis odio. Nullam sodales tincidunt nisl eu hendrerit. Quisque vehicula molestie diam, vel feugiat erat porta sed. Nulla posuere vehicula odio, a varius mauris ornare ac. Maecenas eget dictum massa. Proin sagittis augue sit amet nisi auctor suscipit."},"id":"0055afdc-9c2d-4f50-8ec6-874a9d027140","isHidden":false,"type":"markdown"}]
+Contenu: [{"content":{"text":"La Maison Digitale est constitu\u00e9e de 10 postes, de 4 scanners et accessible \u00e0 tous gratuitement ( sous condition d\u2019adh\u00e9sion \u00e0 la structure )."},"id":"3196d05c-ec29-455f-b6f5-4ce1d90209ea","isHidden":false,"type":"markdown"},{"content":{"text":"Un(e) animateur(trice) vous dirigera vers un poste lors de votre arriv\u00e9e. Une aide pourra aussi vous \u00eatre apport\u00e9e en cas de probl\u00e8mes dans vos d\u00e9marches num\u00e9riques du quotidien (actualisation Pole Emploi, demande de bourses scolaires, bo\u00eetes mail, etc)."},"id":"2b15e484-de90-48d0-b0cd-4e55b5695459","isHidden":false,"type":"markdown"},{"content":{"text":"Une r\u00e9-orientation vers d\u2019autres services de la structure peut-aussi \u00eatre r\u00e9alis\u00e9e en cas de demandes sp\u00e9cifiques (cr\u00e9ation de CV, demande RSA, etc)."},"id":"b951f968-652e-4b7d-9cb9-0f39ebb6cd16","isHidden":false,"type":"markdown"}]

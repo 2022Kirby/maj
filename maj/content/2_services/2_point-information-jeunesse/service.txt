@@ -29,7 +29,10 @@ Horaires:
 
 ----
 
-Telephone: 00 00 00 00 00
+Telephone:
+
+- 
+  numero: 05 63 04 66 26
 
 ----
 
@@ -40,4 +43,4 @@ Mails:
 
 ----
 
-Contenu: [{"content":{"text":"## Lorem ipsum\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium feugiat massa eu condimentum. Vestibulum congue mauris eget lacus ultrices placerat. Ut suscipit rhoncus blandit. Cras id varius metus. Maecenas eget metus nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam a nunc non sem cursus hendrerit. Cras porta varius magna, eu blandit metus congue et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce pretium velit quis ligula ornare blandit. Nullam justo lacus, sollicitudin vitae porta vitae, lobortis quis diam. Phasellus mi diam, porta ut auctor id, faucibus et lacus. Vivamus turpis purus, porttitor at nisi et, lacinia cursus velit. Integer venenatis pulvinar lacinia. Curabitur eu laoreet eros. Proin dapibus, metus sit amet aliquam congue, tortor enim porttitor metus, non fringilla odio lacus nec eros. Curabitur dignissim eget sem eu vulputate. Donec eu lacus aliquet lorem elementum dapibus eget eu augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas id enim non felis auctor blandit vel quis nunc. Duis vel nulla maximus, dictum velit vitae, lobortis odio. Nullam sodales tincidunt nisl eu hendrerit. Quisque vehicula molestie diam, vel feugiat erat porta sed. Nulla posuere vehicula odio, a varius mauris ornare ac. Maecenas eget dictum massa. Proin sagittis augue sit amet nisi auctor suscipit."},"id":"11491410-ee24-4e49-bb72-67fba346fa8f","isHidden":false,"type":"markdown"}]
+Contenu: [{"content":{"text":"Ouvert \u00e0 tous, le PIJ accompagne les usagers (et plus particuli\u00e8rement les jeunes de 16 \u00e0 25 ans) dans leurs recherches d'informations concernant :"},"id":"fff473ef-e9c0-4f65-a361-b1b1f2bef346","isHidden":false,"type":"markdown"},{"content":{"text":"<ul><li>les \u00e9tudes et les formations<\/li><li>l'emploi, les jobs et les stages<\/li><li>la vie quotidienne (logement, sant\u00e9, acc\u00e8s aux droits, projets, volontariat...)<\/li><li>la mobilit\u00e9 internationale<\/li><li>l'engagement et la citoyennet\u00e9 (Service Civique, Service National Universel)<\/li><\/ul>"},"id":"4c23f97d-da53-4e81-ac8b-18fda527b91f","isHidden":false,"type":"list"},{"content":{"text":"Le PIJ est labellis\u00e9 dans le cadre du Service Public R\u00e9gional de l'Orientation et donne un premier niveau d'information sur les m\u00e9tiers, l'information et l'orientation."},"id":"2c4b19a2-1b8d-47e0-bbea-2a751c6239a0","isHidden":false,"type":"markdown"}]

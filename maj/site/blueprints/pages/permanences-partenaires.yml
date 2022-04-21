@@ -33,12 +33,20 @@ tabs:
             layout: cards
             image:
               ratio: 1/1
-          nom:
-            label: Nom
+          titre:
+            label: Titre
             type: text
             required: true
+          soustitre:
+            label: Sous-titre
+            type: text
           telephone:
             label: Numéro de téléphone
             type: tel
             required: true
             help: "Format: xx xx xx xx xx"
+          contenu:
+            label: Contenu
+            type: textarea
+            size: small
+            required: true

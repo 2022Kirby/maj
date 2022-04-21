@@ -351,7 +351,7 @@ main>* {
 
 .accordion-panel>#permanences-partenaires {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
 }
 
@@ -370,6 +370,15 @@ main>* {
     font-size: 1.8vw;
 }
 
+#permanences-partenaires h3 {
+    font-size: 1.2vw;
+    font-weight: normal;
+}
+
+#permanences-partenaires p {
+    margin-top: 2%;
+}
+
 /* actualités / services / adhésion / mentions légales > articles */
 .retour {
     margin-bottom: 2%;
@@ -379,14 +388,14 @@ article .partenaires {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    gap: 1%;
-    margin-bottom: 2%;
+    gap: 2%;
+    margin-bottom: 5%;
 }
 
 article .partenaires img {
     margin: 0;
     width: auto;
-    max-height: 6vw;
+    max-height: 7vw;
 }
 
 article .coordonnees {
@@ -538,17 +547,17 @@ footer>div:nth-child(3) {
 
 /* infos / réseaux sociaux */
 footer>div:nth-child(4) {
-    grid-column: 4 / span 2;
+    grid-column: 4 / span 6;
 }
 
 footer div:nth-child(3) p,
 footer div:nth-child(4) p {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 /* logo réseaux sociaux */
 footer #socials {
-    margin: 5% 0 0 0;
+    margin: 0.5% 0 0 0;
 }
 
 footer #socials a {
@@ -556,8 +565,8 @@ footer #socials a {
 }
 
 footer svg {
-    margin-right: 10%;
-    width: 12%;
+    margin-right: 4%;
+    width: 4%;
     fill: var(--primary-color);
     transition: fill 0.25s;
 }

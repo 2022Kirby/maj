@@ -40,9 +40,12 @@ tabs:
                 help: "Format: Xh"
             help: "Apparaîtra sous le résumé du service."
           telephone:
-            label: Numéro de téléphone
-            type: tel
-            help: "Format: xx xx xx xx xx"
+            label: Numéro(s) de téléphone
+            type: structure
+            fields:
+              numero:
+                label: Numéro
+                type: tel
           mails:
             label: Mail(s) de contact
             type: structure
@@ -59,9 +62,12 @@ tabs:
         type: files
         parent: page.find('partenaires')
         layout: cards
-      images:
+      fichiers:
         type: files
-        layout: cards
+        parent: page.find('fichiers')
+        layout: list
+        info: "{{ file.url }}"
+        help: Fichiers à télécharger
       contenu:
         type: fields
         fields:

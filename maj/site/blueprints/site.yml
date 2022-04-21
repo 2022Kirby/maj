@@ -110,6 +110,7 @@ tabs:
             parent: site.find('actualites')
             template: actualite
             status: all
+            flip: true
             layout: cards
             limit: 6
             size: tiny
@@ -135,7 +136,7 @@ tabs:
             layout: list
             limit: 10
             image:
-              cover: true
+              query: false
             help: "Liste apparaissant sur la page services."
   
   equipe:

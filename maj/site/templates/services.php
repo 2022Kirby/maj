@@ -42,7 +42,10 @@
                     <?php if($service->telephone()->exists() && $service->telephone()->isNotEmpty()): ?>
                         <div>
                             <p><b>Téléphone</b></p>
-                            <p><?= $service->telephone() ?></p>
+                            <!-- boucle affichant chaque champ numéro -->
+                            <?php foreach($service->telephone()->toStructure() as $telephone): ?>
+                                <p><?= $telephone->numero() ?></p>
+                            <?php endforeach ?>
                         </div>
                     <?php endif ?>
                 </div>
@@ -67,9 +70,14 @@
                                 <?php endif ?>
 
                                 <figcaption>
-                                    <h2><?= $partenaire->nom() ?></h2>
-                                    <p>Sur rendez-vous :</p>
-                                    <p><?= $partenaire->telephone() ?></p>
+                                    <h2><?= $partenaire->titre() ?></h2>
+
+                                    <?php if($partenaire->soustitre()->isNotEmpty()): ?>
+                                        <h3><?= $partenaire->soustitre() ?></h3>
+                                    <?php endif ?>
+
+                                    <p><b>Sur rendez-vous :</b> <?= $partenaire->telephone() ?></p>
+                                    <p><?= $partenaire->contenu()->kirbytext() ?></p>
                                 </figcaption>
                             </figure>
                         <?php endforeach ?>

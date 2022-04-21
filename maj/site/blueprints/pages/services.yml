@@ -12,5 +12,5 @@ sections:
     layout: list
     limit: 10
     image:
-      cover: true
+      query: false
     help: "Liste apparaissant sur la page services."

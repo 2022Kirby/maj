@@ -149,23 +149,40 @@
     }
 
     .accordion-panel>#permanences-partenaires {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     #permanences-partenaires img {
-        margin-bottom: 5%;
+        margin-bottom: 2%;
         width: auto;
-        max-height: 40px;
+        max-height: 12vw;
     }
 
     #permanences-partenaires h2 {
         font-size: 3.8vw;
     }
 
+    #permanences-partenaires h3 {
+        font-size: 3vw;
+    }
+
+    #permanences-partenaires p {
+        margin-top: 1%;
+    }
+
     /* actualités / services / adhésion / mentions légales > articles */
     .retour {
         font-size: 4vw;
         margin-bottom: 5%;
+    }
+
+    article .partenaires {
+        flex-flow: row wrap;
+        gap: 0.5%;
+    }
+
+    article .partenaires img {
+        margin-bottom: 2%;
     }
 
     article .coordonnees {
