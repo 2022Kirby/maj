@@ -66,8 +66,7 @@ tabs:
         type: files
         parent: page.find('fichiers')
         layout: list
-        info: "{{ file.url }}"
-        help: Fichiers à télécharger
+        help: Glisser-déposer le fichier à télécharger dans le contenu pour y insérer son lien relatif.
       contenu:
         type: fields
         fields:

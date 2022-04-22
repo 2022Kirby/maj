@@ -17,9 +17,6 @@ tabs:
   article:
     label: Article
     sections:
-      images:
-        type: files
-        layout: cards
       contenu:
         type: fields
         fields:
