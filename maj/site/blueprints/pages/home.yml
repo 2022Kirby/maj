@@ -16,4 +16,3 @@ fields:
     type: textarea
     size: medium
     required: true
-    help: "Apparaîtront sur la page d'accueil."

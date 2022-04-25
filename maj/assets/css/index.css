@@ -40,6 +40,10 @@ h2 {
     font-size: 2.5vw;
 }
 
+h3 {
+    font-size: 1.4vw;
+}
+
 /* textes */
 p,
 ul {
@@ -410,6 +414,31 @@ article .coordonnees p {
     margin: 0;
 }
 
+article .contenu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+article .contenu>*:not(figure) {
+    grid-column: 1 / span 2;
+}
+
+article .contenu figure {
+    grid-column: span 1;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+article .contenu figure img {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+article .contenu figcaption {
+    text-align: center;
+}
+
 article h1,
 h2 {
     margin-bottom: 1%;
@@ -425,9 +454,9 @@ article ul {
 }
 
 article img {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 70%;
 }
 
 /* équipe */

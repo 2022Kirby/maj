@@ -77,7 +77,9 @@
         </div>
 
         <!-- bouton pour charger plus d'actualités -->
-        <button class="load-more">Plus d'actualités</button>
+        <?php if ($pagination->hasNextPage()): ?>
+            <button class="load-more">Plus d'actualités</button>
+        <?php endif ?>
     </main>
 
     <?php snippet('footer') ?>

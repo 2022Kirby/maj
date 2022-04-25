@@ -47,7 +47,7 @@
             </div>
 
             <!-- contenu de la page -->
-            <div>
+            <div class="contenu">
                 <?= $page->contenu()->toBlocks() ?>
             </div>
         </article>

@@ -23,6 +23,10 @@
         font-size: 5vw;
     }
 
+    h3 {
+        font-size: 3.5vw;
+    }
+
     /* textes */
     p {
         font-size: 3.5vw;
@@ -193,6 +197,10 @@
         margin-bottom: 2%;
     }
 
+    article .contenu {
+        display:block;
+    }
+
     article h1,
     h2 {
         margin-bottom: 3%;
@@ -212,6 +220,10 @@
 
     article ul {
         padding-left: 5%;
+        font-size: 3.5vw;
+    }
+
+    article .contenu figcaption {
         font-size: 3.5vw;
     }
 
