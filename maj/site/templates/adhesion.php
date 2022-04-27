@@ -7,7 +7,7 @@
 
         <article>
             <!-- contenu de la page -->
-            <p><?= $page->contenu()->kirbytext() ?></p>
+            <?= $page->contenu()->kirbytext() ?>
         </article>
     </main>
 </body>

@@ -77,7 +77,7 @@
                                     <?php endif ?>
 
                                     <p><b>Sur rendez-vous :</b> <?= $partenaire->telephone() ?></p>
-                                    <p><?= $partenaire->contenu()->kirbytext() ?></p>
+                                    <?= $partenaire->contenu()->kirbytext() ?>
                                 </figcaption>
                             </figure>
                         <?php endforeach ?>

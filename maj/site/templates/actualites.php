@@ -28,7 +28,7 @@
                                 
                                 <div>
                                     <p><?= $breve->titre() ?></p>
-                                    <p><?= $breve->contenu()->kirbytext() ?></p>
+                                    <?= $breve->contenu()->kirbytext() ?>
                                 </div>
                             </li>
 

@@ -78,9 +78,9 @@
             </form>
 
         <?php endif ?>
-    </main>
 
-    <!-- lien vers le script php du formulaire -->
-    <?php snippet('sendForm') ?>
+        <!-- lien vers le script php du formulaire -->
+        <?php snippet('sendForm') ?>
+    </main>
 </body>
 </html>

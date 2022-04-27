@@ -23,12 +23,12 @@
 
             <section>
                 <h1>Nos missions</h1>
-                <p><?= $page->missions()->kirbytext() ?></p>
+                <?= $page->missions()->kirbytext() ?>
             </section>
 
             <section>
                 <h1>Notre histoire</h1>
-                <p><?= $page->histoire()->kirbytext() ?></p>
+                <?= $page->histoire()->kirbytext() ?>
             </section>
         </article>
     </main>
